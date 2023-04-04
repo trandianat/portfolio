@@ -4,10 +4,10 @@ export const Header = (): JSX.Element => {
   return (
     <header>
       <div>Diana Tran</div>
-      <div>
+      <nav>
         <Link to="resume">Resume</Link>
         <Link to="projects">Projects</Link>
-      </div>
+      </nav>
       <Outlet />
     </header>
   );

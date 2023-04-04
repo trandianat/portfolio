@@ -1,11 +1,11 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from 'components/header';
-import { Resume } from 'pages/resume';
 import { Projects } from 'pages/projects';
+import { Resume } from 'pages/resume';
+import 'styles.css';
 
 const root = createRoot(document.getElementById('root') as Element);
-
 root.render(
   <BrowserRouter>
     <Routes>
