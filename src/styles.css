@@ -1,10 +1,54 @@
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('assets/fonts/Crimson\ Text.ttf');
+}
+
+@font-face {
+    font-family: 'Crimson Text Italic';
+    src: url('assets/fonts/Crimson\ Text\ Italic.ttf');
+}
+
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('assets/fonts/Work\ Sans.ttf');
+}
+
 html {
     --desktop: 800px;
-    --black: #030306;
-    --gray: #D2D3D4;
-    --light-gray: #E8E6E9;
+    --black: #000;
+    --gray: #EEF0EF;
+    --white: #FFF;
+    --sans: 'Work Sans';
+    --serif: 'Crimson Text';
+    --serif-italic: 'Crimson Text Italic';
+    font-family: var(--serif);
 }
 
 body {
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+.sans {
+    font-family: 'Work Sans';
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
