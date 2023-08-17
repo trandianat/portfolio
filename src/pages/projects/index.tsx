@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Auth from 'components/auth';
 import { Background } from 'components/background';
 import { Header } from 'components/header';
 import { Navigation } from 'components/navigation';
@@ -9,7 +10,7 @@ export const Projects = (): JSX.Element => (
     <Header>Test description</Header>
     <Background color={Color.GRAY}>
       <Navigation />
-      Projects
+      <Auth />
     </Background>
   </Fragment>
 );
