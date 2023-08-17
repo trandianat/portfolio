@@ -1,4 +1,3 @@
-import { css } from '@emotion/react';
 import { Color } from 'utils/types';
 
 export const background = (backgroundColor: Color) => ({
