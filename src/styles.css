@@ -17,6 +17,7 @@
 html {
     --desktop: 800px;
     --black: #000;
+    --dark-gray: #808080;
     --gray: #EEF0EF;
     --white: #FFF;
     --sans: 'Work Sans';
@@ -29,6 +30,22 @@ body {
     margin: 0;
 }
 
+button {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 48px;
+    color: var(--white);
+    font: .825rem var(--sans);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    &:hover {
+        background-color: var(--white);
+        border: 1px solid var(--black);
+        color: var(--black);
+        cursor: pointer;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
@@ -36,6 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 4rem;
+}
+
+input {
+    font-size: .875rem;
+    padding: 8px 12px;
 }
 
 p {

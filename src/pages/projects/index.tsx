@@ -3,6 +3,7 @@ import Auth from 'components/auth';
 import { Background } from 'components/background';
 import { Header } from 'components/header';
 import { Navigation } from 'components/navigation';
+import * as styles from 'pages/projects/styles';
 import { Color } from 'utils/types';
 
 export const Projects = (): JSX.Element => (
@@ -10,7 +11,9 @@ export const Projects = (): JSX.Element => (
     <Header>Test description</Header>
     <Background color={Color.GRAY}>
       <Navigation />
-      <Auth />
+      <div css={styles.auth}>
+        <Auth />
+      </div>
     </Background>
   </Fragment>
 );
