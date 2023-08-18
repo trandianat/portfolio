@@ -10,6 +10,12 @@ export const navigation = {
     color: Color.WHITE,
     padding: '12px 48px',
     textDecoration: 'none',
-    ':hover': { backgroundColor: Color.WHITE, color: Color.BLACK },
+    ':hover': {
+      backgroundColor: Color.WHITE,
+      color: Color.BLACK,
+      svg: { fill: Color.BLACK },
+    },
+    svg: { fill: Color.WHITE, height: 16 },
   },
+  'a.github': { alignItems: 'center', display: 'flex', gap: 6 },
 };

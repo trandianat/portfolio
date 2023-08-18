@@ -26,10 +26,10 @@ module.exports = {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
-            // {
-            //     test: /\.svg$/,
-            //     use: ["@svgr/webpack"]
-            // },
+            {
+                test: /\.svg$/,
+                use: ["@svgr/webpack"]
+            },
             // { 
             //     test: /\.ttf$/,
             //     type: "asset/resource"
