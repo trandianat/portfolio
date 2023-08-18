@@ -1,5 +1,12 @@
+import { Color } from 'utils/types';
+
 export const auth = {
   'button.amplify-button': { marginTop: 18 },
+  'button.amplify-button--disabled': {
+    backgroundColor: Color.DARK_GRAY,
+    border: `1px solid ${Color.DARK_GRAY}`,
+    ':hover': { color: Color.WHITE, cursor: 'default' },
+  },
   'button.amplify-field__show-password': { display: 'none' },
   'fieldset.amplify-flex': {
     border: 0,

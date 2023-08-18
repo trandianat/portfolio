@@ -18,7 +18,9 @@ export const Projects = (): JSX.Element => (
     <Background color={Color.GRAY}>
       <Navigation />
       <div css={styles.auth}>
-        <Auth />
+        <Auth>
+          <div>Content after login</div>
+        </Auth>
       </div>
     </Background>
   </Fragment>

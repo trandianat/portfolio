@@ -1,16 +1,16 @@
-import { Auth as Authentication } from 'aws-amplify';
 import { useAuthenticator, withAuthenticator } from '@aws-amplify/ui-react';
-import { Fragment } from 'react';
+import { Fragment, ReactNode } from 'react';
 import * as styles from 'components/auth/styles';
 
-function Auth() {
+const Auth = ({ children }: { children: ReactNode }): JSX.Element => {
   const { signOut } = useAuthenticator();
   return (
     <div css={styles.auth}>
       <button onClick={signOut}>Sign out</button>
+      {children}
     </div>
   );
-}
+};
 
 export default withAuthenticator(Auth, {
   components: { SignIn: { Footer: () => <Fragment /> } },

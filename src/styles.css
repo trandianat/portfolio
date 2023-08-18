@@ -17,6 +17,7 @@
 html {
     --desktop: 800px;
     --black: #000;
+    --dark-gray: #808080;
     --gray: #EEF0EF;
     --white: #FFF;
     --sans: 'Work Sans';
