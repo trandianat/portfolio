@@ -40,3 +40,10 @@ export const logo = css({
     width: 24,
   },
 });
+
+export const link = {
+  alignItems: 'center',
+  display: 'inline-flex',
+  gap: 6,
+  '@media (min-width: 701px)': { display: 'none' },
+};

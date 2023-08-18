@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
 
 export const auth = css({
-  button: { marginTop: 12 },
+  button: { marginBottom: 12 },
 });
