@@ -12,7 +12,7 @@ export const Job = ({
   <div css={styles.job}>
     <h2>{role}</h2>
     <p className="sans">{company}</p>
-    <ul css={{ marginTop: 12 }}>
+    <ul>
       {descriptions.map((description: string) => (
         <li>{description}</li>
       ))}

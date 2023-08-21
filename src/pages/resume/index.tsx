@@ -22,25 +22,27 @@ export const Resume = (): JSX.Element => (
         />
         <div css={styles.group}>
           <h2>Liberty Mutual</h2>
-          <p className="sans">
+          <p className="program">
             Technical Development Program & Post-Program Placement
           </p>
-          <Job
-            role="Senior Software Engineer"
-            company="Personal Insurance, Direct Sales, October 2019 - July 2021"
-            descriptions={[
-              'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
-              'Mentored junior software engineers and interns',
-            ]}
-          />
-          <Job
-            role="Senior Software Developer"
-            company="Personal Insurance, Direct Claims, October 2017 - October 2019"
-            descriptions={[
-              'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
-              'Created a website to help different types of claimants decide whether to file a claim',
-            ]}
-          />
+          <div css={styles.groupJobs}>
+            <Job
+              role="Senior Software Engineer"
+              company="Personal Insurance, Direct Sales, October 2019 - July 2021"
+              descriptions={[
+                'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
+                'Mentored junior software engineers and interns',
+              ]}
+            />
+            <Job
+              role="Senior Software Developer"
+              company="Personal Insurance, Direct Claims, October 2017 - October 2019"
+              descriptions={[
+                'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
+                'Created a website to help different types of claimants decide whether to file a claim',
+              ]}
+            />
+          </div>
         </div>
       </div>
     </Background>
