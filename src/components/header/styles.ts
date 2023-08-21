@@ -9,7 +9,11 @@ export const header = css({
 
 export const divider = { backgroundColor: Color.BLACK, height: 2 };
 
-export const name = { display: 'flex', justifyContent: 'space-between' };
+export const name = css({
+  display: 'flex',
+  justifyContent: 'space-between',
+  '@media (max-width: 700px)': { flexDirection: 'column-reverse', gap: 24 },
+});
 
 export const logo = css({
   backgroundColor: Color.BLACK,
@@ -19,6 +23,8 @@ export const logo = css({
   fontSize: '2rem',
   height: 100,
   letterSpacing: 3,
+  minHeight: 100,
+  minWidth: 100,
   width: 100,
   '.content': {
     display: 'flex',
@@ -39,6 +45,7 @@ export const logo = css({
     margin: '0 auto',
     width: 24,
   },
+  '@media (max-width: 700px)': { margin: '0 auto' },
 });
 
 export const link = {
