@@ -4,6 +4,7 @@ export const background = (backgroundColor: Color) => ({
   backgroundColor,
   padding: '48px 0',
   width: '100%',
+  ...(backgroundColor === Color.GRAY && { flexGrow: 1 }),
 });
 
 export const container = {

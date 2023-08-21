@@ -1,6 +1,6 @@
 import { Amplify } from 'aws-amplify';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Projects } from 'pages/projects';
 import { Resume } from 'pages/resume';
 import { Skills } from 'pages/skills';
