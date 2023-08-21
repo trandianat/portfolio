@@ -14,7 +14,7 @@ export const Job = ({
     <p className="sans">{company}</p>
     <ul>
       {descriptions.map((description: string) => (
-        <li>{description}</li>
+        <li key={description}>{description}</li>
       ))}
     </ul>
   </div>
