@@ -5,6 +5,7 @@ export const Job = ({
   company,
   start,
   end,
+  skills,
   descriptions,
   indent = false,
 }: {
@@ -12,6 +13,7 @@ export const Job = ({
   company: string;
   start: string;
   end: string;
+  skills: string[];
   descriptions: string[];
   indent?: boolean;
 }): JSX.Element => (
@@ -30,6 +32,13 @@ export const Job = ({
     <div css={styles.role}>
       <h2>{role}</h2>
       <p className="sans">{company}</p>
+      <div css={styles.skills}>
+        {skills.map((skill: string) => (
+          <div css={styles.skill} key={skill}>
+            {skill}
+          </div>
+        ))}
+      </div>
       <ul>
         {descriptions.map((description: string) => (
           <li key={description}>{description}</li>

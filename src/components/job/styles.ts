@@ -46,5 +46,21 @@ export const role = css({
   display: 'flex',
   flexDirection: 'column',
   h2: { fontFamily: 'var(--serif-italic)' },
-  ul: { marginTop: 6 },
+});
+
+export const skills = css({
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 6,
+  margin: '6px 0',
+});
+
+export const skill = css({
+  backgroundColor: Color.BLACK,
+  borderRadius: 12,
+  color: Color.WHITE,
+  font: '.685rem var(--sans)',
+  letterSpacing: 1,
+  padding: '2px 8px',
+  textTransform: 'uppercase',
 });

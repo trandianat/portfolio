@@ -4,6 +4,7 @@ import { Color } from 'utils/types';
 export const navigation = css({
   backgroundColor: Color.BLACK,
   border: `1px solid ${Color.BLACK}`,
+  boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}`,
   display: 'flex',
   margin: '-48px 0 36px',
   position: 'sticky',
@@ -30,7 +31,7 @@ export const navigation = css({
     flexDirection: 'column',
     a: {
       letterSpacing: 4,
-      ':nth-child(-n + 2)': { borderBottom: `1px solid ${Color.WHITE}` },
+      ':nth-of-type(-n + 2)': { borderBottom: `1px solid ${Color.WHITE}` },
     },
   },
 });
