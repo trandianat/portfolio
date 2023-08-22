@@ -14,11 +14,14 @@ export const Resume = (): JSX.Element => (
       <div css={styles.experience}>
         <Job
           role="Software Development Engineer III & Chapter Lead"
-          company="Haven Technologies, July 2021 - Present"
+          company="Haven Technologies"
+          start="JUL '21"
+          end="PRESENT"
           descriptions={[
             'Manage, foster growth, and do performance reviews for five full-stack developers across two teams',
             'Build and iterate upon new claims application for our primary client, MassMutual',
           ]}
+          indent
         />
         <div css={styles.group}>
           <h2>Liberty Mutual</h2>
@@ -28,7 +31,9 @@ export const Resume = (): JSX.Element => (
           <div css={styles.groupJobs}>
             <Job
               role="Senior Software Engineer"
-              company="Personal Insurance, Direct Sales, October 2019 - July 2021"
+              company="Personal Insurance, Direct Sales"
+              start="OCT '19"
+              end="JUL '21"
               descriptions={[
                 'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
                 'Mentored junior software engineers and interns',
@@ -36,7 +41,9 @@ export const Resume = (): JSX.Element => (
             />
             <Job
               role="Senior Software Developer"
-              company="Personal Insurance, Direct Claims, October 2017 - October 2019"
+              company="Personal Insurance, Direct Claims"
+              start="OCT '17"
+              end="OCT '19"
               descriptions={[
                 'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
                 'Created a website to help different types of claimants decide whether to file a claim',
@@ -44,7 +51,9 @@ export const Resume = (): JSX.Element => (
             />
             <Job
               role="Software Developer"
-              company="Personal Insurance, Sales Compensation, August 2016 - September 2017"
+              company="Personal Insurance, Sales Compensation"
+              start="AUG '16"
+              end="SEP '17"
               descriptions={[
                 'Migrated legacy batch jobs from on-premise to the cloud',
                 'Performed extensive testing to ensure frictionless payments to agents',
@@ -52,7 +61,9 @@ export const Resume = (): JSX.Element => (
             />
             <Job
               role="Software Developer"
-              company="Specialty Markets, Reinsurance, February 2016 - July 2016"
+              company="Specialty Markets, Reinsurance"
+              start="FEB '16"
+              end="JUL '16"
               descriptions={[
                 'Developed the claims, underwriting, and contact management applications',
                 'Contributed to the architecture, design, security, and testing of the three applications',
@@ -60,7 +71,9 @@ export const Resume = (): JSX.Element => (
             />
             <Job
               role="IT Analyst II"
-              company="Personal Insurance, Publishing & Document Management, February 2015 - February 2016"
+              company="Personal Insurance, Publishing & Document Management"
+              start="FEB '15"
+              end="FEB '16"
               descriptions={[
                 'Integrated policy form template retrieval into a document repository application',
                 'Mentored teammates on technical design and implementation as Technical Lead',
@@ -68,7 +81,9 @@ export const Resume = (): JSX.Element => (
             />
             <Job
               role="IT Analyst"
-              company="Commercial Insurance, Reporting, Planning & Analytics, June 2014 - February 2015"
+              company="Commercial Insurance, Reporting, Planning & Analytics"
+              start="JUN '14"
+              end="FEB '15"
               descriptions={[
                 'Attended and observed core trainings and milestone events of ongoing lean transformations',
                 'Performed user acceptance testing and produced reports on lean metrics',
@@ -78,11 +93,14 @@ export const Resume = (): JSX.Element => (
         </div>
         <Job
           role="Operations Intern"
-          company="Community Economic Development Assistance Corporation, June 2013 - May 2014"
+          company="Community Economic Development Assistance Corporation"
+          start="JUN '13"
+          end="MAY '14"
           descriptions={[
             "Updated and managed CEDAC's three websites, emails, and contact management system",
             'Processed, peer-reviewed, and sent financial audit confirmations',
           ]}
+          indent
         />
       </div>
     </Background>

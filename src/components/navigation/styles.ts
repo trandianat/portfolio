@@ -6,7 +6,9 @@ export const navigation = css({
   border: `1px solid ${Color.BLACK}`,
   display: 'flex',
   margin: '-48px 0 36px',
+  position: 'sticky',
   textAlign: 'center',
+  top: 0,
   a: {
     color: Color.WHITE,
     flexGrow: 1,

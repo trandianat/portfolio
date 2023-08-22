@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 export const experience = css({
   display: 'flex',
   flexDirection: 'column',
-  gap: 36,
+  gap: 24,
   '.sans': { fontSize: '.875rem', letterSpacing: 1 },
 });
 
@@ -16,5 +16,5 @@ export const group = {
 export const groupJobs = css({
   display: 'flex',
   flexDirection: 'column',
-  gap: 16,
+  gap: 24,
 });
