@@ -5,23 +5,20 @@ export const navigation = css({
   backgroundColor: Color.BLACK,
   border: `1px solid ${Color.BLACK}`,
   display: 'flex',
-  justifyContent: 'space-between',
   margin: '-48px 0 36px',
+  textAlign: 'center',
   a: {
     color: Color.WHITE,
+    flexGrow: 1,
     fontWeight: 'normal',
-    padding: '12px 48px',
+    padding: '12px 0',
     textDecoration: 'none',
+    svg: { fill: Color.WHITE },
     ':hover': {
       backgroundColor: Color.WHITE,
       color: Color.BLACK,
       svg: { fill: Color.BLACK },
     },
-    svg: { fill: Color.WHITE },
-  },
-  'a.github': { alignItems: 'center', display: 'flex', gap: 6 },
-  '@media (max-width: 950px)': {
-    a: { padding: '12px 24px' },
   },
   '@media (max-width: 700px)': {
     fontSize: '.825rem',
@@ -29,9 +26,16 @@ export const navigation = css({
   },
   '@media (max-width: 450px)': {
     flexDirection: 'column',
-    a: { borderBottom: `1px solid ${Color.WHITE}` },
-  },
-  '@media (max-width: 350px)': {
-    fontSize: '.825rem',
+    a: {
+      letterSpacing: 4,
+      ':nth-child(-n + 2)': { borderBottom: `1px solid ${Color.WHITE}` },
+    },
   },
 });
+
+export const external = {
+  alignItems: 'center',
+  display: 'flex',
+  gap: 6,
+  justifyContent: 'center',
+};

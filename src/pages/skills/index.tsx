@@ -20,7 +20,7 @@ export const Skills = (): JSX.Element => {
     'Agile',
   ];
   const familiar = [
-    'accessibility',
+    'Accessibility',
     'Node.js',
     'MongoDB',
     'Webpack',

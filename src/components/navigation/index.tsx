@@ -7,7 +7,11 @@ export const Navigation = (): JSX.Element => (
     <Link to="/">Experience</Link>
     <Link to="/skills">Skills</Link>
     <Link to="/projects">Projects</Link>
-    <a className="github" href="https://github.com/trandianat" target="_blank">
+    <a
+      css={styles.external}
+      href="https://github.com/trandianat"
+      target="_blank"
+    >
       <LinkIcon />
       <span>Github</span>
     </a>
