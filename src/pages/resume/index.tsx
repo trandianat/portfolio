@@ -27,6 +27,7 @@ export const Resume = (): JSX.Element => (
             'Node.js',
             'Express',
             'PostgreSQL',
+            'Knex.js',
             'Docker',
             'Kubernetes',
           ]}
@@ -47,7 +48,7 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Direct Sales"
               start="OCT '19"
               end="JUL '21"
-              skills={['React', 'TypeScript']}
+              skills={['React', 'TypeScript', 'GraphQL']}
               descriptions={[
                 'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
                 'Mentored junior software engineers and interns',
@@ -58,7 +59,7 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Direct Claims"
               start="OCT '17"
               end="OCT '19"
-              skills={['React']}
+              skills={['React', 'GraphQL']}
               descriptions={[
                 'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
                 'Created a website to help different types of claimants decide whether to file a claim',

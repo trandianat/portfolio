@@ -5,12 +5,17 @@ export const job = (indent: boolean) =>
   css({
     display: 'flex',
     gap: 16,
-    ...(indent && { paddingLeft: 24 }),
+    ...(indent && { '@media (min-width: 451px)': { paddingLeft: 24 } }),
+    '@media (max-width: 450px)': { flexDirection: 'column', gap: 2 },
   });
 
-export const dates = { display: 'flex', gap: 12 };
+export const verticalDates = css({
+  display: 'flex',
+  gap: 12,
+  '@media (max-width: 450px)': { display: 'none' },
+});
 
-export const range = css({
+export const verticalRange = css({
   display: 'flex',
   flexDirection: 'column',
   fontWeight: 500,
@@ -21,12 +26,44 @@ export const range = css({
   whiteSpace: 'nowrap',
 });
 
-export const timeline = css({
+export const verticalTimeline = css({
   alignItems: 'center',
   display: 'flex',
   flexDirection: 'column',
   padding: '8px 0',
 });
+
+export const horizontalDates = css({
+  display: 'flex',
+  flexDirection: 'column',
+  fontWeight: 500,
+  gap: 2,
+  '@media (min-width: 451px)': { display: 'none' },
+});
+
+export const verticalLine = {
+  backgroundColor: Color.DARK_GRAY,
+  height: '100%',
+  width: 2,
+};
+
+export const horizontalRange = {
+  display: 'flex',
+  justifyContent: 'space-between',
+};
+
+export const horizontalTimeline = {
+  alignItems: 'center',
+  display: 'flex',
+  flexGrow: 1,
+  justifyContent: 'space-between',
+};
+
+export const horizontalLine = {
+  backgroundColor: Color.DARK_GRAY,
+  height: 2,
+  width: '100%',
+};
 
 export const circle = {
   backgroundColor: Color.WHITE,
@@ -34,12 +71,6 @@ export const circle = {
   borderRadius: 8,
   minHeight: 8,
   minWidth: 8,
-};
-
-export const line = {
-  backgroundColor: Color.DARK_GRAY,
-  height: '100%',
-  width: 2,
 };
 
 export const role = css({

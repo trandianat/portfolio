@@ -18,15 +18,26 @@ export const Job = ({
   indent?: boolean;
 }): JSX.Element => (
   <div css={styles.job(indent)}>
-    <div css={styles.dates}>
-      <div css={styles.range}>
+    <div css={styles.verticalDates}>
+      <div css={styles.verticalRange}>
         <div className="sans">{end}</div>
         <div className="sans">{start}</div>
       </div>
-      <div css={styles.timeline}>
+      <div css={styles.verticalTimeline}>
         <div css={styles.circle} />
-        <div css={styles.line} />
+        <div css={styles.verticalLine} />
         <div css={styles.circle} />
+      </div>
+    </div>
+    <div css={styles.horizontalDates}>
+      <div css={styles.horizontalTimeline}>
+        <div css={styles.circle} />
+        <div css={styles.horizontalLine} />
+        <div css={styles.circle} />
+      </div>
+      <div css={styles.horizontalRange}>
+        <div className="sans">{start}</div>
+        <div className="sans">{end}</div>
       </div>
     </div>
     <div css={styles.role}>
