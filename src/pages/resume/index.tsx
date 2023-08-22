@@ -48,7 +48,15 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Direct Sales"
               start="OCT '19"
               end="JUL '21"
-              skills={['React', 'TypeScript', 'GraphQL']}
+              skills={[
+                'React',
+                'TypeScript',
+                'Node.js',
+                'Express',
+                'GraphQL',
+                'DynamoDB',
+                'Lambdas',
+              ]}
               descriptions={[
                 'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
                 'Mentored junior software engineers and interns',
@@ -59,7 +67,7 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Direct Claims"
               start="OCT '17"
               end="OCT '19"
-              skills={['React', 'GraphQL']}
+              skills={['React', 'Node.js', 'Express', 'GraphQL', 'MongoDB']}
               descriptions={[
                 'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
                 'Created a website to help different types of claimants decide whether to file a claim',
@@ -70,7 +78,7 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Sales Compensation"
               start="AUG '16"
               end="SEP '17"
-              skills={['Java', 'Gradle']}
+              skills={['Java', 'Gradle', 'Oracle']}
               descriptions={[
                 'Migrated legacy batch jobs from on-premise to the cloud',
                 'Performed extensive testing to ensure frictionless payments to agents',
@@ -81,7 +89,7 @@ export const Resume = (): JSX.Element => (
               company="Specialty Markets, Reinsurance"
               start="FEB '16"
               end="JUL '16"
-              skills={['AngularJS']}
+              skills={['AngularJS', 'MySQL']}
               descriptions={[
                 'Developed the claims, underwriting, and contact management applications',
                 'Contributed to the architecture, design, security, and testing of the three applications',
@@ -92,7 +100,15 @@ export const Resume = (): JSX.Element => (
               company="Personal Insurance, Publishing & Document Management"
               start="FEB '15"
               end="FEB '16"
-              skills={['Dojo']}
+              skills={[
+                'Dojo',
+                'Java',
+                'SOAP',
+                'JAX-RS',
+                'BPELs',
+                'XML',
+                'SharePoint',
+              ]}
               descriptions={[
                 'Integrated policy form template retrieval into a document repository application',
                 'Mentored teammates on technical design and implementation as Technical Lead',

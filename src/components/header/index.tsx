@@ -9,7 +9,7 @@ export const Header = (): JSX.Element => (
       <div css={styles.name}>
         <div>
           <h1>Diana Tran</h1>
-          <h2 className="sans">Software Engineer & Manager</h2>
+          <p className="sans">Software Engineer & Manager</p>
         </div>
         <div css={styles.logo}>
           <div className="content">
