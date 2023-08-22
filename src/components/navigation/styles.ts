@@ -17,6 +17,12 @@ export const navigation = css({
     padding: '12px 0',
     textDecoration: 'none',
     svg: { fill: Color.WHITE },
+    '&.active': {
+      backgroundColor: Color.WHITE,
+      color: Color.BLACK,
+      fontWeight: 500,
+      pointerEvents: 'none',
+    },
     ':hover': {
       backgroundColor: Color.WHITE,
       color: Color.BLACK,
