@@ -20,7 +20,7 @@ export const navigation = css({
     '&.active': {
       backgroundColor: Color.WHITE,
       color: Color.BLACK,
-      fontWeight: 600,
+      fontWeight: 500,
       pointerEvents: 'none',
     },
     ':hover': {
@@ -39,6 +39,7 @@ export const navigation = css({
       letterSpacing: 4,
       padding: '10px 0',
       ':nth-of-type(-n + 2)': { borderBottom: `1px solid ${Color.WHITE}` },
+      '&.active': { fontWeight: 600 },
     },
   },
 });
