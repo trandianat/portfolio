@@ -20,7 +20,7 @@ export const navigation = css({
     '&.active': {
       backgroundColor: Color.WHITE,
       color: Color.BLACK,
-      fontWeight: 500,
+      fontWeight: 600,
       pointerEvents: 'none',
     },
     ':hover': {
@@ -30,13 +30,14 @@ export const navigation = css({
     },
   },
   '@media (max-width: 700px)': {
-    fontSize: '.825rem',
+    fontSize: '.875rem',
     a: { ':last-child': { display: 'none' } },
   },
   '@media (max-width: 450px)': {
     flexDirection: 'column',
     a: {
       letterSpacing: 4,
+      padding: '10px 0',
       ':nth-of-type(-n + 2)': { borderBottom: `1px solid ${Color.WHITE}` },
     },
   },
