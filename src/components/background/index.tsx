@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import * as styles from 'components/background/styles';
-import { Color } from 'utils/types';
+import { Color } from 'utils/constants';
 
 export const Background = ({
   children,

@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Color } from 'utils/types';
+import { Color } from 'utils/constants';
 
 export const job = (indent: boolean) =>
   css({

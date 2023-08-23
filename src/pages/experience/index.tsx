@@ -1,6 +1,6 @@
+import { Content } from 'components/content';
 import { Job } from 'components/job';
 import * as styles from 'pages/experience/styles';
-import { Content } from 'components/content';
 
 export const Experience = (): JSX.Element => (
   <Content>

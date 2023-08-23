@@ -1,4 +1,4 @@
-import { Color } from 'utils/types';
+import { Color } from 'utils/constants';
 
 export const background = (backgroundColor: Color) => ({
   backgroundColor,

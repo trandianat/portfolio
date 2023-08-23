@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import LinkIcon from 'assets/icons/link';
 import * as styles from 'components/navigation/styles';
+import { Links } from 'utils/constants';
 
 export const Navigation = (): JSX.Element => {
   const { pathname } = useLocation();
@@ -40,11 +41,7 @@ export const Navigation = (): JSX.Element => {
           {name}
         </Link>
       ))}
-      <a
-        css={styles.external}
-        href="https://github.com/trandianat"
-        target="_blank"
-      >
+      <a css={styles.external} href={Links.GITHUB} target="_blank">
         <LinkIcon />
         Github
       </a>

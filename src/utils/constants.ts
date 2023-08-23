@@ -4,3 +4,8 @@ export enum Color {
   GRAY = 'var(--gray)',
   WHITE = 'var(--white)',
 }
+
+export enum Links {
+  GITHUB = 'https://github.com/trandianat',
+  WEDDING = 'https://www.thebeanwedding.com',
+}
