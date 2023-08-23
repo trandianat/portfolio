@@ -6,6 +6,7 @@ import Wedding from 'assets/icons/wedding';
 import Auth from 'components/auth';
 import { Content } from 'components/content';
 import * as styles from 'pages/projects/styles';
+import isProjects from 'utils/projects';
 
 type Project = {
   description: string;
@@ -46,7 +47,7 @@ export const Projects = (): JSX.Element => {
     <Content>
       <div css={styles.auth}>
         <Auth>
-          {['/projects', '/projects/'].includes(pathname) && (
+          {isProjects(pathname) && (
             <div css={styles.projects}>
               {pages.map(({ description, icon, name, path }: Project) => (
                 <Link css={styles.card} key={name} to={path}>

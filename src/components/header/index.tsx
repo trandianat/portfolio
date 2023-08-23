@@ -1,6 +1,7 @@
-import Link from 'assets/icons/link';
+import Icon from 'assets/icons/link';
 import { Background } from 'components/background';
 import * as styles from 'components/header/styles';
+import { Link } from 'components/link';
 import { Links } from 'utils/constants';
 
 export const Header = (): JSX.Element => (
@@ -26,10 +27,10 @@ export const Header = (): JSX.Element => (
         business, technology, QA, and UX partners, and 2 years of experience
         managing software engineers. Graduated from Boston College in 2014 with
         a bachelor's in Computer Science.{' '}
-        <a css={styles.link} href={Links.GITHUB} target="_blank">
-          <span>Github</span>
-          <Link />
-        </a>
+        <Link css={styles.link} url={Links.GITHUB}>
+          Github
+          <Icon />
+        </Link>
       </p>
     </div>
   </Background>

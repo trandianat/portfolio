@@ -2,6 +2,7 @@ import { useAuthenticator, withAuthenticator } from '@aws-amplify/ui-react';
 import { Fragment, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import * as styles from 'components/auth/styles';
+import isProjects from 'utils/projects';
 
 const Auth = ({ children }: { children: ReactNode }): JSX.Element => {
   const { signOut } = useAuthenticator();
@@ -9,11 +10,7 @@ const Auth = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
     <Fragment>
       <div css={styles.navigation}>
-        {['/projects', '/projects/'].includes(pathname) ? (
-          <div />
-        ) : (
-          <Link to="projects">≪ Back</Link>
-        )}
+        {isProjects(pathname) ? <div /> : <Link to="projects">≪ Back</Link>}
         <button onClick={signOut}>Sign out</button>
       </div>
       {children}

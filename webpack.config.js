@@ -30,10 +30,6 @@ module.exports = {
                 test: /\.svg$/,
                 use: ["@svgr/webpack"]
             },
-            // { 
-            //     test: /\.ttf$/,
-            //     type: "asset/resource"
-            // },
         ],
     },
     plugins: [

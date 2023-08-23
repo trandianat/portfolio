@@ -6,8 +6,8 @@ const Chat = (): JSX.Element => (
   >
     <path
       stroke="#1C274C"
-      stroke-linecap="round"
-      stroke-width="1.5"
+      strokeLinecap="round"
+      strokeWidth="1.5"
       d="M8 9h8M8 12.5h5.5"
     />
     <path
