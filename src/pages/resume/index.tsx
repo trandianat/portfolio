@@ -25,7 +25,7 @@ export const Resume = (): JSX.Element => (
           'Kubernetes',
         ]}
         descriptions={[
-          'Manage, foster growth, and do performance reviews for five full-stack developers across two teams',
+          'Manage, foster growth, and perform annual reviews for five full-stack developers across two teams',
           'Build and iterate upon new claims application for our primary client, MassMutual',
         ]}
         indent

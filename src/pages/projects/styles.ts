@@ -21,9 +21,11 @@ export const auth = {
 };
 
 export const projects = css({
-  display: 'flex',
-  flexDirection: 'column',
+  display: 'grid',
+  gridAutoRows: '1fr',
+  gridTemplateColumns: '1fr 1fr',
   gap: 12,
+  '@media (max-width: 700px)': { gridTemplateColumns: '1fr' },
 });
 
 export const card = {
