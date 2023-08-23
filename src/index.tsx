@@ -5,6 +5,7 @@ import { Projects } from 'pages/projects';
 import { Chatbot } from 'pages/projects/chatbot';
 import { Detection } from 'pages/projects/detection';
 import { Notes } from 'pages/projects/notes';
+import { Wedding } from 'pages/projects/wedding';
 import { Resume } from 'pages/resume';
 import { Skills } from 'pages/skills';
 import config from './aws-exports';
@@ -21,6 +22,7 @@ root.render(
         <Route element={<Chatbot />} path="chatbot" />
         <Route element={<Detection />} path="detection" />
         <Route element={<Notes />} path="notes" />
+        <Route element={<Wedding />} path="wedding" />
         <Route element={<Navigate to="/projects" />} path="*" />
       </Route>
       <Route element={<Navigate to="/" />} path="*" />

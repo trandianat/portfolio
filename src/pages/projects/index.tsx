@@ -22,6 +22,11 @@ export const Projects = (): JSX.Element => {
       path: 'chatbot',
       description: 'AI for scheduling appointments',
     },
+    {
+      name: 'Wedding',
+      path: 'wedding',
+      description: 'I made my wedding website!',
+    },
   ];
   return (
     <Content>
