@@ -1,31 +1,45 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import Chat from 'assets/icons/chat';
+import Note from 'assets/icons/note';
+import Photo from 'assets/icons/photo';
+import Wedding from 'assets/icons/wedding';
 import Auth from 'components/auth';
 import { Content } from 'components/content';
 import * as styles from 'pages/projects/styles';
-import LinkIcon from 'assets/icons/link';
+
+type Project = {
+  description: string;
+  icon: JSX.Element;
+  name: string;
+  path: string;
+};
 
 export const Projects = (): JSX.Element => {
   const { pathname } = useLocation();
-  const pages = [
+  const pages: Project[] = [
     {
+      description: 'CRUD operations in the form of a to-do list',
+      icon: <Note />,
       name: 'Notes',
       path: 'notes',
-      description: 'CRUD operations in the form of a to-do list',
     },
     {
+      description: 'Detect objects in images by percentages of confidence',
+      icon: <Photo />,
       name: 'Detection',
       path: 'detection',
-      description: 'Detect objects in images by percentages of confidence',
     },
     {
+      description: 'AI for scheduling appointments',
+      icon: <Chat />,
       name: 'Chatbot',
       path: 'chatbot',
-      description: 'AI for scheduling appointments',
     },
     {
+      description: 'I made my wedding website!',
+      icon: <Wedding />,
       name: 'Wedding',
       path: 'wedding',
-      description: 'I made my wedding website!',
     },
   ];
   return (
@@ -34,25 +48,15 @@ export const Projects = (): JSX.Element => {
         <Auth>
           {['/projects', '/projects/'].includes(pathname) && (
             <div css={styles.projects}>
-              {pages.map(
-                ({
-                  description,
-                  name,
-                  path,
-                }: {
-                  description: string;
-                  name: string;
-                  path: string;
-                }) => (
-                  <Link css={styles.card} key={name} to={path}>
-                    <LinkIcon />
-                    <div css={styles.project}>
-                      <p className="name">{name}</p>
-                      <p className="description">{description}</p>
-                    </div>
-                  </Link>
-                )
-              )}
+              {pages.map(({ description, icon, name, path }: Project) => (
+                <Link css={styles.card} key={name} to={path}>
+                  {icon}
+                  <div css={styles.project}>
+                    <h2 className="name">{name}</h2>
+                    <p className="description">{description}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           )}
           <Outlet />

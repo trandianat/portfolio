@@ -13,6 +13,7 @@ export const name = css({
   display: 'flex',
   justifyContent: 'space-between',
   '@media (max-width: 700px)': { flexDirection: 'column-reverse', gap: 24 },
+  '@media (max-width: 360px)': { h1: { lineHeight: '72px', marginBottom: 12 } },
 });
 
 export const logo = css({
