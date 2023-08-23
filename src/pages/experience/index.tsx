@@ -31,8 +31,8 @@ export const Experience = (): JSX.Element => (
         indent
       />
       <div css={styles.group}>
-        <h2>Liberty Mutual</h2>
-        <p className="program">
+        <h2 className="company">Liberty Mutual</h2>
+        <p className="sans">
           Technical Development Program & Post-Program Placement
         </p>
         <div css={styles.groupJobs}>

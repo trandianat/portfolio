@@ -10,11 +10,12 @@ export const experience = css({
 export const group = {
   border: '1px dotted black',
   padding: '16px 24px',
-  '.program': { marginBottom: 16 },
+  '.company': { fontFamily: 'var(--serif)' },
 };
 
 export const groupJobs = css({
   display: 'flex',
   flexDirection: 'column',
   gap: 24,
+  marginTop: 22,
 });
