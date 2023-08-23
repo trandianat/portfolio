@@ -33,13 +33,12 @@ export const card = {
   border: `1px solid ${Color.BLACK}`,
   display: 'flex',
   fontWeight: 'normal',
-  gap: 24,
+  gap: 20,
   padding: 24,
   textDecoration: 'none',
   svg: { minHeight: 64, minWidth: 64 },
-  '.name': { font: '1.5rem var(--serif-italic)', letterSpacing: 1 },
-  '.description': { font: '.875rem var(--sans)' },
-  ':hover': { '.name': { textDecoration: 'underline' } },
+  '.description': { font: '.875rem var(--sans)', lineHeight: '18px' },
+  ':hover': { boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}` },
 };
 
 export const project = css({

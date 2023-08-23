@@ -68,6 +68,10 @@ h1 {
     font-size: 4rem;
 }
 
+h2 {
+    font: 1.5rem var(--serif-italic);
+}
+
 input {
     font-size: .875rem;
     padding: 8px 12px;

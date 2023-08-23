@@ -2,6 +2,6 @@ import { Fragment } from 'react';
 
 export const Notes = (): JSX.Element => (
   <Fragment>
-    <p>Chatbot</p>
+    <h2>Notes</h2>
   </Fragment>
 );

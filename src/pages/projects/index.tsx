@@ -52,7 +52,7 @@ export const Projects = (): JSX.Element => {
                 <Link css={styles.card} key={name} to={path}>
                   {icon}
                   <div css={styles.project}>
-                    <h2 className="name">{name}</h2>
+                    <h2>{name}</h2>
                     <p className="description">{description}</p>
                   </div>
                 </Link>

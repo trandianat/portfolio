@@ -76,7 +76,6 @@ export const circle = {
 export const role = css({
   display: 'flex',
   flexDirection: 'column',
-  h2: { fontFamily: 'var(--serif-italic)' },
 });
 
 export const skills = css({

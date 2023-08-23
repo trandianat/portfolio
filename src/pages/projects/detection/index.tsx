@@ -2,6 +2,6 @@ import { Fragment } from 'react';
 
 export const Detection = (): JSX.Element => (
   <Fragment>
-    <p>Detection</p>
+    <h2>Detection</h2>
   </Fragment>
 );
