@@ -13,8 +13,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<Resume />} path="*" />
-      <Route element={<Skills />} path="skills" />
-      <Route element={<Projects />} path="projects" />
+      <Route element={<Skills />} path="/skills/*" />
+      <Route element={<Projects />} path="/projects/*" />
     </Routes>
   </BrowserRouter>
 );

@@ -9,14 +9,29 @@ export const Navigation = (): JSX.Element => {
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
   ];
+
+  const isResume = (path: string): boolean =>
+    path === '/' && !pathname.substring(1);
+
+  const isParentPage = (path: string): boolean =>
+    path !== '/' && path === pathname;
+
+  const isSubPage = (path: string): boolean => {
+    const pathWithoutSlash = path.substring(1);
+    const page = pathname.substring(1);
+    return (
+      !!pathWithoutSlash &&
+      pathWithoutSlash === page.substring(0, page.indexOf('/'))
+    );
+  };
+
   return (
     <nav className="sans" css={styles.navigation}>
       {pages.map(({ name, path }: { name: string; path: string }) => (
         <Link
           key={name}
           to={path}
-          {...((pathname === path ||
-            (name === 'Experience' && !pathname.substring(1))) && {
+          {...((isResume(path) || isParentPage(path) || isSubPage(path)) && {
             className: 'active',
           })}
         >
