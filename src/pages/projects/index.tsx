@@ -17,7 +17,7 @@ type Project = {
 
 export const Projects = (): JSX.Element => {
   const { pathname } = useLocation();
-  const pages: Project[] = [
+  const projects: Project[] = [
     {
       description: 'CRUD operations in the form of a to-do list',
       icon: <Note />,
@@ -49,7 +49,7 @@ export const Projects = (): JSX.Element => {
         <Auth>
           {isProjects(pathname) && (
             <div css={styles.projects}>
-              {pages.map(({ description, icon, name, path }: Project) => (
+              {projects.map(({ description, icon, name, path }: Project) => (
                 <Link css={styles.card} key={name} to={path}>
                   {icon}
                   <div css={styles.project}>
