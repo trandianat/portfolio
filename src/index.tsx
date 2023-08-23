@@ -1,12 +1,12 @@
 import { Amplify } from 'aws-amplify';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Experience } from 'pages/experience';
 import { Projects } from 'pages/projects';
 import { Chatbot } from 'pages/projects/chatbot';
 import { Detection } from 'pages/projects/detection';
 import { Notes } from 'pages/projects/notes';
 import { Wedding } from 'pages/projects/wedding';
-import { Resume } from 'pages/resume';
 import { Skills } from 'pages/skills';
 import config from './aws-exports';
 import 'styles.css';
@@ -16,7 +16,7 @@ const root = createRoot(document.getElementById('root') as Element);
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route element={<Resume />} path="/" />
+      <Route element={<Experience />} path="/" />
       <Route element={<Skills />} path="skills" />
       <Route element={<Projects />} path="projects">
         <Route element={<Chatbot />} path="chatbot" />

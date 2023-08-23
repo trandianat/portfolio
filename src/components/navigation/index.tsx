@@ -10,7 +10,7 @@ export const Navigation = (): JSX.Element => {
     { name: 'Projects', path: '/projects' },
   ];
 
-  const isResume = (path: string): boolean =>
+  const isExperience = (path: string): boolean =>
     path === '/' && !pathname.substring(1);
 
   const isParentPage = (path: string): boolean =>
@@ -31,7 +31,9 @@ export const Navigation = (): JSX.Element => {
         <Link
           key={name}
           to={path}
-          {...((isResume(path) || isParentPage(path) || isSubPage(path)) && {
+          {...((isExperience(path) ||
+            isParentPage(path) ||
+            isSubPage(path)) && {
             className: 'active',
           })}
         >

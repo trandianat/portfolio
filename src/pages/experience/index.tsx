@@ -1,8 +1,8 @@
 import { Job } from 'components/job';
-import * as styles from 'pages/resume/styles';
+import * as styles from 'pages/experience/styles';
 import { Content } from 'components/content';
 
-export const Resume = (): JSX.Element => (
+export const Experience = (): JSX.Element => (
   <Content>
     <div css={styles.experience}>
       <Job
