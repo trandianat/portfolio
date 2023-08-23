@@ -1,26 +1,58 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import Auth from 'components/auth';
 import { Content } from 'components/content';
-import { Chatbot } from 'pages/projects/chatbot';
-import { Detection } from 'pages/projects/detection';
-import { Notes } from 'pages/projects/notes';
 import * as styles from 'pages/projects/styles';
+import LinkIcon from 'assets/icons/link';
 
-export const Projects = (): JSX.Element => (
-  <Content>
-    <div css={styles.auth}>
-      {/* <Auth> */}
-      <div>Content after login</div>
-      <Link to="notes">Notes</Link>
-      <Link to="detection">Detection</Link>
-      <Link to="chatbot">Chatbot</Link>
-      <Routes>
-        <Route element={<Notes />} path="notes" />
-        <Route element={<Detection />} path="detection" />
-        <Route element={<Chatbot />} path="chatbot" />
-        {/* <Route element={<Resume />} path="*" /> */}
-      </Routes>
-      {/* </Auth> */}
-    </div>
-  </Content>
-);
+export const Projects = (): JSX.Element => {
+  const { pathname } = useLocation();
+  const pages = [
+    {
+      name: 'Notes',
+      path: 'notes',
+      description: 'CRUD operations in the form of a to-do list',
+    },
+    {
+      name: 'Detection',
+      path: 'detection',
+      description: 'Detect objects in images by percentages of confidence',
+    },
+    {
+      name: 'Chatbot',
+      path: 'chatbot',
+      description: 'AI for scheduling appointments',
+    },
+  ];
+  return (
+    <Content>
+      <div css={styles.auth}>
+        <Auth>
+          {['/projects', '/projects/'].includes(pathname) && (
+            <div css={styles.projects}>
+              {pages.map(
+                ({
+                  description,
+                  name,
+                  path,
+                }: {
+                  description: string;
+                  name: string;
+                  path: string;
+                }) => (
+                  <Link css={styles.card} key={name} to={path}>
+                    <LinkIcon />
+                    <div css={styles.project}>
+                      <p className="name">{name}</p>
+                      <p className="description">{description}</p>
+                    </div>
+                  </Link>
+                )
+              )}
+            </div>
+          )}
+          <Outlet />
+        </Auth>
+      </div>
+    </Content>
+  );
+};

@@ -1,1 +1,7 @@
-export const Detection = (): JSX.Element => <p>Detection</p>;
+import { Fragment } from 'react';
+
+export const Detection = (): JSX.Element => (
+  <Fragment>
+    <p>Detection</p>
+  </Fragment>
+);

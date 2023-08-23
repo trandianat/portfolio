@@ -1,14 +1,23 @@
 import { useAuthenticator, withAuthenticator } from '@aws-amplify/ui-react';
 import { Fragment, ReactNode } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import * as styles from 'components/auth/styles';
 
 const Auth = ({ children }: { children: ReactNode }): JSX.Element => {
   const { signOut } = useAuthenticator();
+  const { pathname } = useLocation();
   return (
-    <div css={styles.auth}>
-      <button onClick={signOut}>Sign out</button>
+    <Fragment>
+      <div css={styles.navigation}>
+        {['/projects', '/projects/'].includes(pathname) ? (
+          <div />
+        ) : (
+          <Link to="projects">≪ Back</Link>
+        )}
+        <button onClick={signOut}>Sign out</button>
+      </div>
       {children}
-    </div>
+    </Fragment>
   );
 };
 

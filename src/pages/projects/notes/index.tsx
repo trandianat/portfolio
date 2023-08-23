@@ -1,1 +1,7 @@
-export const Notes = (): JSX.Element => <p>Notes</p>;
+import { Fragment } from 'react';
+
+export const Notes = (): JSX.Element => (
+  <Fragment>
+    <p>Chatbot</p>
+  </Fragment>
+);

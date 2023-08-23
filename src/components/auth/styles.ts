@@ -1,5 +1,6 @@
-import { css } from '@emotion/react';
-
-export const auth = css({
-  button: { marginBottom: 12 },
-});
+export const navigation = {
+  alignItems: 'center',
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginBottom: 24,
+};
