@@ -6,6 +6,7 @@ export enum Color {
 }
 
 export enum Links {
+  DESIGN = 'https://www.justinmind.com',
   GITHUB = 'https://github.com/trandianat',
   WEDDING = 'https://www.thebeanwedding.com',
 }
