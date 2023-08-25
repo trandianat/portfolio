@@ -72,16 +72,11 @@ h2 {
     font: 1.5rem var(--serif-italic);
 }
 
-input {
-    font-size: .875rem;
+input, textarea {
     padding: 8px 12px;
 }
 
-p {
-    margin: 0;
-}
-
-ul {
+p, ul {
     margin: 0;
 }
 

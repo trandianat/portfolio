@@ -22,9 +22,9 @@ export const auth = {
 
 export const projects = css({
   display: 'grid',
+  gap: 12,
   gridAutoRows: '1fr',
   gridTemplateColumns: '1fr 1fr',
-  gap: 12,
   '@media (max-width: 700px)': { gridTemplateColumns: '1fr' },
 });
 
