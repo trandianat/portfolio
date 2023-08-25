@@ -26,7 +26,7 @@ export const card = css({
     width: 'calc(100% - 32px)',
     ':hover': { backgroundColor: Color.GRAY },
   },
-  input: { font: '1rem var(--serif)', width: 'calc(100% - 56px)' },
+  input: { font: '1rem var(--serif)', width: 'calc(100% - 48px)' },
   textarea: { font: '1rem var(--serif)', resize: 'none' },
   '.description': { ':hover': { backgroundColor: Color.GRAY } },
   '.trash': {
@@ -52,6 +52,5 @@ export const empty = {
   backgroundColor: Color.WHITE,
   border: `1px solid ${Color.BLACK}`,
   boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}`,
-  fontFamily: 'var(--serif-italic)',
   padding: '12px 16px',
 };

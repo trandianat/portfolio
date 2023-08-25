@@ -1,8 +1,8 @@
 import { API } from 'aws-amplify';
 import { useEffect, useRef, useState } from 'react';
+import Trash from 'assets/icons/trash';
 import { createNote, deleteNote, updateNote } from 'graphql/mutations';
 import { listNotes } from 'graphql/queries';
-import Trash from 'assets/icons/trash';
 import * as styles from 'pages/projects/notes/styles';
 
 type Note = {
@@ -19,27 +19,17 @@ export const Notes = (): JSX.Element => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [title, setTitle] = useState<{ [title: string]: string }>({});
 
+  const locale = 'en-US';
+
   const useOutsideClick = (callback: any) => {
     const ref = useRef<any>(null);
     useEffect(() => {
       const handleClick = (event: any) => {
-        const titleInputs = document.getElementsByClassName('title');
-        const contentInputs = document.getElementsByTagName('textarea');
-        if (titleInputs.length + contentInputs.length > 1) {
-          setTitle({});
-          setContent({});
-        }
-        // console.log('event.target', event.target);
-        // console.log('ref.current', ref.current);
-        // console.log('event.target.innerText', event.target.innerText);
-        // console.log('ref.current?.value', ref.current?.value);
-        if (event.target.innerText === ref.current?.value) {
-          // pass
-        } else if (event.target === ref.current) {
-          // pass
-        } else if (event?.target?.innerText === ref?.current?.innerText) {
-          // pass
-        } else {
+        const titleClicked = event.target.innerText === ref.current?.value; // When h3 becomes input
+        const contentClicked =
+          event.target.innerText === ref.current?.innerText; // When p becomes textarea
+        const inputClicked = event.target === ref.current; // When input or textarea is clicked
+        if (!titleClicked && !contentClicked && !inputClicked) {
           callback();
         }
       };
@@ -74,8 +64,8 @@ export const Notes = (): JSX.Element => {
     setNotes(sortByUpdated);
   };
 
-  const addNote = async (description: string, name: string) => {
-    const result = await API.graphql({
+  const addNote = async (name: string, description: string) => {
+    await API.graphql({
       query: createNote,
       variables: { input: { description, name } },
     });
@@ -83,13 +73,13 @@ export const Notes = (): JSX.Element => {
   };
 
   const editNote = async ({ description, id, name }: Partial<Note>) => {
-    const result = await API.graphql({
+    await API.graphql({
       query: updateNote,
       variables: {
         input: {
           id,
-          ...(description && { description }),
           ...(name && { name }),
+          ...(description && { description }),
         },
       },
     });
@@ -97,7 +87,7 @@ export const Notes = (): JSX.Element => {
   };
 
   const removeNote = async (id: string) => {
-    const result = await API.graphql({
+    await API.graphql({
       query: deleteNote,
       variables: { input: { id } },
     });
@@ -117,96 +107,120 @@ export const Notes = (): JSX.Element => {
         of a note to edit it. The notes are sorted by latest update date, so
         notes are moved to the top of the list when they are updated.
       </p>
-      <button onClick={() => addNote('Note', 'Title')}>Add note</button>
+      <div>
+        <p className="serif-italic">In progress:</p>
+        <ul>
+          <li>
+            When clicking into a note's content, place the cursor at the end of
+            the input (like how the cursor is placed at the end of the title)
+          </li>
+        </ul>
+      </div>
+      <button onClick={() => addNote('Untitled', 'Edit note')}>Add note</button>
       <div css={styles.cards}>
         {notes.length ? (
-          notes.map(({ createdAt, description, id, name, updatedAt }: Note) => (
-            <div css={styles.card} key={id}>
-              <div
-                className="trash"
-                onClick={() => {
-                  removeNote(id);
-                  setTitle({});
-                  setContent({});
-                }}
-              >
-                <Trash />
-              </div>
-              {title[id] ? (
-                <input
-                  className="title"
-                  id={id}
-                  onBlur={() => {
-                    if (title[id] !== description) {
-                      editNote({ id, name: title[id] });
-                    }
-                    setTitle({});
-                  }}
-                  onChange={({ target: { value } }) => {
-                    setTitle({ ...title, [id]: value });
-                  }}
-                  onKeyDown={(event: any) => {
-                    if (event.key === 'Enter') {
-                      document.getElementById(id)?.blur();
-                    }
-                  }}
-                  ref={ref}
-                  value={title[id]}
-                />
-              ) : (
-                <h3
-                  className="name"
+          notes.map(({ createdAt, description, id, name, updatedAt }: Note) => {
+            const createdDate = new Date(createdAt);
+            const updatedDate = new Date(updatedAt);
+            const formattedCreatedDate = `${createdDate.toLocaleDateString(
+              locale
+            )} ${createdDate.toLocaleTimeString(locale)}`;
+            const formattedUpdatedDate = `${updatedDate.toLocaleDateString(
+              locale
+            )} ${updatedDate.toLocaleTimeString(locale)}`;
+            return (
+              <div css={styles.card} key={id}>
+                <div
+                  className="trash"
                   onClick={() => {
-                    setTitle({ ...title, ...{ [id]: name } });
-                  }}
-                  ref={ref}
-                >
-                  {name}
-                </h3>
-              )}
-              {content[id] ? (
-                <textarea
-                  onBlur={() => {
-                    if (content[id] !== description) {
-                      editNote({ id, description: content[id] });
-                    }
+                    removeNote(id);
+                    setTitle({});
                     setContent({});
                   }}
-                  onChange={({ target: { value } }) => {
-                    setContent({ ...content, [id]: value });
-                  }}
-                  onKeyDown={(event: any) => {
-                    if (event.key === 'Enter') {
-                      document.getElementById(id)?.blur();
-                    }
-                  }}
-                  ref={ref}
-                  rows={8}
-                  value={content[id]}
-                />
-              ) : (
-                <p
-                  className="description"
-                  onClick={() =>
-                    setContent({ ...content, ...{ [id]: description } })
-                  }
-                  ref={ref}
                 >
-                  {description}
-                </p>
-              )}
-              <div css={styles.footer}>
-                <p>
-                  <span>Created</span>: {createdAt}
-                </p>
-                <p>
-                  <span>Updated</span>: {updatedAt}
-                </p>
+                  <Trash />
+                </div>
+                {title[id] ? (
+                  <input
+                    autoFocus
+                    className="title"
+                    id={id}
+                    onBlur={() => {
+                      if (title[id] !== name) {
+                        editNote({ id, name: title[id] });
+                      }
+                      setTitle({});
+                    }}
+                    onChange={({ target: { value } }) => {
+                      setTitle({ ...title, [id]: value });
+                    }}
+                    onKeyDown={(event: any) => {
+                      if (event.key === 'Enter') {
+                        document.getElementById(id)?.blur();
+                      }
+                    }}
+                    ref={ref}
+                    value={title[id]}
+                  />
+                ) : (
+                  <h3
+                    className="name"
+                    onClick={() => {
+                      setTitle({ ...title, ...{ [id]: name } });
+                    }}
+                    ref={ref}
+                  >
+                    {name}
+                  </h3>
+                )}
+                {content[id] ? (
+                  <textarea
+                    autoFocus
+                    id={id}
+                    onBlur={() => {
+                      if (content[id] !== description) {
+                        editNote({ id, description: content[id] });
+                      }
+                      setContent({});
+                    }}
+                    onChange={({ target: { value } }) => {
+                      setContent({ ...content, [id]: value });
+                    }}
+                    onKeyDown={(event: any) => {
+                      if (event.key === 'Enter') {
+                        document.getElementById(id)?.blur();
+                      }
+                    }}
+                    ref={ref}
+                    rows={4}
+                    value={content[id]}
+                  />
+                ) : (
+                  <p
+                    className="description"
+                    onClick={() =>
+                      setContent({ ...content, ...{ [id]: description } })
+                    }
+                    ref={ref}
+                  >
+                    {description}
+                  </p>
+                )}
+                <div css={styles.footer}>
+                  <p>
+                    <span>Created</span>: {formattedCreatedDate}
+                  </p>
+                  <p>
+                    <span>Updated</span>: {formattedUpdatedDate}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))
+            );
+          })
         ) : (
-          <div css={styles.empty}>No notes found</div>
+          <div className="serif-italic" css={styles.empty}>
+            No notes found
+          </div>
         )}
       </div>
     </div>

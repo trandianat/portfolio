@@ -10,6 +10,7 @@ export const navigation = css({
   position: 'sticky',
   textAlign: 'center',
   top: 0,
+  zIndex: 1,
   a: {
     color: Color.WHITE,
     flexGrow: 1,
