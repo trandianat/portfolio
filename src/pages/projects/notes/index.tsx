@@ -159,9 +159,9 @@ export const Notes = (): JSX.Element => {
                       }
                       setTitle({});
                     }}
-                    onChange={({ target: { value } }) => {
-                      setTitle({ ...title, [id]: value });
-                    }}
+                    onChange={({ target: { value } }) =>
+                      setTitle({ ...title, [id]: value })
+                    }
                     onKeyDown={(event: any) => {
                       if (event.key === 'Enter') {
                         document.getElementById(id)?.blur();
@@ -173,9 +173,7 @@ export const Notes = (): JSX.Element => {
                 ) : (
                   <h3
                     className="name"
-                    onClick={() => {
-                      setTitle({ ...title, ...{ [id]: name } });
-                    }}
+                    onClick={() => setTitle({ ...title, ...{ [id]: name } })}
                     ref={ref}
                   >
                     {name}
@@ -191,9 +189,9 @@ export const Notes = (): JSX.Element => {
                       }
                       setContent({});
                     }}
-                    onChange={({ target: { value } }) => {
-                      setContent({ ...content, [id]: value });
-                    }}
+                    onChange={({ target: { value } }) =>
+                      setContent({ ...content, [id]: value })
+                    }
                     onKeyDown={(event: any) => {
                       if (event.key === 'Enter') {
                         document.getElementById(id)?.blur();
