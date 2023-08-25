@@ -26,8 +26,8 @@ export const card = css({
     width: 'calc(100% - 32px)',
     ':hover': { backgroundColor: Color.GRAY },
   },
-  input: { font: '1rem var(--serif)', width: 'calc(100% - 48px)' },
-  textarea: { font: '1rem var(--serif)', resize: 'none' },
+  input: { fontWeight: 600, width: 'calc(100% - 48px)' },
+  textarea: { resize: 'none' },
   '.description': { ':hover': { backgroundColor: Color.GRAY } },
   '.trash': {
     borderRadius: 16,

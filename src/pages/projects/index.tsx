@@ -19,7 +19,8 @@ export const Projects = (): JSX.Element => {
   const { pathname } = useLocation();
   const projects: Project[] = [
     {
-      description: 'CRUD operations in the form of a to-do list',
+      description:
+        'Create, read, update, and delete notes sorted by latest update descending',
       icon: <Note />,
       name: 'Notes',
       path: 'notes',

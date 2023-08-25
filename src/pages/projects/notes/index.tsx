@@ -105,7 +105,8 @@ export const Notes = (): JSX.Element => {
         The notes are stored in <b>DynamoDB</b> and are added, edited, removed,
         and retrieved via <b>GraphQL</b>. You can click on the title or content
         of a note to edit it. The notes are sorted by latest update date, so
-        notes are moved to the top of the list when they are updated.
+        notes are moved to the top of the list when they are updated. Feel free
+        to add a note with suggestions for improvement on any of my projects!
       </p>
       <div>
         <p className="serif-italic">In progress:</p>
@@ -114,6 +115,12 @@ export const Notes = (): JSX.Element => {
             When clicking into a note's content, place the cursor at the end of
             the input (like how the cursor is placed at the end of the title)
           </li>
+          <li>
+            When deleting all of the text in a title or content, do not exit the
+            input field
+          </li>
+          <li>Slide updated notes to the top of the list</li>
+          <li>Error handling</li>
         </ul>
       </div>
       <button onClick={() => addNote('Untitled', 'Edit note')}>Add note</button>
