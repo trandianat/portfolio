@@ -15,13 +15,13 @@ type Note = {
 };
 
 export const Notes = (): JSX.Element => {
-  const [content, setContent] = useState<{ [content: string]: string }>({});
   const [notes, setNotes] = useState<Note[]>([]);
   const [title, setTitle] = useState<{ [title: string]: string }>({});
+  const [content, setContent] = useState<{ [content: string]: string }>({});
 
   const locale = 'en-US';
 
-  const useOutsideClick = (callback: any) => {
+  const useOutsideClick = (callback: Function) => {
     const ref = useRef<any>(null);
     useEffect(() => {
       const handleClick = (event: any) => {
@@ -119,6 +119,7 @@ export const Notes = (): JSX.Element => {
             When deleting all of the text in a title or content, do not exit the
             input field
           </li>
+          <li>Replace TypeScript "any" types</li>
           <li>Slide updated notes to the top of the list</li>
           <li>Error handling</li>
         </ul>

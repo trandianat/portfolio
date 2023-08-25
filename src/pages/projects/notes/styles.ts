@@ -5,6 +5,7 @@ export const notes = css({
   display: 'flex',
   flexDirection: 'column',
   gap: 16,
+  '@media (min-width: 701px)': { button: { width: 'fit-content' } },
 });
 
 export const cards = css({
