@@ -76,7 +76,7 @@ h2 {
 }
 
 input {
-    font: 1rem var(--sans);
+    font: .875rem var(--sans);
     padding: 8px 12px;
 }
 
