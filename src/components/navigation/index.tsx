@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Icon from 'assets/icons/link';
 import { Link as LinkOut } from 'components/link';
 import * as styles from 'components/navigation/styles';
-import { Links } from 'utils/constants';
+import { Links, Position, Size } from 'utils/constants';
 
 export const Navigation = (): JSX.Element => {
   const { pathname } = useLocation();
@@ -42,10 +42,14 @@ export const Navigation = (): JSX.Element => {
           {name}
         </Link>
       ))}
-      <LinkOut css={styles.external} url={Links.GITHUB}>
-        <Icon />
-        Github
-      </LinkOut>
+      <LinkOut
+        css={styles.external}
+        icon={<Icon />}
+        iconGap={Size.LARGE}
+        iconPosition={Position.LEFT}
+        text="Github"
+        url={Links.GITHUB}
+      />
     </nav>
   );
 };

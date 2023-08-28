@@ -44,9 +44,4 @@ export const navigation = css({
   },
 });
 
-export const external = {
-  alignItems: 'center',
-  display: 'flex',
-  gap: 6,
-  justifyContent: 'center',
-};
+export const external = { justifyContent: 'center' };

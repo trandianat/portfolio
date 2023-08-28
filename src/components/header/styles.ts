@@ -50,8 +50,5 @@ export const logo = css({
 });
 
 export const link = {
-  alignItems: 'center',
-  display: 'inline-flex',
-  gap: 4,
   '@media (min-width: 701px)': { display: 'none' },
 };
