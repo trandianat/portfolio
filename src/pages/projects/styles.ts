@@ -38,7 +38,7 @@ export const card = {
   textDecoration: 'none',
   svg: { minHeight: 64, minWidth: 64 },
   '.description': { font: '.875rem var(--sans)', lineHeight: '18px' },
-  ':hover': { boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}` },
+  ':hover': { boxShadow: 'var(--shadow)' },
 };
 
 export const project = css({

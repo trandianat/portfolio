@@ -18,10 +18,13 @@ html {
     --black: #000;
     --dark-gray: #808080;
     --gray: #EEF0EF;
+    --green: #005900;
+    --red: #BF0000;
     --white: #FFF;
     --sans: 'Work Sans';
     --serif: 'Crimson Text';
     --serif-italic: 'Crimson Text Italic';
+    --shadow: 0 4px 8px -2px var(--dark-gray);
     font-family: var(--serif);
 }
 

@@ -4,7 +4,7 @@ import { Color } from 'utils/constants';
 export const navigation = css({
   backgroundColor: Color.BLACK,
   border: `1px solid ${Color.BLACK}`,
-  boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}`,
+  boxShadow: 'var(--shadow)',
   display: 'flex',
   margin: '-48px 0 36px',
   position: 'sticky',

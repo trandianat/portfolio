@@ -2,6 +2,8 @@ export enum Color {
   BLACK = 'var(--black)',
   DARK_GRAY = 'var(--dark-gray)',
   GRAY = 'var(--gray)',
+  GREEN = 'var(--green)',
+  RED = 'var(--red)',
   WHITE = 'var(--white)',
 }
 
@@ -20,4 +22,10 @@ export enum Size {
   SMALL = 'small',
   MEDIUM = 'medium',
   LARGE = 'large',
+}
+
+export enum Status {
+  DEFAULT = 'default',
+  ERROR = 'error',
+  SUCCESS = 'success',
 }

@@ -8,24 +8,27 @@ import { Detection } from 'pages/projects/detection';
 import { Notes } from 'pages/projects/notes';
 import { Wedding } from 'pages/projects/wedding';
 import { Skills } from 'pages/skills';
+import NotificationProvider from 'utils/notification';
 import config from './aws-exports';
 import 'styles.css';
 
 Amplify.configure(config);
 const root = createRoot(document.getElementById('root') as Element);
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route element={<Experience />} path="/" />
-      <Route element={<Skills />} path="skills" />
-      <Route element={<Projects />} path="projects">
-        <Route element={<Chatbot />} path="chatbot" />
-        <Route element={<Detection />} path="detection" />
-        <Route element={<Notes />} path="notes" />
-        <Route element={<Wedding />} path="wedding" />
-        <Route element={<Navigate to="/projects" />} path="*" />
-      </Route>
-      <Route element={<Navigate to="/" />} path="*" />
-    </Routes>
-  </BrowserRouter>
+  <NotificationProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Experience />} path="/" />
+        <Route element={<Skills />} path="skills" />
+        <Route element={<Projects />} path="projects">
+          <Route element={<Chatbot />} path="chatbot" />
+          <Route element={<Detection />} path="detection" />
+          <Route element={<Notes />} path="notes" />
+          <Route element={<Wedding />} path="wedding" />
+          <Route element={<Navigate to="/projects" />} path="*" />
+        </Route>
+        <Route element={<Navigate to="/" />} path="*" />
+      </Routes>
+    </BrowserRouter>
+  </NotificationProvider>
 );

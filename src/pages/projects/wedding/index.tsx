@@ -1,7 +1,7 @@
 import LinkOut from 'assets/icons/link';
 import { Link } from 'components/link';
 import * as styles from 'pages/projects/wedding/styles';
-import { Links, Position, Size } from 'utils/constants';
+import { Links, Position } from 'utils/constants';
 
 export const Wedding = (): JSX.Element => (
   <div css={styles.wedding}>

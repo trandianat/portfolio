@@ -40,7 +40,7 @@ export const card = css({
     ':hover': { backgroundColor: Color.GRAY, cursor: 'pointer' },
   },
   ':hover': {
-    boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}`,
+    boxShadow: 'var(--shadow)',
   },
 });
 
@@ -52,6 +52,6 @@ export const footer = {
 export const empty = {
   backgroundColor: Color.WHITE,
   border: `1px solid ${Color.BLACK}`,
-  boxShadow: `0 4px 8px -2px ${Color.DARK_GRAY}`,
+  boxShadow: 'var(--shadow)',
   padding: '12px 16px',
 };
