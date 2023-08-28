@@ -5,7 +5,7 @@ import { Position, Size } from 'utils/constants';
 export const Link = ({
   children,
   icon,
-  iconGap = Size.MEDIUM,
+  iconGap = Size.SMALL,
   iconPosition,
   text,
   url,

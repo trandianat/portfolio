@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import Icon from 'assets/icons/link';
+import LinkIcon from 'assets/icons/link';
 import { Link as LinkOut } from 'components/link';
 import * as styles from 'components/navigation/styles';
 import { Links, Position, Size } from 'utils/constants';
@@ -44,7 +44,7 @@ export const Navigation = (): JSX.Element => {
       ))}
       <LinkOut
         css={styles.external}
-        icon={<Icon />}
+        icon={<LinkIcon />}
         iconGap={Size.LARGE}
         iconPosition={Position.LEFT}
         text="Github"

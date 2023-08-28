@@ -1,8 +1,8 @@
-import Icon from 'assets/icons/link';
+import LinkOut from 'assets/icons/link';
 import { Background } from 'components/background';
 import * as styles from 'components/header/styles';
 import { Link } from 'components/link';
-import { Links, Position } from 'utils/constants';
+import { Links, Position, Size } from 'utils/constants';
 
 export const Header = (): JSX.Element => (
   <Background>
@@ -29,7 +29,8 @@ export const Header = (): JSX.Element => (
         a bachelor's in Computer Science.{' '}
         <Link
           css={styles.link}
-          icon={<Icon />}
+          icon={<LinkOut />}
+          iconGap={Size.MEDIUM}
           iconPosition={Position.RIGHT}
           text="Github"
           url={Links.GITHUB}

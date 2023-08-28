@@ -10,7 +10,6 @@ export const Wedding = (): JSX.Element => (
       I created a{' '}
       <Link
         icon={<LinkOut />}
-        iconGap={Size.SMALL}
         iconPosition={Position.RIGHT}
         text="website"
         url={Links.WEDDING}
@@ -20,7 +19,6 @@ export const Wedding = (): JSX.Element => (
       mockups I made using{' '}
       <Link
         icon={<LinkOut />}
-        iconGap={Size.SMALL}
         iconPosition={Position.RIGHT}
         text="Justinmind"
         url={Links.DESIGN}
