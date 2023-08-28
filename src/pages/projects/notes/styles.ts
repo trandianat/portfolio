@@ -27,7 +27,12 @@ export const card = css({
     width: 'calc(100% - 32px)',
     ':hover': { backgroundColor: Color.GRAY },
   },
-  input: { fontWeight: 600, width: 'calc(100% - 48px)' },
+  input: {
+    font: '1rem var(--serif)',
+    fontWeight: 600,
+    padding: '2px 6px',
+    width: 'calc(100% - 48px)',
+  },
   textarea: { resize: 'none' },
   '.description': { ':hover': { backgroundColor: Color.GRAY } },
   '.trash': {
