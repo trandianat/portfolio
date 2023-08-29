@@ -1,9 +1,11 @@
 import { API } from 'aws-amplify';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Trash from 'assets/icons/trash';
 import { createNote, deleteNote, updateNote } from 'graphql/mutations';
 import { listNotes } from 'graphql/queries';
 import * as styles from 'pages/projects/notes/styles';
+import { Status } from 'utils/constants';
+import { NotificationContext } from 'utils/notification';
 
 type Note = {
   createdAt: string;
@@ -15,6 +17,7 @@ type Note = {
 };
 
 export const Notes = (): JSX.Element => {
+  const { notify } = useContext(NotificationContext);
   const [notes, setNotes] = useState<Note[]>([]);
   const [title, setTitle] = useState<{ [title: string]: string }>({});
   const [content, setContent] = useState<{ [content: string]: string }>({});
@@ -65,33 +68,48 @@ export const Notes = (): JSX.Element => {
   };
 
   const addNote = async (name: string, description: string) => {
-    await API.graphql({
-      query: createNote,
-      variables: { input: { description, name } },
-    });
-    getNotes();
+    try {
+      await API.graphql({
+        query: createNote,
+        variables: { input: { description, name } },
+      });
+      notify({ message: <p>New note added</p>, variant: Status.SUCCESS });
+      getNotes();
+    } catch {
+      notify({ message: <p>Failed to add new note</p>, variant: Status.ERROR });
+    }
   };
 
   const editNote = async ({ description, id, name }: Partial<Note>) => {
-    await API.graphql({
-      query: updateNote,
-      variables: {
-        input: {
-          id,
-          ...(name && { name }),
-          ...(description && { description }),
+    try {
+      await API.graphql({
+        query: updateNote,
+        variables: {
+          input: {
+            id,
+            ...(name && { name }),
+            ...(description && { description }),
+          },
         },
-      },
-    });
-    getNotes();
+      });
+      notify({ message: <p>Note saved</p>, variant: Status.SUCCESS });
+      getNotes();
+    } catch {
+      notify({ message: <p>Failed to save note</p>, variant: Status.ERROR });
+    }
   };
 
   const removeNote = async (id: string) => {
-    await API.graphql({
-      query: deleteNote,
-      variables: { input: { id } },
-    });
-    getNotes();
+    try {
+      await API.graphql({
+        query: deleteNote,
+        variables: { input: { id } },
+      });
+      notify({ message: <p>Note removed</p>, variant: Status.SUCCESS });
+      getNotes();
+    } catch {
+      notify({ message: <p>Failed to remove note</p>, variant: Status.ERROR });
+    }
   };
 
   useEffect(() => {

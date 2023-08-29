@@ -6,42 +6,48 @@ import {
   useState,
 } from 'react';
 import { Notification } from 'components/notification';
-import { Status } from './constants';
+import { Status } from 'utils/constants';
+
+type NotificationType = {
+  message: JSX.Element;
+  variant: Status;
+};
 
 export const NotificationContext = createContext({
-  addNotification: (notification: any) => console.log(notification),
-  notification: null,
-  removeNotification: () => {},
+  notify: (_: NotificationType) => {},
 });
 
 export default function NotificationProvider({ children }: PropsWithChildren) {
-  const [notification, setNotification] = useState(null);
-
-  const addNotification = (notification: any) => setNotification(notification);
-  const removeNotification = () => setNotification(null);
+  const [notifications, setNotifications] = useState<NotificationType[]>([]);
+  const latestNotification: NotificationType =
+    notifications[notifications.length - 1];
 
   const context = {
-    addNotification: useCallback(
-      (notification: any) => addNotification(notification),
+    notify: useCallback(
+      (notification: NotificationType) =>
+        setNotifications([...notifications, notification]),
       []
     ),
-    notification,
-    removeNotification: useCallback(() => removeNotification(), []),
   };
 
   useEffect(() => {
-    let interval: any;
-    if (notification) {
-      interval = setInterval(() => removeNotification(), 2000);
+    let interval: NodeJS.Timer;
+    if (notifications.length) {
+      interval = setInterval(
+        () => setNotifications(notifications.slice(1)),
+        3000
+      );
     }
     return () => clearInterval(interval);
-  }, [notification]);
+  }, [notifications]);
 
   return (
     <NotificationContext.Provider value={context}>
       {children}
-      {notification && (
-        <Notification variant={Status.ERROR}>{notification}</Notification>
+      {latestNotification && (
+        <Notification variant={latestNotification.variant}>
+          {latestNotification.message}
+        </Notification>
       )}
     </NotificationContext.Provider>
   );

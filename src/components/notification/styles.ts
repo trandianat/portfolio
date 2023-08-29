@@ -11,6 +11,7 @@ export const notification = (variant: Status) =>
     bottom: 24,
     boxShadow: 'var(--shadow)',
     color: color(variant),
+    font: '.875rem var(--sans)',
     left: 24,
     maxWidth: 'calc(80% - 12px)',
     padding: '12px 16px',
