@@ -1,10 +1,17 @@
 export enum Color {
   BLACK = 'var(--black)',
+  BLUE = 'var(--blue)',
   DARK_GRAY = 'var(--dark-gray)',
   GRAY = 'var(--gray)',
   GREEN = 'var(--green)',
   RED = 'var(--red)',
   WHITE = 'var(--white)',
+}
+
+export enum Persona {
+  AUTO = 'auto',
+  BOT = 'bot',
+  USER = 'user',
 }
 
 export enum Position {

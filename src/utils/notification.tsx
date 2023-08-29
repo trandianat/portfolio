@@ -9,7 +9,7 @@ import { Notification } from 'components/notification';
 import { Status } from 'utils/constants';
 
 type NotificationType = {
-  message: JSX.Element;
+  message: JSX.Element | string;
   variant: Status;
 };
 

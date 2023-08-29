@@ -16,6 +16,7 @@
 html {
     --desktop: 800px;
     --black: #000;
+    --blue: #0152C0;
     --dark-gray: #808080;
     --gray: #EEF0EF;
     --green: #005900;
@@ -54,6 +55,16 @@ button {
     font: .825rem var(--sans);
     letter-spacing: 1px;
     padding: 10px 20px;
+    &:disabled {
+        background-color: var(--dark-gray);
+        border: 1px solid var(--dark-gray);
+        &:hover {
+            background-color: var(--dark-gray);
+            border: 1px solid var(--dark-gray);
+            color: var(--white);
+            cursor: default;
+        }
+    }
     &:hover {
         background-color: var(--white);
         border: 1px solid var(--black);

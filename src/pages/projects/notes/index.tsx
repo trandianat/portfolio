@@ -73,10 +73,10 @@ export const Notes = (): JSX.Element => {
         query: createNote,
         variables: { input: { description, name } },
       });
-      notify({ message: <p>New note added</p>, variant: Status.SUCCESS });
+      notify({ message: 'New note added', variant: Status.SUCCESS });
       getNotes();
     } catch {
-      notify({ message: <p>Failed to add new note</p>, variant: Status.ERROR });
+      notify({ message: 'Failed to create note', variant: Status.ERROR });
     }
   };
 
@@ -92,10 +92,10 @@ export const Notes = (): JSX.Element => {
           },
         },
       });
-      notify({ message: <p>Note saved</p>, variant: Status.SUCCESS });
+      notify({ message: 'Note saved', variant: Status.SUCCESS });
       getNotes();
     } catch {
-      notify({ message: <p>Failed to save note</p>, variant: Status.ERROR });
+      notify({ message: 'Failed to save note', variant: Status.ERROR });
     }
   };
 
@@ -105,10 +105,10 @@ export const Notes = (): JSX.Element => {
         query: deleteNote,
         variables: { input: { id } },
       });
-      notify({ message: <p>Note removed</p>, variant: Status.SUCCESS });
+      notify({ message: 'Note deleted', variant: Status.SUCCESS });
       getNotes();
     } catch {
-      notify({ message: <p>Failed to remove note</p>, variant: Status.ERROR });
+      notify({ message: 'Failed to delete note', variant: Status.ERROR });
     }
   };
 
