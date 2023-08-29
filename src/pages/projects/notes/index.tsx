@@ -137,9 +137,9 @@ export const Notes = (): JSX.Element => {
             When deleting all of the text in a title or content, do not exit the
             input field
           </li>
+          <li>Stack notifications on top of each other</li>
           <li>Replace TypeScript "any" types</li>
           <li>Slide updated notes to the top of the list</li>
-          <li>Error handling</li>
         </ul>
       </div>
       <button onClick={() => addNote('Untitled', 'Edit note')}>Add note</button>
