@@ -96,6 +96,7 @@ export const Chatbot = (): JSX.Element => {
       <div>
         <p className="serif-italic">In progress:</p>
         <ul>
+          <li>Fix environment variables</li>
           <li>Train chatbot with more utterances</li>
           <li>Display character count when typing a message</li>
         </ul>
