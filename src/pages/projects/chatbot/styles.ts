@@ -25,18 +25,23 @@ export const messages = css({
   padding: 12,
   '.message': {
     borderRadius: 18,
+    maxWidth: '75%',
     padding: '8px 16px',
     width: 'fit-content',
     '&.auto': {
+      alignSelf: 'end',
       border: `1.5px solid ${Color.RED}`,
       color: Color.RED,
       fontWeight: 500,
-      textAlign: 'right',
     },
-    '&.bot': { backgroundColor: Color.GRAY, textAlign: 'left' },
+    '&.bot': {
+      backgroundColor: Color.GRAY,
+      border: `1px solid ${Color.DARK_GRAY}`,
+    },
     '&.user': {
       alignSelf: 'end',
       backgroundColor: Color.BLUE,
+      border: `1px solid ${Color.NAVY}`,
       color: Color.WHITE,
       textAlign: 'right',
     },
@@ -52,7 +57,7 @@ export const inputs = css({
   padding: 12,
   input: {
     flexGrow: 1,
-    '@media (min-width: 451px)': { flexGrow: 2 },
+    '@media (min-width: 451px)': { flexGrow: 3 },
     '@media (max-width: 450px)': { width: '100%' },
   },
   '.buttons': {

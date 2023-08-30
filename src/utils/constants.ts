@@ -4,6 +4,7 @@ export enum Color {
   DARK_GRAY = 'var(--dark-gray)',
   GRAY = 'var(--gray)',
   GREEN = 'var(--green)',
+  NAVY = 'var(--navy)',
   RED = 'var(--red)',
   WHITE = 'var(--white)',
 }

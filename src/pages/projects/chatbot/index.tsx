@@ -45,7 +45,7 @@ export const Chatbot = (): JSX.Element => {
           inputText: input,
           userId: process.env.REACT_APP_LEX_USER,
         },
-        (_: any, data: any) => {
+        (error: any, data: any) => {
           if (data) {
             if (data.dialogState === 'ReadyForFulfillment') {
               setMessages([
@@ -64,12 +64,14 @@ export const Chatbot = (): JSX.Element => {
               ]);
             }
           } else {
+            console.log('lex error', error);
             handleError();
           }
         }
       );
       setInput('');
-    } catch {
+    } catch (error: any) {
+      console.log('try/catch error', error);
       handleError();
     }
   };
@@ -88,9 +90,18 @@ export const Chatbot = (): JSX.Element => {
         three "slots"—appointment type, date, and time—before confirming an
         appointment. Feel free to chat with it and see how it responds.
       </p>
+      <div>
+        <p className="serif-italic">In progress:</p>
+        <ul>
+          <li>Fix environment variables</li>
+          <li>Train chatbot with more utterances</li>
+          <li>Display character count when typing a message</li>
+          <li>Replace TypeScript "any" types</li>
+        </ul>
+      </div>
       <div css={styles.conversation}>
         <div css={styles.messages} id="messages">
-          {!messages.length && 'Try asking for an appointment!'}
+          {!messages.length && <h3>Try asking for an appointment!</h3>}
           {messages.length > 0 &&
             messages.map(({ from, input }: Message) => (
               <div className={`message ${from}`} key={v4()}>
