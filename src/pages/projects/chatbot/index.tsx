@@ -1,5 +1,5 @@
 import { LexRuntimeService } from '@aws-sdk/client-lex-runtime-service';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 import * as styles from 'pages/projects/chatbot/styles';
 import { Persona } from 'utils/constants';
@@ -23,6 +23,7 @@ export const Chatbot = (): JSX.Element => {
       secretAccessKey: process.env.REACT_APP_LEX_SECRET as string,
     },
     region: process.env.REACT_APP_REGION,
+    signingRegion: process.env.REACT_APP_REGION,
   });
 
   const handleError = () => {
@@ -38,6 +39,8 @@ export const Chatbot = (): JSX.Element => {
 
   const send = async () => {
     try {
+      console.log('alias', process.env.REACT_APP_LEX_ALIAS);
+      console.log('region', process.env.REACT_APP_REGION);
       await lex.postText(
         {
           botAlias: process.env.REACT_APP_LEX_ALIAS,
@@ -70,15 +73,15 @@ export const Chatbot = (): JSX.Element => {
         }
       );
       setInput('');
-    } catch (error: any) {
+    } catch (error) {
       console.log('try/catch error', error);
       handleError();
     }
   };
 
   useEffect(() => {
-    const history = document.getElementById('messages') as any;
-    history.scrollTop = history?.scrollHeight;
+    const history = document.getElementById('messages') as HTMLElement;
+    history.scrollTop = history.scrollHeight;
   }, [messages]);
 
   return (
@@ -96,7 +99,6 @@ export const Chatbot = (): JSX.Element => {
           <li>Fix environment variables</li>
           <li>Train chatbot with more utterances</li>
           <li>Display character count when typing a message</li>
-          <li>Replace TypeScript "any" types</li>
         </ul>
       </div>
       <div css={styles.conversation}>
@@ -113,8 +115,10 @@ export const Chatbot = (): JSX.Element => {
           <input
             disabled={error}
             maxLength={100}
-            onChange={(event: any) => setInput(event?.target.value)}
-            onKeyDown={(event: any) => {
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              setInput(event.target.value)
+            }
+            onKeyDown={event => {
               if (event.key === 'Enter') {
                 document.getElementById('send')?.click();
               }
