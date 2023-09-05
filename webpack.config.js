@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: path.join(__dirname, "src", "index.tsx"), // or "./src/index.tsx"
-    output: { path: path.join(__dirname, "build"), filename: "index.bundle.js", publicPath: "/" },
+    output: { clean: true, path: path.join(__dirname, "build"), filename: "index.bundle.js", publicPath: "/" },
     mode: process.env.NODE_ENV || "development",
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
@@ -16,7 +16,7 @@ module.exports = {
             { 
                 test: /\.(js|jsx)$/, 
                 exclude: /node_modules/, 
-                use: ["babel-loader"] 
+                use: ["babel-loader"] ,
             },
             {
                 test: /\.(ts|tsx)$/,
@@ -29,8 +29,12 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                use: ["@svgr/webpack"]
+                use: ["@svgr/webpack"],
             },
+            {
+                test: /\.jpg$/i,
+                type: 'asset/resource'
+            }
         ],
     },
     plugins: [

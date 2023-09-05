@@ -96,6 +96,12 @@ p, ul {
     margin: 0;
 }
 
+select {
+    border-radius: 4px;
+    font: .875rem var(--sans);
+    padding: 2px 0;
+}
+
 svg {
     height: 16px;
 }
