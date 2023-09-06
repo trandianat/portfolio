@@ -98,7 +98,6 @@ export const Chatbot = (): JSX.Element => {
         <ul>
           <li>Fix environment variables</li>
           <li>Train chatbot with more utterances</li>
-          <li>Display character count when typing a message</li>
         </ul>
       </div>
       <div css={styles.conversation}>

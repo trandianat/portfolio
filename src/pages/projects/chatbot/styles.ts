@@ -22,7 +22,7 @@ export const messages = css({
   height: 250,
   lineHeight: '18px',
   overflow: 'auto',
-  padding: 12,
+  padding: '12px 12px 16px',
   '.message': {
     borderRadius: 18,
     maxWidth: '75%',
