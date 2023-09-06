@@ -30,12 +30,8 @@ export const objects = {
   gap: '8px 18px',
   gridTemplateColumns: 'auto auto',
   width: 'fit-content',
+  hr: { gridColumn: '1 / span 2', margin: '2px 0' },
   '.heading': { fontWeight: 600, letterSpacing: 0.5 },
-  '.divider': {
-    backgroundColor: Color.BLACK,
-    gridColumn: '1 / span 2',
-    height: 1,
-  },
 };
 
 export const object = (index: number) => ({

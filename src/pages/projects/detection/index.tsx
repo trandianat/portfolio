@@ -122,7 +122,7 @@ export const Detection = (): JSX.Element => {
         <div css={styles.objects}>
           <div className="heading">Object</div>
           <div className="heading">Confidence</div>
-          <div className="divider" />
+          <hr />
           {results.map((result: Prediction, index: number) => (
             <Fragment key={index}>
               <div css={styles.object(index)}>{result.class}</div>
