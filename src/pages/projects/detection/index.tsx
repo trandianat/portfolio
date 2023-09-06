@@ -35,7 +35,6 @@ export const Detection = (): JSX.Element => {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<Prediction[]>([]);
 
-  const selectedImage = document.getElementById('image') as HTMLImageElement;
   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
   const images: { [image: string]: string } = {
@@ -54,7 +53,6 @@ export const Detection = (): JSX.Element => {
         10,
         0.25
       );
-      console.log('predictions', predictions);
       setResults(predictions as Prediction[]);
     } catch {
       setError(true);
@@ -64,19 +62,10 @@ export const Detection = (): JSX.Element => {
   };
 
   useEffect(() => {
+    const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+    const context = canvas.getContext('2d') as CanvasRenderingContext2D;
     if (results.length) {
       setError(false);
-      const result = document.getElementById('result') as HTMLElement;
-      const canvas = document.createElement('canvas');
-      const width = selectedImage.offsetWidth;
-      const height = selectedImage.offsetHeight;
-      canvas.id = 'canvas';
-      canvas.width = width;
-      canvas.height = height;
-      result.appendChild(canvas);
-      const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(selectedImage, 0, 0, width, height);
       results.forEach((result: Prediction, index: number) => {
         context.beginPath();
         context.lineWidth = 2;
@@ -85,9 +74,12 @@ export const Detection = (): JSX.Element => {
         context.strokeRect(x, y, width, height);
       });
     } else {
-      document.getElementById('canvas')?.remove();
+      const selectedImage = document.getElementById(
+        'image'
+      ) as HTMLImageElement;
+      context.clearRect(0, 0, selectedImage.width, selectedImage.height);
     }
-  }, [colors, results, selectedImage]);
+  }, [colors, results]);
 
   return (
     <div css={styles.detection}>
@@ -99,7 +91,7 @@ export const Detection = (): JSX.Element => {
         the image, and a score of confidence for each object. Results will vary
         per detection depending on what the model returns.
       </p>
-      <div className="select">
+      <div className="selection">
         <label htmlFor="dropdown">Select an image:</label>
         <select
           id="dropdown"
@@ -108,6 +100,7 @@ export const Detection = (): JSX.Element => {
             setError(false);
             setResults([]);
           }}
+          {...{ disabled: loading }}
         >
           {Object.keys(images).map((image: string) => (
             <option key={image} value={images[image]}>
@@ -121,25 +114,28 @@ export const Detection = (): JSX.Element => {
           {loading ? 'Loading...' : 'Detect'}
         </button>
       )}
-      <img id="image" src={image} />
-      <div id="result" />
+      <div className="result">
+        <img id="image" src={image} />
+        <canvas height={200} id="canvas" />
+      </div>
       {error && (
-        <p className="error">
-          <strong>Error in object detection. Please try again.</strong>
+        <p className="error text">
+          Error in object detection. Please try again.
         </p>
       )}
-      <div>
-        {results.length > 0 &&
-          results.map((result: Prediction, index: number) => (
-            <p key={index}>
-              A{' '}
+      {results.length > 0 && (
+        <div className="confidence">
+          {results.map((result: Prediction, index: number) => (
+            <p className="text" key={index}>
+              A{vowels.includes(result.class.charAt(0)) ? 'n' : ''}{' '}
               <span style={{ color: colors[index] }}>
                 <strong>{result.class}</strong>
               </span>{' '}
               with {Math.round(result.score * 100)}% confidence
             </p>
           ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
