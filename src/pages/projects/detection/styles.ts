@@ -31,10 +31,10 @@ export const objects = {
   gridTemplateColumns: 'auto auto',
   width: 'fit-content',
   hr: { gridColumn: '1 / span 2', margin: '2px 0' },
-  '.heading': { fontWeight: 600, letterSpacing: 0.5 },
+  '.heading': { fontWeight: 500, letterSpacing: 0.5 },
 };
 
 export const object = (index: number) => ({
   color: colors[index],
-  fontWeight: 600,
+  fontWeight: 500,
 });
