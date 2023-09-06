@@ -110,26 +110,28 @@ export const Detection = (): JSX.Element => {
           {loading ? 'Loading...' : 'Detect'}
         </button>
       )}
-      <div css={styles.image}>
-        <img id="image" src={image} />
-        <canvas height={200} id="canvas" />
-      </div>
-      {error && (
-        <p className="error">Error in object detection. Please try again.</p>
-      )}
-      {results.length > 0 && (
-        <div css={styles.objects}>
-          <div className="heading">Object</div>
-          <div className="heading">Confidence</div>
-          <hr />
-          {results.map((result: Prediction, index: number) => (
-            <Fragment key={index}>
-              <div css={styles.object(index)}>{result.class}</div>
-              <div>{Math.round(result.score * 100)}%</div>
-            </Fragment>
-          ))}
+      <div css={styles.results}>
+        <div css={styles.image}>
+          <img id="image" src={image} />
+          <canvas height={200} id="canvas" />
         </div>
-      )}
+        {error && (
+          <p className="error">Error in object detection. Please try again.</p>
+        )}
+        {results.length > 0 && (
+          <div css={styles.objects}>
+            <div className="heading">Object</div>
+            <div className="heading">Confidence</div>
+            <hr />
+            {results.map((result: Prediction, index: number) => (
+              <Fragment key={index}>
+                <div css={styles.object(index)}>{result.class}</div>
+                <div>{Math.round(result.score * 100)}%</div>
+              </Fragment>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

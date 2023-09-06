@@ -23,7 +23,6 @@ export const Chatbot = (): JSX.Element => {
       secretAccessKey: process.env.REACT_APP_LEX_SECRET as string,
     },
     region: process.env.REACT_APP_REGION,
-    signingRegion: process.env.REACT_APP_REGION,
   });
 
   const handleError = () => {

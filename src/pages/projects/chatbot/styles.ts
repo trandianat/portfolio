@@ -19,7 +19,7 @@ export const messages = css({
   flexDirection: 'column',
   font: '.875rem var(--sans)',
   gap: 12,
-  height: 250,
+  height: 200,
   lineHeight: '18px',
   overflow: 'auto',
   padding: '12px 12px 16px',
@@ -49,6 +49,7 @@ export const messages = css({
 });
 
 export const inputs = css({
+  backgroundColor: Color.GRAY,
   boxShadow: `0 -1px 8px -2px ${Color.DARK_GRAY}`,
   display: 'flex',
   flexWrap: 'wrap',

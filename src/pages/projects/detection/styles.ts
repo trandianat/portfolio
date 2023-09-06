@@ -17,6 +17,12 @@ export const dropdown = css({
   label: { whiteSpace: 'nowrap' },
 });
 
+export const results = css({
+  display: 'flex',
+  gap: 20,
+  '@media (max-width: 700px)': { flexDirection: 'column', gap: 16 },
+});
+
 export const image = css({
   position: 'relative',
   width: 'fit-content',
@@ -25,10 +31,13 @@ export const image = css({
 });
 
 export const objects = {
+  backgroundColor: Color.WHITE,
   display: 'grid',
   font: '.875rem var(--sans)',
   gap: '8px 18px',
   gridTemplateColumns: 'auto auto',
+  height: 'fit-content',
+  padding: 16,
   width: 'fit-content',
   hr: { gridColumn: '1 / span 2', margin: '2px 0' },
   '.heading': { fontWeight: 500, letterSpacing: 0.5 },
