@@ -1,7 +1,6 @@
-import { ChangeEvent, Fragment, useEffect, useState } from 'react';
 import '@tensorflow/tfjs-backend-cpu';
-import '@tensorflow/tfjs-backend-webgl';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import { ChangeEvent, Fragment, useEffect, useState } from 'react';
 import LinkOut from 'assets/icons/link';
 import dog from 'assets/images/dog.jpg';
 import street from 'assets/images/street.jpg';
