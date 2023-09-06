@@ -89,7 +89,8 @@ h2 {
 
 hr {
     background-color: var(--black);
-    height: .1px;
+    border-style: none;
+    height: .5px;
     margin: 0;
     width: 100%;
 }
