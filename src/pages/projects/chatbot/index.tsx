@@ -39,8 +39,12 @@ export const Chatbot = (): JSX.Element => {
 
   const send = async () => {
     try {
-      console.log('alias', process.env.REACT_APP_LEX_ALIAS);
-      console.log('region', process.env.REACT_APP_REGION);
+      console.log('REACT_APP_LEX_ACCESS', process.env.REACT_APP_LEX_ACCESS);
+      console.log('REACT_APP_LEX_ALIAS', process.env.REACT_APP_LEX_ALIAS);
+      console.log('REACT_APP_LEX_BOT', process.env.REACT_APP_LEX_BOT);
+      console.log('REACT_APP_LEX_SECRET', process.env.REACT_APP_LEX_SECRET);
+      console.log('REACT_APP_LEX_USER', process.env.REACT_APP_LEX_USER);
+      console.log('REACT_APP_REGION', process.env.REACT_APP_REGION);
       await lex.postText(
         {
           botAlias: process.env.REACT_APP_LEX_ALIAS,
