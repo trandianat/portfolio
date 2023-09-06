@@ -14,7 +14,7 @@ export const Wedding = (): JSX.Element => (
         text="website"
         url={Links.WEDDING}
       />{' '}
-      for guests to find information related to me and Brendan's July 2023
+      for guests to find information related to me and my husband's July 2023
       wedding. The design is based on lots of inspiration from Pinterest and
       mockups I made using{' '}
       <Link

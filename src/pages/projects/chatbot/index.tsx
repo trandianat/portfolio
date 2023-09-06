@@ -46,7 +46,6 @@ export const Chatbot = (): JSX.Element => {
           userId: process.env.REACT_APP_LEX_USER,
         },
         (_: Error, data: any) => {
-          console.log(data);
           if (data) {
             if (data.dialogState === 'ReadyForFulfillment') {
               setMessages([

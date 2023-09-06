@@ -27,13 +27,4 @@ export default withAuthenticator(Auth, {
     },
   },
   hideSignUp: true,
-  // services: {
-  //   handleSignIn: async ({
-  //     username,
-  //     password,
-  //   }: {
-  //     username: string;
-  //     password: string;
-  //   }) => console.log('Credentials: ' + username + ' / ' + password),
-  // },
 });

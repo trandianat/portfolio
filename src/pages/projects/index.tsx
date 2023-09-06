@@ -20,7 +20,7 @@ export const Projects = (): JSX.Element => {
   const projects: Project[] = [
     {
       description:
-        'Create, read, update, and delete notes sorted by latest update descending',
+        'Create, read, update, and delete notes sorted by latest update',
       icon: <Note />,
       name: 'Notes',
       path: 'notes',
@@ -32,13 +32,15 @@ export const Projects = (): JSX.Element => {
       path: 'detection',
     },
     {
-      description: 'AI for scheduling appointments',
+      description:
+        'Conversational artificial intelligence for scheduling appointments',
       icon: <Chat />,
       name: 'Chatbot',
       path: 'chatbot',
     },
     {
-      description: 'I made my wedding website!',
+      description:
+        'A website for my wedding guests to RSVP and find more information',
       icon: <Wedding />,
       name: 'Wedding',
       path: 'wedding',
