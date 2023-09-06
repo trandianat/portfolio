@@ -51,5 +51,3 @@ export const colors = [
   'black',
   'yellow',
 ];
-
-export const vowels = ['a', 'e', 'i', 'o', 'u'];

@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, Fragment, useEffect, useState } from 'react';
 import '@tensorflow/tfjs-backend-cpu';
 import '@tensorflow/tfjs-backend-webgl';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
@@ -7,9 +7,9 @@ import dog from 'assets/images/dog.jpg';
 import street from 'assets/images/street.jpg';
 import table from 'assets/images/table.jpg';
 import wine from 'assets/images/wine.jpg';
-import * as styles from 'pages/projects/detection/styles';
-import { Links, Position, colors, vowels } from 'utils/constants';
 import { Link } from 'components/link';
+import * as styles from 'pages/projects/detection/styles';
+import { colors, Links, Position } from 'utils/constants';
 
 type Prediction = {
   bbox: number[];
@@ -87,7 +87,8 @@ export const Detection = (): JSX.Element => {
         included in the results. Results will vary per detection depending on
         what the model returns.
       </p>
-      <div className="selection">
+      <hr />
+      <div css={styles.dropdown}>
         <label htmlFor="dropdown">Select an image:</label>
         <select
           id="dropdown"
@@ -110,25 +111,23 @@ export const Detection = (): JSX.Element => {
           {loading ? 'Loading...' : 'Detect'}
         </button>
       )}
-      <div className="result">
+      <div css={styles.image}>
         <img id="image" src={image} />
         <canvas height={200} id="canvas" />
       </div>
       {error && (
-        <p className="error text">
-          Error in object detection. Please try again.
-        </p>
+        <p className="error">Error in object detection. Please try again.</p>
       )}
       {results.length > 0 && (
-        <div className="confidence">
+        <div css={styles.objects}>
+          <div className="heading">Object</div>
+          <div className="heading">Confidence</div>
+          <div className="divider" />
           {results.map((result: Prediction, index: number) => (
-            <p className="text" key={index}>
-              A{vowels.includes(result.class.charAt(0)) ? 'n' : ''}{' '}
-              <span css={styles.object(index)}>
-                <b>{result.class}</b>
-              </span>{' '}
-              with {Math.round(result.score * 100)}% confidence
-            </p>
+            <Fragment key={index}>
+              <div css={styles.object(index)}>{result.class}</div>
+              <div>{Math.round(result.score * 100)}%</div>
+            </Fragment>
           ))}
         </div>
       )}

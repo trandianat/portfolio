@@ -5,22 +5,40 @@ export const detection = css({
   display: 'flex',
   flexDirection: 'column',
   gap: 16,
-  img: { display: 'block', height: 200 },
-  '.selection': {
-    alignItems: 'center',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: 6,
-    label: { whiteSpace: 'nowrap' },
-  },
-  '.result': { position: 'relative', width: 'fit-content' },
-  '#canvas': { left: 0, position: 'absolute', top: 0 },
-  '.confidence': { display: 'flex', flexDirection: 'column', gap: 4 },
-  '.error': { color: Color.RED },
-  '.text': { font: '.875rem var(--sans)' },
-  '@media (min-width: 401px)': {
-    button: { width: 'fit-content' },
-  },
+  button: { width: 'fit-content' },
+  '.error': { color: Color.RED, font: '.875rem var(--sans)' },
 });
 
-export const object = (index: number) => ({ color: colors[index] });
+export const dropdown = css({
+  alignItems: 'center',
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 6,
+  label: { whiteSpace: 'nowrap' },
+});
+
+export const image = css({
+  position: 'relative',
+  width: 'fit-content',
+  img: { display: 'block', height: 200 },
+  '#canvas': { left: 0, position: 'absolute', top: 0 },
+});
+
+export const objects = {
+  display: 'grid',
+  font: '.875rem var(--sans)',
+  gap: '8px 18px',
+  gridTemplateColumns: 'auto auto',
+  width: 'fit-content',
+  '.heading': { fontWeight: 600, letterSpacing: 0.5 },
+  '.divider': {
+    backgroundColor: Color.BLACK,
+    gridColumn: '1 / span 2',
+    height: 1,
+  },
+};
+
+export const object = (index: number) => ({
+  color: colors[index],
+  fontWeight: 600,
+});
