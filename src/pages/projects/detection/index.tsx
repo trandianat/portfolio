@@ -1,12 +1,15 @@
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import '@tensorflow/tfjs-backend-cpu';
 import '@tensorflow/tfjs-backend-webgl';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import LinkOut from 'assets/icons/link';
 import dog from 'assets/images/dog.jpg';
 import street from 'assets/images/street.jpg';
 import table from 'assets/images/table.jpg';
 import wine from 'assets/images/wine.jpg';
 import * as styles from 'pages/projects/detection/styles';
+import { Links, Position, colors, vowels } from 'utils/constants';
+import { Link } from 'components/link';
 
 type Prediction = {
   bbox: number[];
@@ -15,27 +18,10 @@ type Prediction = {
 };
 
 export const Detection = (): JSX.Element => {
-  const colors = useMemo(
-    () => [
-      'red',
-      'blue',
-      'green',
-      'orange',
-      'purple',
-      'gray',
-      'pink',
-      'brown',
-      'black',
-      'yellow',
-    ],
-    []
-  );
   const [error, setError] = useState(false);
   const [image, setImage] = useState(dog);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<Prediction[]>([]);
-
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
 
   const images: { [image: string]: string } = {
     dog: dog,
@@ -50,10 +36,10 @@ export const Detection = (): JSX.Element => {
     try {
       const predictions = await model.detect(
         document.getElementById('image') as HTMLImageElement,
-        10,
-        0.25
+        colors.length,
+        0.15
       );
-      setResults(predictions as Prediction[]);
+      setResults(predictions);
     } catch {
       setError(true);
     } finally {
@@ -70,7 +56,7 @@ export const Detection = (): JSX.Element => {
         context.beginPath();
         context.lineWidth = 2;
         context.strokeStyle = colors[index];
-        const [x, y, width, height] = result['bbox'];
+        const [x, y, width, height] = result.bbox;
         context.strokeRect(x, y, width, height);
       });
     } else {
@@ -79,17 +65,27 @@ export const Detection = (): JSX.Element => {
       ) as HTMLImageElement;
       context.clearRect(0, 0, selectedImage.width, selectedImage.height);
     }
-  }, [colors, results]);
+  }, [results]);
 
   return (
     <div css={styles.detection}>
       <h2>Detection</h2>
       <p>
-        This project identifies objects within images via{' '}
-        <b>TensorFlow's COCO-SSD machine learning object detection model</b>.
-        The model returns a list of predicted objects, their coordinates within
-        the image, and a score of confidence for each object. Results will vary
-        per detection depending on what the model returns.
+        This project identifies objects within images via the{' '}
+        <b>
+          <Link
+            icon={<LinkOut />}
+            iconPosition={Position.RIGHT}
+            text="TensorFlow"
+            url={Links.TENSORFLOW}
+          />{' '}
+          COCO-SSD machine learning object detection model
+        </b>
+        . The model returns a list of predicted objects, their coordinates
+        within the image, and a score of confidence for each object. The score
+        of confidence must be at least 15% for the predicted object to be
+        included in the results. Results will vary per detection depending on
+        what the model returns.
       </p>
       <div className="selection">
         <label htmlFor="dropdown">Select an image:</label>
@@ -109,7 +105,7 @@ export const Detection = (): JSX.Element => {
           ))}
         </select>
       </div>
-      {(results.length === 0 || error) && (
+      {(!results.length || error) && (
         <button onClick={() => detectImage()} {...{ disabled: loading }}>
           {loading ? 'Loading...' : 'Detect'}
         </button>
@@ -128,8 +124,8 @@ export const Detection = (): JSX.Element => {
           {results.map((result: Prediction, index: number) => (
             <p className="text" key={index}>
               A{vowels.includes(result.class.charAt(0)) ? 'n' : ''}{' '}
-              <span style={{ color: colors[index] }}>
-                <strong>{result.class}</strong>
+              <span css={styles.object(index)}>
+                <b>{result.class}</b>
               </span>{' '}
               with {Math.round(result.score * 100)}% confidence
             </p>

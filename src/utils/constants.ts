@@ -23,6 +23,7 @@ export enum Position {
 export enum Links {
   DESIGN = 'https://www.justinmind.com',
   GITHUB = 'https://github.com/trandianat',
+  TENSORFLOW = 'https://www.tensorflow.org/js/models',
   WEDDING = 'https://www.thebeanwedding.com',
 }
 
@@ -37,3 +38,18 @@ export enum Status {
   ERROR = 'error',
   SUCCESS = 'success',
 }
+
+export const colors = [
+  'red',
+  'blue',
+  'green',
+  'orange',
+  'purple',
+  'gray',
+  'pink',
+  'brown',
+  'black',
+  'yellow',
+];
+
+export const vowels = ['a', 'e', 'i', 'o', 'u'];
