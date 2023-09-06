@@ -97,13 +97,6 @@ export const Chatbot = (): JSX.Element => {
         three "slots"—appointment type, date, and time—before confirming an
         appointment. Feel free to chat with it and see how it responds.
       </p>
-      <div>
-        <p className="serif-italic">In progress:</p>
-        <ul>
-          <li>Fix environment variables</li>
-          <li>Train chatbot with more utterances</li>
-        </ul>
-      </div>
       <div css={styles.conversation}>
         <div css={styles.messages} id="messages">
           {!messages.length && <h3>Try asking for an appointment!</h3>}
