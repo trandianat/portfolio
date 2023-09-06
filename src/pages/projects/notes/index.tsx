@@ -138,7 +138,6 @@ export const Notes = (): JSX.Element => {
             input field
           </li>
           <li>Stack notifications on top of each other</li>
-          <li>Replace TypeScript "any" types</li>
           <li>Slide updated notes to the top of the list</li>
         </ul>
       </div>

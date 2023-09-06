@@ -32,6 +32,7 @@ export const image = css({
 
 export const objects = {
   backgroundColor: Color.WHITE,
+  border: `1px solid ${Color.DARK_GRAY}`,
   display: 'grid',
   font: '.875rem var(--sans)',
   gap: '8px 18px',

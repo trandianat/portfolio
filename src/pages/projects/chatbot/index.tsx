@@ -38,12 +38,6 @@ export const Chatbot = (): JSX.Element => {
 
   const send = async () => {
     try {
-      console.log('REACT_APP_LEX_ACCESS', process.env.REACT_APP_LEX_ACCESS);
-      console.log('REACT_APP_LEX_ALIAS', process.env.REACT_APP_LEX_ALIAS);
-      console.log('REACT_APP_LEX_BOT', process.env.REACT_APP_LEX_BOT);
-      console.log('REACT_APP_LEX_SECRET', process.env.REACT_APP_LEX_SECRET);
-      console.log('REACT_APP_LEX_USER', process.env.REACT_APP_LEX_USER);
-      console.log('REACT_APP_REGION', process.env.REACT_APP_REGION);
       await lex.postText(
         {
           botAlias: process.env.REACT_APP_LEX_ALIAS,
@@ -51,7 +45,8 @@ export const Chatbot = (): JSX.Element => {
           inputText: input,
           userId: process.env.REACT_APP_LEX_USER,
         },
-        (error: any, data: any) => {
+        (_: Error, data: any) => {
+          console.log(data);
           if (data) {
             if (data.dialogState === 'ReadyForFulfillment') {
               setMessages([
@@ -70,14 +65,12 @@ export const Chatbot = (): JSX.Element => {
               ]);
             }
           } else {
-            console.log('lex error', error);
             handleError();
           }
         }
       );
       setInput('');
     } catch (error) {
-      console.log('try/catch error', error);
       handleError();
     }
   };
