@@ -25,6 +25,7 @@ export const card = css({
   h3: {
     fontWeight: 600,
     width: 'calc(100% - 32px)',
+    wordBreak: 'break-all',
     ':hover': { backgroundColor: Color.GRAY },
   },
   input: {
@@ -34,7 +35,10 @@ export const card = css({
     width: 'calc(100% - 48px)',
   },
   textarea: { resize: 'none' },
-  '.description': { ':hover': { backgroundColor: Color.GRAY } },
+  '.description': {
+    wordBreak: 'break-all',
+    ':hover': { backgroundColor: Color.GRAY },
+  },
   '.trash': {
     borderRadius: 16,
     height: 16,

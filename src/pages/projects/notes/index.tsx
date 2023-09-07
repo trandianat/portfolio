@@ -139,6 +139,7 @@ export const Notes = (): JSX.Element => {
           </li>
           <li>Stack notifications on top of each other</li>
           <li>Slide updated notes to the top of the list</li>
+          <li>Character counter for title and content</li>
         </ul>
       </div>
       <button onClick={() => addNote('Untitled', 'Edit note')}>Add note</button>

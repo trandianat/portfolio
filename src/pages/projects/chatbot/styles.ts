@@ -24,11 +24,13 @@ export const messages = css({
   lineHeight: '18px',
   overflow: 'auto',
   padding: '12px 12px 16px',
+  h3: { lineHeight: '22px' },
   '.message': {
     borderRadius: 18,
     maxWidth: '75%',
     padding: '8px 16px',
     width: 'fit-content',
+    wordBreak: 'break-all',
     '&.auto': {
       alignSelf: 'end',
       border: `1.5px solid ${Color.RED}`,
