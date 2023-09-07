@@ -1,0 +1,12 @@
+{
+  "resourceName": "portfolio",
+  "policyUUID": "fe14533f",
+  "bucketName": "portfolio",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

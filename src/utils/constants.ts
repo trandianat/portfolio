@@ -39,6 +39,13 @@ export enum Status {
   SUCCESS = 'success',
 }
 
+export const Wedding = {
+  ENTRY_DESKTOP: 0,
+  ENTRY_MOBILE: 1,
+  HOME_DESKTOP: 2,
+  HOME_MOBILE: 3,
+};
+
 export const colors = [
   'red',
   'blue',
