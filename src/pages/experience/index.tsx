@@ -93,15 +93,7 @@ export const Experience = (): JSX.Element => (
             company="Personal Insurance, Publishing & Document Management"
             start="FEB '15"
             end="FEB '16"
-            skills={[
-              'Dojo',
-              'Java',
-              'SOAP',
-              'JAX-RS',
-              'BPELs',
-              'XML',
-              'SharePoint',
-            ]}
+            skills={['Dojo', 'Java', 'SOAP', 'XML', 'SharePoint']}
             descriptions={[
               'Integrated policy form template retrieval into a document repository application',
               'Mentored teammates on technical design and implementation as Technical Lead',
@@ -112,7 +104,7 @@ export const Experience = (): JSX.Element => (
             company="Commercial Insurance, Reporting, Planning & Analytics"
             start="JUN '14"
             end="FEB '15"
-            skills={['Agile']}
+            skills={['Lean Management']}
             descriptions={[
               'Attended and observed core trainings and milestone events of ongoing lean transformations',
               'Performed user acceptance testing and produced reports on lean metrics',
