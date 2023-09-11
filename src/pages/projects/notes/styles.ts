@@ -25,7 +25,7 @@ export const card = css({
   h3: {
     fontWeight: 600,
     width: 'calc(100% - 32px)',
-    wordBreak: 'break-all',
+    wordWrap: 'break-word',
     ':hover': { backgroundColor: Color.GRAY },
   },
   input: {
@@ -36,7 +36,7 @@ export const card = css({
   },
   textarea: { resize: 'none' },
   '.description': {
-    wordBreak: 'break-all',
+    wordWrap: 'break-word',
     ':hover': { backgroundColor: Color.GRAY },
   },
   '.trash': {

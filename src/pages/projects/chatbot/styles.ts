@@ -30,7 +30,7 @@ export const messages = css({
     maxWidth: '75%',
     padding: '8px 16px',
     width: 'fit-content',
-    wordBreak: 'break-all',
+    wordWrap: 'break-word',
     '&.auto': {
       alignSelf: 'end',
       border: `1.5px solid ${Color.RED}`,
