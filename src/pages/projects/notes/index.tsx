@@ -171,6 +171,7 @@ export const Notes = (): JSX.Element => {
                     autoFocus
                     className="title"
                     id={id}
+                    maxLength={100}
                     onBlur={() => {
                       if (title[id] !== name) {
                         editNote({ id, name: title[id] });
@@ -201,6 +202,7 @@ export const Notes = (): JSX.Element => {
                   <textarea
                     autoFocus
                     id={id}
+                    maxLength={500}
                     onBlur={() => {
                       if (content[id] !== description) {
                         editNote({ id, description: content[id] });
