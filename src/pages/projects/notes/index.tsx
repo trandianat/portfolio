@@ -1,5 +1,5 @@
 import { API } from 'aws-amplify';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useRef, useState } from 'react';
 import Trash from 'assets/icons/trash';
 import { createNote, deleteNote, updateNote } from 'graphql/mutations';
 import { listNotes } from 'graphql/queries';
@@ -178,7 +178,9 @@ export const Notes = (): JSX.Element => {
                       }
                       setTitle({});
                     }}
-                    onChange={({ target: { value } }) =>
+                    onChange={({
+                      target: { value },
+                    }: ChangeEvent<HTMLInputElement>) =>
                       setTitle({ ...title, [id]: value })
                     }
                     onKeyDown={event => {
@@ -209,7 +211,9 @@ export const Notes = (): JSX.Element => {
                       }
                       setContent({});
                     }}
-                    onChange={({ target: { value } }) =>
+                    onChange={({
+                      target: { value },
+                    }: ChangeEvent<HTMLTextAreaElement>) =>
                       setContent({ ...content, [id]: value })
                     }
                     onKeyDown={event => {
