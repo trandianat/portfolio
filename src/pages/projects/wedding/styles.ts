@@ -11,7 +11,7 @@ export const wedding = css({
     img: { display: 'block', flexGrow: 1, width: '100%' },
     '&.desktop': { '@media (max-width: 950px)': { flexDirection: 'column' } },
     '&.mobile': {
-      '@media (min-width: 951px)': { img: { maxHeight: 300 } },
+      '@media (min-width: 951px)': { img: { maxHeight: 300, maxWidth: 220 } },
       '@media (max-width: 350px)': {
         flexDirection: 'column',
         img: { maxHeight: 'none' },
