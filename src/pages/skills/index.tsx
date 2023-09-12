@@ -7,7 +7,8 @@ export const Skills = (): JSX.Element => {
     'JavaScript',
     'TypeScript',
     'HTML',
-    'CSS/Sass',
+    'CSS',
+    'Emotion',
     'PostgreSQL',
     'AWS',
     'REST APIs',
@@ -17,15 +18,17 @@ export const Skills = (): JSX.Element => {
   ];
   const familiar = [
     'Accessibility',
+    'Sass',
     'Node.js',
     'MongoDB',
     'Webpack',
     'Docker',
     'Kubernetes',
     'Redux',
+    'GraphQL',
     'Angular',
     'Java',
-    'GraphQL',
+    'Waterfall',
   ];
   return (
     <Content>

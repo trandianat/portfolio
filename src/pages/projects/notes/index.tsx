@@ -181,7 +181,7 @@ export const Notes = (): JSX.Element => {
                     onChange={({ target: { value } }) =>
                       setTitle({ ...title, [id]: value })
                     }
-                    onKeyDown={(event: any) => {
+                    onKeyDown={event => {
                       if (event.key === 'Enter') {
                         document.getElementById(id)?.blur();
                       }
@@ -212,7 +212,7 @@ export const Notes = (): JSX.Element => {
                     onChange={({ target: { value } }) =>
                       setContent({ ...content, [id]: value })
                     }
-                    onKeyDown={(event: any) => {
+                    onKeyDown={event => {
                       if (event.key === 'Enter') {
                         document.getElementById(id)?.blur();
                       }

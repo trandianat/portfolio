@@ -9,7 +9,7 @@ export const Experience = (): JSX.Element => (
         role="Software Development Engineer III & Chapter Lead"
         company="Haven Technologies"
         start="JUL '21"
-        end="PRESENT"
+        end="AUG '23"
         skills={[
           'React',
           'Redux',
@@ -23,6 +23,8 @@ export const Experience = (): JSX.Element => (
           'Knex.js',
           'Docker',
           'Kubernetes',
+          'Agile',
+          'SaaS',
         ]}
         descriptions={[
           'Manage, foster growth, and perform annual reviews for five full-stack developers across two teams',
@@ -49,6 +51,7 @@ export const Experience = (): JSX.Element => (
               'GraphQL',
               'DynamoDB',
               'Lambdas',
+              'Agile',
             ]}
             descriptions={[
               'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
@@ -60,7 +63,14 @@ export const Experience = (): JSX.Element => (
             company="Personal Insurance, Direct Claims"
             start="OCT '17"
             end="OCT '19"
-            skills={['React', 'Node.js', 'Express', 'GraphQL', 'MongoDB']}
+            skills={[
+              'React',
+              'Node.js',
+              'Express',
+              'GraphQL',
+              'MongoDB',
+              'Agile',
+            ]}
             descriptions={[
               'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
               'Created a website to help different types of claimants decide whether to file a claim',
@@ -71,7 +81,7 @@ export const Experience = (): JSX.Element => (
             company="Personal Insurance, Sales Compensation"
             start="AUG '16"
             end="SEP '17"
-            skills={['Java', 'Gradle', 'Oracle']}
+            skills={['Java', 'Gradle', 'Oracle', 'Agile']}
             descriptions={[
               'Migrated legacy batch jobs from on-premise to the cloud',
               'Performed extensive testing to ensure frictionless payments to agents',
@@ -82,7 +92,7 @@ export const Experience = (): JSX.Element => (
             company="Specialty Markets, Reinsurance"
             start="FEB '16"
             end="JUL '16"
-            skills={['AngularJS', 'MySQL']}
+            skills={['AngularJS', 'MySQL', 'Agile']}
             descriptions={[
               'Developed the claims, underwriting, and contact management applications',
               'Contributed to the architecture, design, security, and testing of the three applications',
@@ -93,7 +103,7 @@ export const Experience = (): JSX.Element => (
             company="Personal Insurance, Publishing & Document Management"
             start="FEB '15"
             end="FEB '16"
-            skills={['Dojo', 'Java', 'SOAP', 'XML', 'SharePoint']}
+            skills={['Dojo', 'Java', 'SOAP', 'XML', 'SharePoint', 'Waterfall']}
             descriptions={[
               'Integrated policy form template retrieval into a document repository application',
               'Mentored teammates on technical design and implementation as Technical Lead',
