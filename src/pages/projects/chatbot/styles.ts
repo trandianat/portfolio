@@ -11,7 +11,7 @@ export const conversation = css({
   border: `1px solid ${Color.BLACK}`,
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: 400,
+  maxWidth: 425,
 });
 
 export const messages = css({
