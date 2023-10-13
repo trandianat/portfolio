@@ -17,6 +17,8 @@ export const Experience = (): JSX.Element => (
           'Angular',
           'CSS',
           'Emotion',
+          'Jest',
+          'Cypress',
           'Node.js',
           'Express',
           'PostgreSQL',
@@ -50,6 +52,8 @@ export const Experience = (): JSX.Element => (
               'Express',
               'GraphQL',
               'DynamoDB',
+              'Jest',
+              'Enzyme',
               'Lambdas',
               'Agile',
             ]}
@@ -69,6 +73,8 @@ export const Experience = (): JSX.Element => (
               'Express',
               'GraphQL',
               'MongoDB',
+              'Jest',
+              'Enzyme',
               'Agile',
             ]}
             descriptions={[
