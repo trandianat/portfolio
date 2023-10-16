@@ -11,16 +11,16 @@ export const Wedding = (): JSX.Element => {
 
   useEffect(() => {
     const getImages = async () => {
-      await Storage.list(`${folder}/${folder}`, { pageSize: 'ALL' })
-        .then(async ({ results }) => {
+      await Storage.list(`${folder}/${folder}`, { pageSize: 'ALL' }).then(
+        async ({ results }) => {
           const list: string[] = [];
           results.forEach(async result => {
             const image = await Storage.get((result as any).key);
             list.push(image);
           });
           setImages(list);
-        })
-        .catch(() => {});
+        }
+      );
     };
     getImages();
   }, []);
@@ -29,16 +29,9 @@ export const Wedding = (): JSX.Element => {
     <div css={styles.wedding}>
       <h2>Wedding</h2>
       <p>
-        I created a{' '}
-        <Link
-          icon={<LinkOut />}
-          iconPosition={Position.RIGHT}
-          text="website"
-          url={Links.WEDDING}
-        />{' '}
-        for guests to find information related to me and my husband's July 2023
-        wedding. The design is based on lots of inspiration from Pinterest and
-        mockups I made using{' '}
+        I created a website for guests to find information related to me and my
+        husband's July 2023 wedding. The design is based on lots of inspiration
+        from Pinterest and mockups I made using{' '}
         <Link
           icon={<LinkOut />}
           iconPosition={Position.RIGHT}
@@ -50,8 +43,15 @@ export const Wedding = (): JSX.Element => {
         Prototyping for multiple devices is not easy, and building this website
         made me have a much deeper appreciation for UX designers.
       </p>
+      <Link
+        icon={<LinkOut />}
+        iconPosition={Position.RIGHT}
+        text="Go to wedding website"
+        url={Links.WEDDING}
+      />
       {!!images.length && (
         <Fragment>
+          <hr />
           <h3>Desktop</h3>
           <div className="images desktop">
             <div>
