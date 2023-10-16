@@ -11,7 +11,7 @@ export const Header = (): JSX.Element => (
       <div css={styles.name}>
         <div>
           <h1>Diana Tran</h1>
-          <p className="sans">Software Engineer & Manager</p>
+          <p className="sans">Software Engineer</p>
         </div>
         <div css={styles.logo}>
           <div className="content">
@@ -22,11 +22,11 @@ export const Header = (): JSX.Element => (
         </div>
       </div>
       <p>
-        Empathetically driven software engineer and manager with 9 years of
-        experience developing customer-centric solutions in collaboration with
-        business, technology, QA, and UX partners, and 2 years of experience
-        managing software engineers. Graduated from Boston College in 2014 with
-        a bachelor's in Computer Science.{' '}
+        Results-driven software engineer with 8 years of full-stack experience
+        and 1 year of people-management experience. Seeking a frontend-focused
+        role that highlights my passion for developing seamless and accessible
+        user experiences. Graduated from Boston College in 2014 with a
+        bachelor's in Computer Science.{' '}
         <Link
           css={styles.link}
           icon={<LinkOut />}
