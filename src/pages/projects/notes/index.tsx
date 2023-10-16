@@ -126,22 +126,6 @@ export const Notes = (): JSX.Element => {
         notes are moved to the top of the list when they are updated. Feel free
         to add a note with suggestions for improvement on any of my projects!
       </p>
-      <div>
-        <p className="serif-italic">In progress:</p>
-        <ul>
-          <li>
-            When clicking into a note's content, place the cursor at the end of
-            the input (like how the cursor is placed at the end of the title)
-          </li>
-          <li>
-            When deleting all of the text in a title or content, do not exit the
-            input field
-          </li>
-          <li>Stack notifications on top of each other</li>
-          <li>Slide updated notes to the top of the list</li>
-          <li>Character counter for title and content</li>
-        </ul>
-      </div>
       <button onClick={() => addNote('Untitled', 'Edit note')}>Add note</button>
       <div css={styles.cards}>
         {notes.length ? (

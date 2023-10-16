@@ -32,8 +32,8 @@ export const Experience = (): JSX.Element => (
           'SaaS',
         ]}
         descriptions={[
-          'Manage, foster growth, and perform annual reviews for five full-stack developers across two teams',
           'Build and iterate upon new claims application for our primary client, MassMutual',
+          'Manage, foster growth, and perform annual reviews for five full-stack developers across two teams',
         ]}
         indent
       />
