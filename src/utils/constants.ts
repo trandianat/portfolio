@@ -58,3 +58,17 @@ export const colors = [
   'black',
   'yellow',
 ];
+
+export const lexRuntimeConfig = {
+  credentials: {
+    accessKeyId: process.env.REACT_APP_LEX_ACCESS as string,
+    secretAccessKey: process.env.REACT_APP_LEX_SECRET as string,
+  },
+  region: process.env.REACT_APP_REGION,
+};
+
+export const lexInputConfig = {
+  botAlias: process.env.REACT_APP_LEX_ALIAS,
+  botName: process.env.REACT_APP_LEX_BOT,
+  userId: process.env.REACT_APP_LEX_USER,
+};

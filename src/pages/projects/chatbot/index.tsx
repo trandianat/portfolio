@@ -2,7 +2,7 @@ import { LexRuntimeService } from '@aws-sdk/client-lex-runtime-service';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 import * as styles from 'pages/projects/chatbot/styles';
-import { Persona } from 'utils/constants';
+import { lexInputConfig, lexRuntimeConfig, Persona } from 'utils/constants';
 
 type Message = {
   from: Persona.AUTO | Persona.BOT | Persona.USER;
@@ -16,14 +16,7 @@ export const Chatbot = (): JSX.Element => {
 
   const empty = input.length < 1;
   const whitespace = input.length > 0 && !input.trim();
-
-  const lex = new LexRuntimeService({
-    credentials: {
-      accessKeyId: process.env.REACT_APP_LEX_ACCESS as string,
-      secretAccessKey: process.env.REACT_APP_LEX_SECRET as string,
-    },
-    region: process.env.REACT_APP_REGION,
-  });
+  const lex = new LexRuntimeService(lexRuntimeConfig);
 
   const handleError = () => {
     setError(true);
@@ -39,12 +32,7 @@ export const Chatbot = (): JSX.Element => {
   const send = async () => {
     try {
       await lex.postText(
-        {
-          botAlias: process.env.REACT_APP_LEX_ALIAS,
-          botName: process.env.REACT_APP_LEX_BOT,
-          inputText: input,
-          userId: process.env.REACT_APP_LEX_USER,
-        },
+        { ...lexInputConfig, inputText: input },
         (_: Error, data: any) => {
           if (data) {
             if (data.dialogState === 'ReadyForFulfillment') {
@@ -69,7 +57,7 @@ export const Chatbot = (): JSX.Element => {
         }
       );
       setInput('');
-    } catch (error) {
+    } catch {
       handleError();
     }
   };
