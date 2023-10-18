@@ -50,6 +50,7 @@ export const Experience = (): JSX.Element => (
             end="JUL '21"
             skills={[
               'React',
+              'Redux',
               'TypeScript',
               'Node.js',
               'Express',
@@ -72,6 +73,7 @@ export const Experience = (): JSX.Element => (
             end="OCT '19"
             skills={[
               'React',
+              'Redux',
               'Node.js',
               'Express',
               'GraphQL',
