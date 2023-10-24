@@ -43,6 +43,5 @@ module.exports = {
             favicon: "./src/assets/favicon.ico",
             template: path.join(__dirname, "src", "index.html"),
         }),
-    ],
-    devtool: "eval-source-map"
+    ]
 };
