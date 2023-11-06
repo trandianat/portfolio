@@ -1,7 +1,7 @@
 {
     "presets": [
-        "@babel/env",
-        "@babel/react",
+        "@babel/preset-env",
+        ["@babel/preset-react", { "runtime": "automatic" }], // Prevents "React is not defined" in Jest files
         "@babel/preset-typescript"
     ]
 }

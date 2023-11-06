@@ -12,7 +12,7 @@ export const Wedding = (): JSX.Element => {
   useEffect(() => {
     const getImages = async () => {
       await Storage.list(`${folder}/${folder}`, { pageSize: 'ALL' }).then(
-        async ({ results }) => {
+        ({ results }) => {
           const list: string[] = [];
           results.forEach(async result => {
             const image = await Storage.get((result as any).key);
