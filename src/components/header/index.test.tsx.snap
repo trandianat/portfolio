@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.emotion-1 {
+  background-color: var(--black);
+  height: 2px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .emotion-2 {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .emotion-2 h1 {
+    line-height: 72px;
+    margin-bottom: 12px;
+  }
+}
+
+.emotion-3 {
+  background-color: var(--black);
+  border-radius: 50%;
+  color: var(--white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 100px;
+  letter-spacing: 3px;
+  min-height: 100px;
+  min-width: 100px;
+  width: 100px;
+}
+
+.emotion-3 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 6px;
+  margin: auto;
+}
+
+.emotion-3 .dot {
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 4px;
+  margin: 0 auto;
+  width: 4px;
+}
+
+.emotion-3 .line {
+  background-color: var(--white);
+  height: 1px;
+  margin: 0 auto;
+  width: 24px;
+}
+
+@media (max-width: 700px) {
+  .emotion-3 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  vertical-align: bottom;
+}
+
+@media (min-width: 701px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    />
+    <div
+      className="emotion-2"
+    >
+      <div>
+        <h1>
+          Diana Tran
+        </h1>
+        <p
+          className="sans"
+        >
+          Software Engineer
+        </p>
+      </div>
+      <div
+        className="emotion-3"
+      >
+        <div
+          className="content"
+        >
+          <div
+            className="dot"
+          />
+          <div>
+            DT
+          </div>
+          <div
+            className="line"
+          />
+        </div>
+      </div>
+    </div>
+    <p>
+      Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a frontend-focused role that highlights my passion for developing seamless and accessible user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+       
+      <a
+        className="emotion-4"
+        href="https://github.com/trandianat"
+        target="_blank"
+      >
+        Github
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+          />
+        </svg>
+      </a>
+    </p>
+  </div>
+</div>
+`;

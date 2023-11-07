@@ -1,31 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Background should match the snapshot 1`] = `
-<div
-  css={
-    {
-      "backgroundColor": "var(--white)",
-      "padding": "48px 0",
-      "width": "100%",
-    }
+.emotion-0 {
+  background-color: var(--white);
+  padding: 48px 0;
+  width: 100%;
+}
+
+.emotion-1 {
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+@media (max-width: 950px) {
+  .emotion-1 {
+    width: 650px;
   }
+}
+
+@media (max-width: 700px) {
+  .emotion-1 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .emotion-1 {
+    width: 80%;
+  }
+}
+
+<div
+  className="emotion-0"
 >
   <div
-    css={
-      {
-        "@media (max-width: 450px)": {
-          "width": "80%",
-        },
-        "@media (max-width: 700px)": {
-          "width": 400,
-        },
-        "@media (max-width: 950px)": {
-          "width": 650,
-        },
-        "margin": "0 auto",
-        "width": "var(--desktop)",
-      }
-    }
-  />
+    className="emotion-1"
+  >
+    Content
+  </div>
 </div>
 `;

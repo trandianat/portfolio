@@ -2,6 +2,7 @@
     "presets": [
         "@babel/preset-env",
         ["@babel/preset-react", { "runtime": "automatic" }], // Prevents "React is not defined" in Jest files
-        "@babel/preset-typescript"
+        "@babel/preset-typescript",
+        "@emotion/babel-preset-css-prop" // Outputs Emotion CSS in snapshots
     ]
 }

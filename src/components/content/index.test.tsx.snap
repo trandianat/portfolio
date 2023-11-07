@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content should match the snapshot 1`] = `
+[
+  <div>
+    Header
+  </div>,
+  .emotion-0 {
+  background-color: var(--gray);
+  padding: 48px 0;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+@media (max-width: 950px) {
+  .emotion-1 {
+    width: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-1 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .emotion-1 {
+    width: 80%;
+  }
+}
+
+<div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      <div>
+        Navigation
+      </div>
+      Content
+    </div>
+  </div>,
+]
+`;
