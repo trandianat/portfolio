@@ -3,8 +3,26 @@ const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: path.join(__dirname, "src", "index.tsx"), // or "./src/index.tsx"
-    output: { clean: true, path: path.join(__dirname, "build"), filename: "index.bundle.js", publicPath: "/" },
+    entry: {
+        index: {
+            dependOn: 'shared',
+            import: path.join(__dirname, "src", "index.tsx") // or "./src/index.tsx"
+        },
+        skills: {
+            dependOn: 'shared',
+            import: './src/pages/skills/index.tsx'
+        },
+        projects: {
+            dependOn: 'shared',
+            import: './src/pages/projects/index.tsx'
+        },
+        shared: '@emotion/react'
+    },
+    output: {
+        clean: true,
+        filename: "[name].bundle.js",
+        path: path.join(__dirname, "build"),
+        publicPath: "/" },
     mode: process.env.NODE_ENV || "development",
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
