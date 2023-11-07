@@ -3,7 +3,17 @@ const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: path.join(__dirname, "src", "index.tsx"), // or "./src/index.tsx"
+    entry: {
+        index: {
+            dependOn: 'shared',
+            import: path.join(__dirname, "src", "index.tsx") // or "./src/index.tsx"
+        },
+        projects: {
+            dependOn: 'shared',
+            import: './src/pages/projects/index.tsx'
+        },
+        shared: ['@emotion/react', 'aws-amplify']
+    },
     output: {
         clean: true,
         filename: "[name].bundle.js",
@@ -49,5 +59,8 @@ module.exports = {
             template: path.join(__dirname, "src", "index.html"),
         }),
     ],
-    optimization: { splitChunks: { chunks: 'all' } }, // Splits common dependencies into chunks
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: { chunks: 'all' } // Splits common dependencies into chunks
+    },
 };
