@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 import { Header } from 'components/header';
 
 jest.mock('components/background', () => ({
@@ -8,6 +8,6 @@ jest.mock('components/background', () => ({
 
 describe('Header', () => {
   it('should match the snapshot', () => {
-    expect(renderer.create(<Header />)).toMatchSnapshot();
+    expect(create(<Header />)).toMatchSnapshot();
   });
 });

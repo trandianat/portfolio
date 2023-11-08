@@ -1,10 +1,10 @@
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 import { Job } from 'components/job';
 
 describe('Job', () => {
   it('should match the snapshot', () => {
     expect(
-      renderer.create(
+      create(
         <Job
           role="Role"
           company="Company"

@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 import { Content } from 'components/content';
 
 jest.mock('components/header', () => ({
@@ -11,6 +11,6 @@ jest.mock('components/navigation', () => ({
 
 describe('Content', () => {
   it('should match the snapshot', () => {
-    expect(renderer.create(<Content>Content</Content>)).toMatchSnapshot();
+    expect(create(<Content>Content</Content>)).toMatchSnapshot();
   });
 });

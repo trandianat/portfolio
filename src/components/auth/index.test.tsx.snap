@@ -21,7 +21,7 @@ exports[`Auth should match the snapshot 1`] = `
     className="emotion-0"
   >
     <a
-      href="projects"
+      href="/projects"
     >
       ≪ Back
     </a>

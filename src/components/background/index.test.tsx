@@ -1,8 +1,8 @@
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 import { Background } from 'components/background';
 
 describe('Background', () => {
   it('should match the snapshot', () => {
-    expect(renderer.create(<Background>Content</Background>)).toMatchSnapshot();
+    expect(create(<Background>Content</Background>)).toMatchSnapshot();
   });
 });
