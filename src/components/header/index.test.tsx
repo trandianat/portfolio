@@ -3,7 +3,9 @@ import { create } from 'react-test-renderer';
 import { Header } from 'components/header';
 
 jest.mock('components/background', () => ({
-  Background: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  Background: ({ children }: { children: ReactNode }) => (
+    <div className="background">{children}</div>
+  ),
 }));
 
 describe('Header', () => {

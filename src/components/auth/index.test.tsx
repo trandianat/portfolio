@@ -3,12 +3,13 @@ import { useLocation } from 'react-router-dom';
 import { create } from 'react-test-renderer';
 import Auth from 'components/auth';
 
+const mockSignOut = jest.fn();
 jest.mock('@aws-amplify/ui-react', () => ({
   withAuthenticator:
     (Auth: FunctionComponent<PropsWithChildren<{}>>) =>
     ({ children }: { children: ReactNode }) =>
       <Auth>{children}</Auth>,
-  useAuthenticator: () => ({ signOut: jest.fn() }),
+  useAuthenticator: () => ({ signOut: mockSignOut }),
 }));
 
 jest.mock('react-router-dom', () => ({
@@ -35,6 +36,12 @@ describe('Auth', () => {
   it('should not show the ≪ Back link on the projects page', () => {
     mockUseLocation.mockReturnValue({ pathname: '/projects' });
     const render = create(component).root;
-    expect(render.findAllByProps({ to: '/projects' }).length).toBe(0);
+    expect(render.findAllByProps({ children: '≪ Back' }).length).toBe(0);
+  });
+
+  it('should sign out', () => {
+    const render = create(component).root;
+    render.findByType('button').props.onClick();
+    expect(mockSignOut).toHaveBeenCalledTimes(1);
   });
 });

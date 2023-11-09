@@ -111,7 +111,9 @@ exports[`Header should match the snapshot 1`] = `
   }
 }
 
-<div>
+<div
+  className="background"
+>
   <div
     className="emotion-0"
   >
