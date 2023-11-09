@@ -7,8 +7,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "report:dev": "webpack --profile --json > report.json; webpack-bundle-analyzer ./report.json",
     "report:prod": "webpack --mode production --profile --json > report.json; webpack-bundle-analyzer ./report.json",
-    "test": "jest",
-    "test:snapshot": "jest -u",
+    "test": "jest --coverage",
+    "test:snapshot": "jest --updateSnapshot --coverage",
     "test:watch": "jest --watch",
     "start": "webpack serve",
     "webpack": "webpack"
