@@ -23,8 +23,8 @@ export const Header = (): JSX.Element => (
       </div>
       <p>
         Results-driven software engineer with 8 years of full-stack experience
-        and 1 year of people-management experience. Seeking a frontend-focused
-        role that highlights my passion for developing seamless and accessible
+        and 1 year of people-management experience. Seeking a role that
+        highlights my passion for developing seamless and confidence-boosting
         user experiences. Graduated from Boston College in 2014 with a
         bachelor's in Computer Science.{' '}
         <Link

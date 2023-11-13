@@ -185,7 +185,7 @@ exports[`Skills should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a frontend-focused role that highlights my passion for developing seamless and accessible user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a role that highlights my passion for developing seamless and confidence-boosting user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
            
           <a
             className="emotion-6"
@@ -341,7 +341,7 @@ exports[`Skills should match the snapshot 1`] = `
   line-height: 24px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .emotion-4 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -408,6 +408,9 @@ exports[`Skills should match the snapshot 1`] = `
               TypeScript
             </li>
             <li>
+              Redux
+            </li>
+            <li>
               HTML
             </li>
             <li>
@@ -423,10 +426,10 @@ exports[`Skills should match the snapshot 1`] = `
               Cypress
             </li>
             <li>
-              PostgreSQL
+              Node.js
             </li>
             <li>
-              AWS
+              PostgreSQL
             </li>
             <li>
               REST APIs
@@ -451,21 +454,6 @@ exports[`Skills should match the snapshot 1`] = `
               Accessibility
             </li>
             <li>
-              Redux
-            </li>
-            <li>
-              Sass
-            </li>
-            <li>
-              Storybook
-            </li>
-            <li>
-              Node.js
-            </li>
-            <li>
-              MongoDB
-            </li>
-            <li>
               Webpack
             </li>
             <li>
@@ -475,16 +463,34 @@ exports[`Skills should match the snapshot 1`] = `
               Kubernetes
             </li>
             <li>
+              Knex.js
+            </li>
+            <li>
+              Angular
+            </li>
+            <li>
+              Sass
+            </li>
+            <li>
+              Storybook
+            </li>
+            <li>
+              React Testing Library
+            </li>
+            <li>
               Enzyme
             </li>
             <li>
               GraphQL
             </li>
             <li>
-              Angular
+              Java
             </li>
             <li>
-              Java
+              MongoDB
+            </li>
+            <li>
+              AWS
             </li>
             <li>
               Waterfall
