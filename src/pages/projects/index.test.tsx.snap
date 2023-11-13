@@ -1,0 +1,450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects should match the snapshot 1`] = `
+[
+  .emotion-0 {
+  background-color: var(--white);
+  padding: 48px 0;
+  width: 100%;
+}
+
+.emotion-1 {
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+@media (max-width: 950px) {
+  .emotion-1 {
+    width: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-1 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .emotion-1 {
+    width: 80%;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.emotion-3 {
+  background-color: var(--black);
+  height: 2px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .emotion-4 {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .emotion-4 h1 {
+    line-height: 72px;
+    margin-bottom: 12px;
+  }
+}
+
+.emotion-5 {
+  background-color: var(--black);
+  border-radius: 50%;
+  color: var(--white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 100px;
+  letter-spacing: 3px;
+  min-height: 100px;
+  min-width: 100px;
+  width: 100px;
+}
+
+.emotion-5 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 6px;
+  margin: auto;
+}
+
+.emotion-5 .dot {
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 4px;
+  margin: 0 auto;
+  width: 4px;
+}
+
+.emotion-5 .line {
+  background-color: var(--white);
+  height: 1px;
+  margin: 0 auto;
+  width: 24px;
+}
+
+@media (max-width: 700px) {
+  .emotion-5 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  vertical-align: bottom;
+}
+
+@media (min-width: 701px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+<div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        />
+        <div
+          className="emotion-4"
+        >
+          <div>
+            <h1>
+              Diana Tran
+            </h1>
+            <p
+              className="sans"
+            >
+              Software Engineer
+            </p>
+          </div>
+          <div
+            className="emotion-5"
+          >
+            <div
+              className="content"
+            >
+              <div
+                className="dot"
+              />
+              <div>
+                DT
+              </div>
+              <div
+                className="line"
+              />
+            </div>
+          </div>
+        </div>
+        <p>
+          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a frontend-focused role that highlights my passion for developing seamless and accessible user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+           
+          <a
+            className="emotion-6"
+            href="https://github.com/trandianat"
+            target="_blank"
+          >
+            Github
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+              />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>,
+  .emotion-0 {
+  background-color: var(--gray);
+  padding: 48px 0;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+@media (max-width: 950px) {
+  .emotion-1 {
+    width: 650px;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-1 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .emotion-1 {
+    width: 80%;
+  }
+}
+
+.emotion-2 {
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  box-shadow: var(--shadow);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -48px 0 36px;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-2 a {
+  color: var(--white);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-weight: normal;
+  padding: 12px 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 a svg {
+  fill: var(--white);
+}
+
+.emotion-2 a.active {
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.emotion-2 a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.emotion-2 a:hover svg {
+  fill: var(--black);
+}
+
+@media (max-width: 700px) {
+  .emotion-2 {
+    font-size: .875rem;
+  }
+
+  .emotion-2 a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .emotion-2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .emotion-2 a {
+    letter-spacing: 4px;
+    padding: 10px 0;
+  }
+
+  .emotion-2 a:nth-of-type(-n + 2) {
+    border-bottom: 1px solid var(--white);
+  }
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 6px;
+  vertical-align: bottom;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 button.amplify-button {
+  margin-top: 18px;
+}
+
+.emotion-4 button.amplify-button--disabled {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--dark-gray);
+}
+
+.emotion-4 button.amplify-button--disabled:hover {
+  color: var(--white);
+  cursor: default;
+}
+
+.emotion-4 button.amplify-field__show-password {
+  display: none;
+}
+
+.emotion-4 fieldset.amplify-flex {
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-4 legend {
+  font-size: 1.75rem;
+}
+
+.emotion-4 svg.amplify-loader {
+  display: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+<div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      <nav
+        className="sans emotion-2"
+      >
+        <a
+          href="/"
+        >
+          Experience
+        </a>
+        <a
+          href="/skills"
+        >
+          Skills
+        </a>
+        <a
+          href="/projects"
+        >
+          Projects
+        </a>
+        <a
+          className="emotion-3"
+          href="https://github.com/trandianat"
+          target="_blank"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+          Github
+        </a>
+      </nav>
+      <div
+        className="emotion-4"
+      >
+        <div
+          className="emotion-5"
+        >
+          <a
+            href="/projects"
+          >
+            ≪ Back
+          </a>
+          <button
+            onClick={[MockFunction]}
+          >
+            Sign out
+          </button>
+        </div>
+        <div>
+          Outlet
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
