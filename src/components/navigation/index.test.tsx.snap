@@ -49,13 +49,15 @@ exports[`Navigation should match the snapshot 1`] = `
   fill: var(--black);
 }
 
-@media (max-width: 700px) {
-  .emotion-0 {
-    font-size: .875rem;
-  }
-
-  .emotion-0 a:last-child {
+@media (max-width: 950px) {
+  .emotion-0 .external {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-0 a {
+    font-size: .875rem;
   }
 }
 
@@ -112,7 +114,22 @@ exports[`Navigation should match the snapshot 1`] = `
     Projects
   </a>
   <a
-    className="emotion-1"
+    className="external emotion-1"
+    href="https://www.linkedin.com/in/trandianat"
+    target="_blank"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+      />
+    </svg>
+    LinkedIn
+  </a>
+  <a
+    className="external emotion-1"
     href="https://github.com/trandianat"
     target="_blank"
   >

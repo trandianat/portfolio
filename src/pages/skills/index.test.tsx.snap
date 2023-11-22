@@ -122,7 +122,13 @@ exports[`Skills should match the snapshot 1`] = `
   }
 }
 
-.emotion-6 {
+@media (min-width: 951px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -133,12 +139,6 @@ exports[`Skills should match the snapshot 1`] = `
   display: inline-flex;
   gap: 4px;
   vertical-align: bottom;
-}
-
-@media (min-width: 701px) {
-  .emotion-6 {
-    display: none;
-  }
 }
 
 <div
@@ -185,23 +185,45 @@ exports[`Skills should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a role that highlights my passion for developing seamless and confidence-boosting user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+          Results-driven team player with 8 years of full-stack experience and 1 year of management experience. Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Well versed in the software development lifecycle including design thinking, architecture and system design, testing, and monitoring. Graduated from Boston College in 2014 with a bachelor's degree in Computer Science.
            
-          <a
+          <span
             className="emotion-6"
-            href="https://github.com/trandianat"
-            target="_blank"
           >
-            Github
-            <svg
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              className="emotion-7"
+              href="https://www.linkedin.com/in/trandianat"
+              target="_blank"
             >
-              <path
-                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-              />
-            </svg>
-          </a>
+              LinkedIn
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+             
+            &
+             
+            <a
+              className="emotion-7"
+              href="https://github.com/trandianat"
+              target="_blank"
+            >
+              Github
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+          </span>
         </p>
       </div>
     </div>
@@ -287,13 +309,15 @@ exports[`Skills should match the snapshot 1`] = `
   fill: var(--black);
 }
 
-@media (max-width: 700px) {
-  .emotion-2 {
-    font-size: .875rem;
-  }
-
-  .emotion-2 a:last-child {
+@media (max-width: 950px) {
+  .emotion-2 .external {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-2 a {
+    font-size: .875rem;
   }
 }
 
@@ -331,22 +355,43 @@ exports[`Skills should match the snapshot 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5.desktop {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .emotion-5.desktop {
+    display: none;
+  }
+}
+
+.emotion-5.mobile {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: var(--sans);
-  gap: 48px;
-  line-height: 24px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
 }
 
-@media (max-width: 450px) {
-  .emotion-4 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 24px;
+.emotion-5.mobile div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (min-width: 701px) {
+  .emotion-5.mobile {
+    display: none;
   }
 }
 
@@ -375,7 +420,22 @@ exports[`Skills should match the snapshot 1`] = `
           Projects
         </a>
         <a
-          className="emotion-3"
+          className="external emotion-3"
+          href="https://www.linkedin.com/in/trandianat"
+          target="_blank"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          className="external emotion-3"
           href="https://github.com/trandianat"
           target="_blank"
         >
@@ -391,24 +451,18 @@ exports[`Skills should match the snapshot 1`] = `
         </a>
       </nav>
       <div
-        className="emotion-4"
+        className="desktop emotion-5"
       >
         <div>
           <h2>
-            Primarily used:
+            Languages
           </h2>
           <ul>
-            <li>
-              React
-            </li>
             <li>
               JavaScript
             </li>
             <li>
               TypeScript
-            </li>
-            <li>
-              Redux
             </li>
             <li>
               HTML
@@ -417,39 +471,105 @@ exports[`Skills should match the snapshot 1`] = `
               CSS
             </li>
             <li>
-              Emotion
-            </li>
-            <li>
-              Jest
-            </li>
-            <li>
-              Cypress
-            </li>
-            <li>
               Node.js
             </li>
             <li>
-              PostgreSQL
+              Angular
             </li>
             <li>
-              REST APIs
+              GraphQL
             </li>
             <li>
-              Git
+              Java
             </li>
             <li>
-              CI/CD
-            </li>
-            <li>
-              Agile
+              XML
             </li>
           </ul>
         </div>
         <div>
           <h2>
-            Familiar with:
+            Libraries
           </h2>
           <ul>
+            <li>
+              React
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Express
+            </li>
+            <li>
+              Emotion
+            </li>
+            <li>
+              Sass
+            </li>
+            <li>
+              Knex.js
+            </li>
+            <li>
+              Storybook
+            </li>
+            <li>
+              Handlebars
+            </li>
+            <li>
+              Dojo
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Testing
+          </h2>
+          <ul>
+            <li>
+              Jest
+            </li>
+            <li>
+              React Testing Library
+            </li>
+            <li>
+              Cypress
+            </li>
+            <li>
+              Enzyme
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Databases
+          </h2>
+          <ul>
+            <li>
+              PostgreSQL
+            </li>
+            <li>
+              MongoDB
+            </li>
+            <li>
+              DynamoDB
+            </li>
+            <li>
+              Oracle
+            </li>
+            <li>
+              MySQL
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Other
+          </h2>
+          <ul>
+            <li>
+              Agile
+            </li>
             <li>
               Accessibility
             </li>
@@ -463,39 +583,90 @@ exports[`Skills should match the snapshot 1`] = `
               Kubernetes
             </li>
             <li>
-              Knex.js
-            </li>
-            <li>
-              Angular
-            </li>
-            <li>
-              Sass
-            </li>
-            <li>
-              Storybook
-            </li>
-            <li>
-              React Testing Library
-            </li>
-            <li>
-              Enzyme
-            </li>
-            <li>
-              GraphQL
-            </li>
-            <li>
-              Java
-            </li>
-            <li>
-              MongoDB
-            </li>
-            <li>
               AWS
             </li>
             <li>
-              Waterfall
+              Git
             </li>
           </ul>
+        </div>
+      </div>
+      <div
+        className="mobile emotion-5"
+      >
+        <div>
+          <h2>
+            Languages
+          </h2>
+          <hr />
+          <p>
+            JavaScript, 
+            TypeScript, 
+            HTML, 
+            CSS, 
+            Node.js, 
+            Angular, 
+            GraphQL, 
+            Java, 
+            XML
+          </p>
+        </div>
+        <div>
+          <h2>
+            Libraries
+          </h2>
+          <hr />
+          <p>
+            React, 
+            Redux, 
+            Express, 
+            Emotion, 
+            Sass, 
+            Knex.js, 
+            Storybook, 
+            Handlebars, 
+            Dojo
+          </p>
+        </div>
+        <div>
+          <h2>
+            Testing
+          </h2>
+          <hr />
+          <p>
+            Jest, 
+            React Testing Library, 
+            Cypress, 
+            Enzyme
+          </p>
+        </div>
+        <div>
+          <h2>
+            Databases
+          </h2>
+          <hr />
+          <p>
+            PostgreSQL, 
+            MongoDB, 
+            DynamoDB, 
+            Oracle, 
+            MySQL
+          </p>
+        </div>
+        <div>
+          <h2>
+            Other
+          </h2>
+          <hr />
+          <p>
+            Agile, 
+            Accessibility, 
+            Webpack, 
+            Docker, 
+            Kubernetes, 
+            AWS, 
+            Git
+          </p>
         </div>
       </div>
     </div>

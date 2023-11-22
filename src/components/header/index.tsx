@@ -22,19 +22,29 @@ export const Header = (): JSX.Element => (
         </div>
       </div>
       <p>
-        Results-driven software engineer with 8 years of full-stack experience
-        and 1 year of people-management experience. Seeking a role that
-        highlights my passion for developing seamless and confidence-boosting
-        user experiences. Graduated from Boston College in 2014 with a
-        bachelor's in Computer Science.{' '}
-        <Link
-          css={styles.link}
-          icon={<LinkOut />}
-          iconGap={Size.MEDIUM}
-          iconPosition={Position.RIGHT}
-          text="Github"
-          url={Links.GITHUB}
-        />
+        Results-driven team player with 8 years of full-stack experience and 1
+        year of management experience. Detail-oriented documentation expert who
+        is eager to fail fast, learn, and iterate. Well versed in the software
+        development lifecycle including design thinking, architecture and system
+        design, testing, and monitoring. Graduated from Boston College in 2014
+        with a bachelor's degree in Computer Science.{' '}
+        <span css={styles.links}>
+          <Link
+            icon={<LinkOut />}
+            iconGap={Size.MEDIUM}
+            iconPosition={Position.RIGHT}
+            text="LinkedIn"
+            url={Links.LINKEDIN}
+          />{' '}
+          &{' '}
+          <Link
+            icon={<LinkOut />}
+            iconGap={Size.MEDIUM}
+            iconPosition={Position.RIGHT}
+            text="Github"
+            url={Links.GITHUB}
+          />
+        </span>
       </p>
     </div>
   </Background>

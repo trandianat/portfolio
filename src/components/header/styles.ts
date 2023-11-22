@@ -49,6 +49,6 @@ export const logo = css({
   '@media (max-width: 700px)': { margin: '0 auto' },
 });
 
-export const link = {
-  '@media (min-width: 701px)': { display: 'none' },
+export const links = {
+  '@media (min-width: 951px)': { display: 'none' },
 };

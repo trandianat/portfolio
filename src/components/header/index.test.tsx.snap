@@ -92,7 +92,13 @@ exports[`Header should match the snapshot 1`] = `
   }
 }
 
-.emotion-4 {
+@media (min-width: 951px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -103,12 +109,6 @@ exports[`Header should match the snapshot 1`] = `
   display: inline-flex;
   gap: 4px;
   vertical-align: bottom;
-}
-
-@media (min-width: 701px) {
-  .emotion-4 {
-    display: none;
-  }
 }
 
 <div
@@ -152,23 +152,45 @@ exports[`Header should match the snapshot 1`] = `
       </div>
     </div>
     <p>
-      Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a role that highlights my passion for developing seamless and confidence-boosting user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+      Results-driven team player with 8 years of full-stack experience and 1 year of management experience. Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Well versed in the software development lifecycle including design thinking, architecture and system design, testing, and monitoring. Graduated from Boston College in 2014 with a bachelor's degree in Computer Science.
        
-      <a
+      <span
         className="emotion-4"
-        href="https://github.com/trandianat"
-        target="_blank"
       >
-        Github
-        <svg
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <a
+          className="emotion-5"
+          href="https://www.linkedin.com/in/trandianat"
+          target="_blank"
         >
-          <path
-            d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-          />
-        </svg>
-      </a>
+          LinkedIn
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+        </a>
+         
+        &
+         
+        <a
+          className="emotion-5"
+          href="https://github.com/trandianat"
+          target="_blank"
+        >
+          Github
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+        </a>
+      </span>
     </p>
   </div>
 </div>

@@ -122,7 +122,13 @@ exports[`Projects should match the snapshot 1`] = `
   }
 }
 
-.emotion-6 {
+@media (min-width: 951px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -133,12 +139,6 @@ exports[`Projects should match the snapshot 1`] = `
   display: inline-flex;
   gap: 4px;
   vertical-align: bottom;
-}
-
-@media (min-width: 701px) {
-  .emotion-6 {
-    display: none;
-  }
 }
 
 <div
@@ -185,23 +185,45 @@ exports[`Projects should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a role that highlights my passion for developing seamless and confidence-boosting user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+          Results-driven team player with 8 years of full-stack experience and 1 year of management experience. Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Well versed in the software development lifecycle including design thinking, architecture and system design, testing, and monitoring. Graduated from Boston College in 2014 with a bachelor's degree in Computer Science.
            
-          <a
+          <span
             className="emotion-6"
-            href="https://github.com/trandianat"
-            target="_blank"
           >
-            Github
-            <svg
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              className="emotion-7"
+              href="https://www.linkedin.com/in/trandianat"
+              target="_blank"
             >
-              <path
-                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-              />
-            </svg>
-          </a>
+              LinkedIn
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+             
+            &
+             
+            <a
+              className="emotion-7"
+              href="https://github.com/trandianat"
+              target="_blank"
+            >
+              Github
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+          </span>
         </p>
       </div>
     </div>
@@ -287,13 +309,15 @@ exports[`Projects should match the snapshot 1`] = `
   fill: var(--black);
 }
 
-@media (max-width: 700px) {
-  .emotion-2 {
-    font-size: .875rem;
-  }
-
-  .emotion-2 a:last-child {
+@media (max-width: 950px) {
+  .emotion-2 .external {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-2 a {
+    font-size: .875rem;
   }
 }
 
@@ -331,25 +355,25 @@ exports[`Projects should match the snapshot 1`] = `
   justify-content: center;
 }
 
-.emotion-4 button.amplify-button {
+.emotion-5 button.amplify-button {
   margin-top: 18px;
 }
 
-.emotion-4 button.amplify-button--disabled {
+.emotion-5 button.amplify-button--disabled {
   background-color: var(--dark-gray);
   border: 1px solid var(--dark-gray);
 }
 
-.emotion-4 button.amplify-button--disabled:hover {
+.emotion-5 button.amplify-button--disabled:hover {
   color: var(--white);
   cursor: default;
 }
 
-.emotion-4 button.amplify-field__show-password {
+.emotion-5 button.amplify-field__show-password {
   display: none;
 }
 
-.emotion-4 fieldset.amplify-flex {
+.emotion-5 fieldset.amplify-flex {
   border: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -360,15 +384,15 @@ exports[`Projects should match the snapshot 1`] = `
   padding: 0;
 }
 
-.emotion-4 legend {
+.emotion-5 legend {
   font-size: 1.75rem;
 }
 
-.emotion-4 svg.amplify-loader {
+.emotion-5 svg.amplify-loader {
   display: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -408,7 +432,22 @@ exports[`Projects should match the snapshot 1`] = `
           Projects
         </a>
         <a
-          className="emotion-3"
+          className="external emotion-3"
+          href="https://www.linkedin.com/in/trandianat"
+          target="_blank"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          className="external emotion-3"
           href="https://github.com/trandianat"
           target="_blank"
         >
@@ -424,10 +463,10 @@ exports[`Projects should match the snapshot 1`] = `
         </a>
       </nav>
       <div
-        className="emotion-4"
+        className="emotion-5"
       >
         <div
-          className="emotion-5"
+          className="emotion-6"
         >
           <a
             href="/projects"

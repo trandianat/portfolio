@@ -122,7 +122,13 @@ exports[`Experience should match the snapshot 1`] = `
   }
 }
 
-.emotion-6 {
+@media (min-width: 951px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -133,12 +139,6 @@ exports[`Experience should match the snapshot 1`] = `
   display: inline-flex;
   gap: 4px;
   vertical-align: bottom;
-}
-
-@media (min-width: 701px) {
-  .emotion-6 {
-    display: none;
-  }
 }
 
 <div
@@ -185,23 +185,45 @@ exports[`Experience should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Results-driven software engineer with 8 years of full-stack experience and 1 year of people-management experience. Seeking a role that highlights my passion for developing seamless and confidence-boosting user experiences. Graduated from Boston College in 2014 with a bachelor's in Computer Science.
+          Results-driven team player with 8 years of full-stack experience and 1 year of management experience. Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Well versed in the software development lifecycle including design thinking, architecture and system design, testing, and monitoring. Graduated from Boston College in 2014 with a bachelor's degree in Computer Science.
            
-          <a
+          <span
             className="emotion-6"
-            href="https://github.com/trandianat"
-            target="_blank"
           >
-            Github
-            <svg
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              className="emotion-7"
+              href="https://www.linkedin.com/in/trandianat"
+              target="_blank"
             >
-              <path
-                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-              />
-            </svg>
-          </a>
+              LinkedIn
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+             
+            &
+             
+            <a
+              className="emotion-7"
+              href="https://github.com/trandianat"
+              target="_blank"
+            >
+              Github
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+          </span>
         </p>
       </div>
     </div>
@@ -287,13 +309,15 @@ exports[`Experience should match the snapshot 1`] = `
   fill: var(--black);
 }
 
-@media (max-width: 700px) {
-  .emotion-2 {
-    font-size: .875rem;
-  }
-
-  .emotion-2 a:last-child {
+@media (max-width: 950px) {
+  .emotion-2 .external {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .emotion-2 a {
+    font-size: .875rem;
   }
 }
 
@@ -331,7 +355,7 @@ exports[`Experience should match the snapshot 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -342,12 +366,12 @@ exports[`Experience should match the snapshot 1`] = `
   gap: 24px;
 }
 
-.emotion-4 .sans {
+.emotion-5 .sans {
   font-size: .875rem;
   letter-spacing: 1px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -356,13 +380,13 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 @media (min-width: 451px) {
-  .emotion-5 {
+  .emotion-6 {
     padding-left: 24px;
   }
 }
 
 @media (max-width: 450px) {
-  .emotion-5 {
+  .emotion-6 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -370,7 +394,7 @@ exports[`Experience should match the snapshot 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,12 +403,12 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 @media (max-width: 450px) {
-  .emotion-6 {
+  .emotion-7 {
     display: none;
   }
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,7 +426,7 @@ exports[`Experience should match the snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -417,7 +441,7 @@ exports[`Experience should match the snapshot 1`] = `
   padding: 8px 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   background-color: var(--white);
   border: 2px solid var(--dark-gray);
   border-radius: 8px;
@@ -425,13 +449,13 @@ exports[`Experience should match the snapshot 1`] = `
   min-width: 8px;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: var(--dark-gray);
   height: 100%;
   width: 2px;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -444,12 +468,12 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 @media (min-width: 451px) {
-  .emotion-12 {
+  .emotion-13 {
     display: none;
   }
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -467,13 +491,13 @@ exports[`Experience should match the snapshot 1`] = `
   justify-content: space-between;
 }
 
-.emotion-15 {
+.emotion-16 {
   background-color: var(--dark-gray);
   height: 2px;
   width: 100%;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -483,7 +507,7 @@ exports[`Experience should match the snapshot 1`] = `
   justify-content: space-between;
 }
 
-.emotion-18 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -493,7 +517,7 @@ exports[`Experience should match the snapshot 1`] = `
   flex-direction: column;
 }
 
-.emotion-19 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -506,7 +530,7 @@ exports[`Experience should match the snapshot 1`] = `
   margin: 6px 0;
 }
 
-.emotion-20 {
+.emotion-21 {
   background-color: var(--black);
   border-radius: 12px;
   color: var(--white);
@@ -516,16 +540,16 @@ exports[`Experience should match the snapshot 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-39 {
+.emotion-40 {
   border: 1px dotted black;
   padding: 16px 24px;
 }
 
-.emotion-39 .company {
+.emotion-40 .company {
   font-family: var(--serif);
 }
 
-.emotion-40 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -537,7 +561,7 @@ exports[`Experience should match the snapshot 1`] = `
   margin-top: 22px;
 }
 
-.emotion-41 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -546,7 +570,7 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 @media (max-width: 450px) {
-  .emotion-41 {
+  .emotion-42 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -579,7 +603,22 @@ exports[`Experience should match the snapshot 1`] = `
           Projects
         </a>
         <a
-          className="emotion-3"
+          className="external emotion-3"
+          href="https://www.linkedin.com/in/trandianat"
+          target="_blank"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          className="external emotion-3"
           href="https://github.com/trandianat"
           target="_blank"
         >
@@ -595,60 +634,60 @@ exports[`Experience should match the snapshot 1`] = `
         </a>
       </nav>
       <div
-        className="emotion-4"
+        className="emotion-5"
       >
         <div
-          className="emotion-5"
+          className="emotion-6"
         >
           <div
-            className="emotion-6"
+            className="emotion-7"
           >
-            <div
-              className="emotion-7"
-            >
-              <div
-                className="sans"
-              >
-                AUG '23
-              </div>
-              <div
-                className="sans"
-              >
-                JUL '21
-              </div>
-            </div>
             <div
               className="emotion-8"
             >
               <div
-                className="emotion-9"
-              />
+                className="sans"
+              >
+                AUG '23
+              </div>
+              <div
+                className="sans"
+              >
+                JUL '21
+              </div>
+            </div>
+            <div
+              className="emotion-9"
+            >
               <div
                 className="emotion-10"
               />
               <div
-                className="emotion-9"
+                className="emotion-11"
+              />
+              <div
+                className="emotion-10"
               />
             </div>
           </div>
           <div
-            className="emotion-12"
+            className="emotion-13"
           >
             <div
-              className="emotion-13"
+              className="emotion-14"
             >
               <div
-                className="emotion-9"
+                className="emotion-10"
               />
               <div
-                className="emotion-15"
+                className="emotion-16"
               />
               <div
-                className="emotion-9"
+                className="emotion-10"
               />
             </div>
             <div
-              className="emotion-17"
+              className="emotion-18"
             >
               <div
                 className="sans"
@@ -663,7 +702,7 @@ exports[`Experience should match the snapshot 1`] = `
             </div>
           </div>
           <div
-            className="emotion-18"
+            className="emotion-19"
           >
             <h2>
               Software Development Engineer III & Chapter Lead
@@ -674,116 +713,119 @@ exports[`Experience should match the snapshot 1`] = `
               Haven Technologies
             </p>
             <div
-              className="emotion-19"
+              className="emotion-20"
             >
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 React
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Redux
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 TypeScript
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Angular
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 CSS
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Emotion
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Storybook
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Handlebars
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Jest
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Cypress
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 React Testing Library
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Node.js
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Express
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 PostgreSQL
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Knex.js
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Docker
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Kubernetes
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Agile
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 SaaS
               </div>
             </div>
             <ul>
               <li>
-                Build and iterate upon new claims application for our primary client, MassMutual
+                Led development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for our primary client, MassMutual
               </li>
               <li>
-                Manage, foster growth, and perform annual reviews for five full-stack developers across two teams
+                Fostered professional growth and performed annual reviews for 5 full-stack developers across 2 teams
+              </li>
+              <li>
+                Served as a frontend subject matter expert for annuity, disability insurance, and claims product teams
               </li>
             </ul>
           </div>
         </div>
         <div
-          className="emotion-39"
+          className="emotion-40"
         >
           <h2
             className="company"
@@ -796,65 +838,65 @@ exports[`Experience should match the snapshot 1`] = `
             Technical Development Program & Post-Program Placement
           </p>
           <div
-            className="emotion-40"
+            className="emotion-41"
           >
             <div
-              className="emotion-41"
+              className="emotion-42"
             >
               <div
-                className="emotion-6"
+                className="emotion-7"
               >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    className="sans"
-                  >
-                    JUL '21
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    OCT '19
-                  </div>
-                </div>
                 <div
                   className="emotion-8"
                 >
                   <div
-                    className="emotion-9"
-                  />
+                    className="sans"
+                  >
+                    JUL '21
+                  </div>
+                  <div
+                    className="sans"
+                  >
+                    OCT '17
+                  </div>
+                </div>
+                <div
+                  className="emotion-9"
+                >
                   <div
                     className="emotion-10"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-11"
+                  />
+                  <div
+                    className="emotion-10"
                   />
                 </div>
               </div>
               <div
-                className="emotion-12"
+                className="emotion-13"
               >
                 <div
-                  className="emotion-13"
+                  className="emotion-14"
                 >
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                   <div
-                    className="emotion-15"
+                    className="emotion-16"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                 </div>
                 <div
-                  className="emotion-17"
+                  className="emotion-18"
                 >
                   <div
                     className="sans"
                   >
-                    OCT '19
+                    OCT '17
                   </div>
                   <div
                     className="sans"
@@ -864,7 +906,7 @@ exports[`Experience should match the snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-18"
+                className="emotion-19"
               >
                 <h2>
                   Senior Software Engineer
@@ -872,220 +914,93 @@ exports[`Experience should match the snapshot 1`] = `
                 <p
                   className="sans"
                 >
-                  Personal Insurance, Direct Sales
+                  Direct Sales & Claims
                 </p>
                 <div
-                  className="emotion-19"
+                  className="emotion-20"
                 >
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     React
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Redux
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     TypeScript
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Node.js
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Express
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     GraphQL
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     DynamoDB
                   </div>
                   <div
-                    className="emotion-20"
-                  >
-                    Jest
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Enzyme
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Lambdas
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Agile
-                  </div>
-                </div>
-                <ul>
-                  <li>
-                    Innovated on the quoting platform via A/B testing in collaboration with product and UX
-                  </li>
-                  <li>
-                    Mentored junior software engineers and interns
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="emotion-41"
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    className="sans"
-                  >
-                    OCT '19
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    OCT '17
-                  </div>
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-10"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-              </div>
-              <div
-                className="emotion-12"
-              >
-                <div
-                  className="emotion-13"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-15"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-                <div
-                  className="emotion-17"
-                >
-                  <div
-                    className="sans"
-                  >
-                    OCT '17
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    OCT '19
-                  </div>
-                </div>
-              </div>
-              <div
-                className="emotion-18"
-              >
-                <h2>
-                  Senior Software Developer
-                </h2>
-                <p
-                  className="sans"
-                >
-                  Personal Insurance, Direct Claims
-                </p>
-                <div
-                  className="emotion-19"
-                >
-                  <div
-                    className="emotion-20"
-                  >
-                    React
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Redux
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Node.js
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Express
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    GraphQL
-                  </div>
-                  <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     MongoDB
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Jest
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Enzyme
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
+                  >
+                    Lambdas
+                  </div>
+                  <div
+                    className="emotion-21"
                   >
                     Agile
                   </div>
                 </div>
                 <ul>
                   <li>
-                    Scaled the claim filing application beyond first-party users, e.g., third-party and carriers
+                    Improved quote conversion rate via design-thinking ideation and failing fast by rapidly launching A/B tests
                   </li>
                   <li>
-                    Created a website to help different types of claimants decide whether to file a claim
+                    Expanded customer base and confidence by scaling the claim-filing application to serve third-party claimants and carriers, and creating an application to guide different types of claimants in deciding whether to file a claim
+                  </li>
+                  <li>
+                    Assisted in career growth by mentoring junior software engineers and interns
                   </li>
                 </ul>
               </div>
             </div>
             <div
-              className="emotion-41"
+              className="emotion-42"
             >
               <div
-                className="emotion-6"
+                className="emotion-7"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-8"
                 >
                   <div
                     className="sans"
@@ -1095,46 +1010,46 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    AUG '16
+                    FEB '16
                   </div>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
-                  <div
-                    className="emotion-9"
-                  />
                   <div
                     className="emotion-10"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-11"
+                  />
+                  <div
+                    className="emotion-10"
                   />
                 </div>
               </div>
               <div
-                className="emotion-12"
+                className="emotion-13"
               >
                 <div
-                  className="emotion-13"
+                  className="emotion-14"
                 >
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                   <div
-                    className="emotion-15"
+                    className="emotion-16"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                 </div>
                 <div
-                  className="emotion-17"
+                  className="emotion-18"
                 >
                   <div
                     className="sans"
                   >
-                    AUG '16
+                    FEB '16
                   </div>
                   <div
                     className="sans"
@@ -1144,7 +1059,7 @@ exports[`Experience should match the snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-18"
+                className="emotion-19"
               >
                 <h2>
                   Software Developer
@@ -1152,204 +1067,109 @@ exports[`Experience should match the snapshot 1`] = `
                 <p
                   className="sans"
                 >
-                  Personal Insurance, Sales Compensation
+                  Sales Compensation & Reinsurance
                 </p>
                 <div
-                  className="emotion-19"
+                  className="emotion-20"
                 >
                   <div
-                    className="emotion-20"
-                  >
-                    Java
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Gradle
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Oracle
-                  </div>
-                  <div
-                    className="emotion-20"
-                  >
-                    Agile
-                  </div>
-                </div>
-                <ul>
-                  <li>
-                    Migrated legacy batch jobs from on-premise to the cloud
-                  </li>
-                  <li>
-                    Performed extensive testing to ensure frictionless payments to agents
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="emotion-41"
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    className="sans"
-                  >
-                    JUL '16
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    FEB '16
-                  </div>
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-10"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-              </div>
-              <div
-                className="emotion-12"
-              >
-                <div
-                  className="emotion-13"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-15"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-                <div
-                  className="emotion-17"
-                >
-                  <div
-                    className="sans"
-                  >
-                    FEB '16
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    JUL '16
-                  </div>
-                </div>
-              </div>
-              <div
-                className="emotion-18"
-              >
-                <h2>
-                  Software Developer
-                </h2>
-                <p
-                  className="sans"
-                >
-                  Specialty Markets, Reinsurance
-                </p>
-                <div
-                  className="emotion-19"
-                >
-                  <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     AngularJS
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
+                  >
+                    Java
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
+                    Gradle
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
+                    Oracle
+                  </div>
+                  <div
+                    className="emotion-21"
                   >
                     MySQL
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Agile
                   </div>
                 </div>
                 <ul>
                   <li>
-                    Developed the claims, underwriting, and contact management applications
+                    Reduced spending and optimized processing speed by migrating batch jobs from on-premise to the cloud
                   </li>
                   <li>
-                    Contributed to the architecture, design, security, and testing of the three applications
+                    Boosted insurer productivity by developing claims, underwriting, and contact management platforms
                   </li>
                 </ul>
               </div>
             </div>
             <div
-              className="emotion-41"
+              className="emotion-42"
             >
               <div
-                className="emotion-6"
+                className="emotion-7"
               >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    className="sans"
-                  >
-                    FEB '16
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    FEB '15
-                  </div>
-                </div>
                 <div
                   className="emotion-8"
                 >
                   <div
-                    className="emotion-9"
-                  />
+                    className="sans"
+                  >
+                    FEB '16
+                  </div>
+                  <div
+                    className="sans"
+                  >
+                    JUN '14
+                  </div>
+                </div>
+                <div
+                  className="emotion-9"
+                >
                   <div
                     className="emotion-10"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-11"
+                  />
+                  <div
+                    className="emotion-10"
                   />
                 </div>
               </div>
               <div
-                className="emotion-12"
+                className="emotion-13"
               >
                 <div
-                  className="emotion-13"
+                  className="emotion-14"
                 >
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                   <div
-                    className="emotion-15"
+                    className="emotion-16"
                   />
                   <div
-                    className="emotion-9"
+                    className="emotion-10"
                   />
                 </div>
                 <div
-                  className="emotion-17"
+                  className="emotion-18"
                 >
                   <div
                     className="sans"
                   >
-                    FEB '15
+                    JUN '14
                   </div>
                   <div
                     className="sans"
@@ -1359,151 +1179,56 @@ exports[`Experience should match the snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-18"
+                className="emotion-19"
               >
                 <h2>
-                  IT Analyst II
+                  Technology Associate
                 </h2>
                 <p
                   className="sans"
                 >
-                  Personal Insurance, Publishing & Document Management
+                  Publishing & RPA (Reporting, Planning & Analytics)
                 </p>
                 <div
-                  className="emotion-19"
+                  className="emotion-20"
                 >
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Dojo
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Java
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     SOAP
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     XML
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     SharePoint
                   </div>
                   <div
-                    className="emotion-20"
+                    className="emotion-21"
                   >
                     Waterfall
                   </div>
                 </div>
                 <ul>
                   <li>
-                    Integrated policy form template retrieval into a document repository application
+                    Promoted policy-issuing efficiency by integrating form templates into a centralized document repository portal
                   </li>
                   <li>
-                    Mentored teammates on technical design and implementation as Technical Lead
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="emotion-41"
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className="emotion-7"
-                >
-                  <div
-                    className="sans"
-                  >
-                    FEB '15
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    JUN '14
-                  </div>
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-10"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-              </div>
-              <div
-                className="emotion-12"
-              >
-                <div
-                  className="emotion-13"
-                >
-                  <div
-                    className="emotion-9"
-                  />
-                  <div
-                    className="emotion-15"
-                  />
-                  <div
-                    className="emotion-9"
-                  />
-                </div>
-                <div
-                  className="emotion-17"
-                >
-                  <div
-                    className="sans"
-                  >
-                    JUN '14
-                  </div>
-                  <div
-                    className="sans"
-                  >
-                    FEB '15
-                  </div>
-                </div>
-              </div>
-              <div
-                className="emotion-18"
-              >
-                <h2>
-                  IT Analyst
-                </h2>
-                <p
-                  className="sans"
-                >
-                  Commercial Insurance, Reporting, Planning & Analytics
-                </p>
-                <div
-                  className="emotion-19"
-                >
-                  <div
-                    className="emotion-20"
-                  >
-                    Lean Management
-                  </div>
-                </div>
-                <ul>
-                  <li>
-                    Attended and observed core trainings and milestone events of ongoing lean transformations
-                  </li>
-                  <li>
-                    Performed user acceptance testing and produced reports on lean metrics
+                    Increased company-wide engagement in organizational lean transformation efforts by participating in change initiatives and publishing knowledge-sharing articles
                   </li>
                 </ul>
               </div>
@@ -1511,57 +1236,57 @@ exports[`Experience should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          className="emotion-5"
+          className="emotion-6"
         >
           <div
-            className="emotion-6"
+            className="emotion-7"
           >
-            <div
-              className="emotion-7"
-            >
-              <div
-                className="sans"
-              >
-                MAY '14
-              </div>
-              <div
-                className="sans"
-              >
-                JUN '13
-              </div>
-            </div>
             <div
               className="emotion-8"
             >
               <div
-                className="emotion-9"
-              />
+                className="sans"
+              >
+                MAY '14
+              </div>
+              <div
+                className="sans"
+              >
+                JUN '13
+              </div>
+            </div>
+            <div
+              className="emotion-9"
+            >
               <div
                 className="emotion-10"
               />
               <div
-                className="emotion-9"
+                className="emotion-11"
+              />
+              <div
+                className="emotion-10"
               />
             </div>
           </div>
           <div
-            className="emotion-12"
+            className="emotion-13"
           >
             <div
-              className="emotion-13"
+              className="emotion-14"
             >
               <div
-                className="emotion-9"
+                className="emotion-10"
               />
               <div
-                className="emotion-15"
+                className="emotion-16"
               />
               <div
-                className="emotion-9"
+                className="emotion-10"
               />
             </div>
             <div
-              className="emotion-17"
+              className="emotion-18"
             >
               <div
                 className="sans"
@@ -1576,7 +1301,7 @@ exports[`Experience should match the snapshot 1`] = `
             </div>
           </div>
           <div
-            className="emotion-18"
+            className="emotion-19"
           >
             <h2>
               Operations Intern
@@ -1587,30 +1312,27 @@ exports[`Experience should match the snapshot 1`] = `
               Community Economic Development Assistance Corporation
             </p>
             <div
-              className="emotion-19"
+              className="emotion-20"
             >
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 HTML
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 CSS
               </div>
               <div
-                className="emotion-20"
+                className="emotion-21"
               >
                 Adobe Photoshop
               </div>
             </div>
             <ul>
               <li>
-                Updated and managed CEDAC's three websites, emails, and contact management system
-              </li>
-              <li>
-                Processed, peer-reviewed, and sent financial audit confirmations
+                Raised community awareness of corporate mission by updating websites and contact management system, and coding engaging emails and event invitations with on-brand graphics
               </li>
             </ul>
           </div>

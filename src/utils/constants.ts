@@ -23,6 +23,7 @@ export enum Position {
 export enum Links {
   DESIGN = 'https://www.justinmind.com',
   GITHUB = 'https://github.com/trandianat',
+  LINKEDIN = 'https://www.linkedin.com/in/trandianat',
   TENSORFLOW = 'https://www.tensorflow.org/js/models',
   WEDDING = 'https://www.thebeanwedding.com',
 }

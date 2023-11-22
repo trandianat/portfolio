@@ -43,6 +43,16 @@ export const Navigation = (): JSX.Element => {
         </Link>
       ))}
       <LinkOut
+        className="external"
+        css={styles.external}
+        icon={<LinkIcon />}
+        iconGap={Size.LARGE}
+        iconPosition={Position.LEFT}
+        text="LinkedIn"
+        url={Links.LINKEDIN}
+      />
+      <LinkOut
+        className="external"
         css={styles.external}
         icon={<LinkIcon />}
         iconGap={Size.LARGE}

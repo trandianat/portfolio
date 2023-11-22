@@ -1,9 +1,17 @@
 import { css } from '@emotion/react';
 
 export const skills = css({
-  display: 'flex',
-  fontFamily: 'var(--sans)',
-  gap: 48,
-  lineHeight: '24px',
-  '@media (max-width: 450px)': { flexDirection: 'column', gap: 24 },
+  '&.desktop': {
+    display: 'grid',
+    gap: 12,
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+    '@media (max-width: 700px)': { display: 'none' },
+  },
+  '&.mobile': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 24,
+    div: { display: 'flex', flexDirection: 'column', gap: 6 },
+    '@media (min-width: 701px)': { display: 'none' },
+  },
 });

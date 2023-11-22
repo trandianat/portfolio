@@ -32,8 +32,9 @@ export const Experience = (): JSX.Element => (
           'SaaS',
         ]}
         descriptions={[
-          'Build and iterate upon new claims application for our primary client, MassMutual',
-          'Manage, foster growth, and perform annual reviews for five full-stack developers across two teams',
+          'Led development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for our primary client, MassMutual',
+          'Fostered professional growth and performed annual reviews for 5 full-stack developers across 2 teams',
+          'Served as a frontend subject matter expert for annuity, disability insurance, and claims product teams',
         ]}
         indent
       />
@@ -45,8 +46,8 @@ export const Experience = (): JSX.Element => (
         <div css={styles.groupJobs}>
           <Job
             role="Senior Software Engineer"
-            company="Personal Insurance, Direct Sales"
-            start="OCT '19"
+            company="Direct Sales & Claims"
+            start="OCT '17"
             end="JUL '21"
             skills={[
               'React',
@@ -56,79 +57,38 @@ export const Experience = (): JSX.Element => (
               'Express',
               'GraphQL',
               'DynamoDB',
+              'MongoDB',
               'Jest',
               'Enzyme',
               'Lambdas',
               'Agile',
             ]}
             descriptions={[
-              'Innovated on the quoting platform via A/B testing in collaboration with product and UX',
-              'Mentored junior software engineers and interns',
-            ]}
-          />
-          <Job
-            role="Senior Software Developer"
-            company="Personal Insurance, Direct Claims"
-            start="OCT '17"
-            end="OCT '19"
-            skills={[
-              'React',
-              'Redux',
-              'Node.js',
-              'Express',
-              'GraphQL',
-              'MongoDB',
-              'Jest',
-              'Enzyme',
-              'Agile',
-            ]}
-            descriptions={[
-              'Scaled the claim filing application beyond first-party users, e.g., third-party and carriers',
-              'Created a website to help different types of claimants decide whether to file a claim',
+              'Improved quote conversion rate via design-thinking ideation and failing fast by rapidly launching A/B tests',
+              'Expanded customer base and confidence by scaling the claim-filing application to serve third-party claimants and carriers, and creating an application to guide different types of claimants in deciding whether to file a claim',
+              'Assisted in career growth by mentoring junior software engineers and interns',
             ]}
           />
           <Job
             role="Software Developer"
-            company="Personal Insurance, Sales Compensation"
-            start="AUG '16"
-            end="SEP '17"
-            skills={['Java', 'Gradle', 'Oracle', 'Agile']}
-            descriptions={[
-              'Migrated legacy batch jobs from on-premise to the cloud',
-              'Performed extensive testing to ensure frictionless payments to agents',
-            ]}
-          />
-          <Job
-            role="Software Developer"
-            company="Specialty Markets, Reinsurance"
+            company="Sales Compensation & Reinsurance"
             start="FEB '16"
-            end="JUL '16"
-            skills={['AngularJS', 'MySQL', 'Agile']}
+            end="SEP '17"
+            skills={['AngularJS', 'Java', 'Gradle', 'Oracle', 'MySQL', 'Agile']}
             descriptions={[
-              'Developed the claims, underwriting, and contact management applications',
-              'Contributed to the architecture, design, security, and testing of the three applications',
+              'Reduced spending and optimized processing speed by migrating batch jobs from on-premise to the cloud',
+              'Boosted insurer productivity by developing claims, underwriting, and contact management platforms',
             ]}
           />
           <Job
-            role="IT Analyst II"
-            company="Personal Insurance, Publishing & Document Management"
-            start="FEB '15"
+            role="Technology Associate"
+            company="Publishing & RPA (Reporting, Planning & Analytics)"
+            start="JUN '14"
             end="FEB '16"
             skills={['Dojo', 'Java', 'SOAP', 'XML', 'SharePoint', 'Waterfall']}
             descriptions={[
-              'Integrated policy form template retrieval into a document repository application',
-              'Mentored teammates on technical design and implementation as Technical Lead',
-            ]}
-          />
-          <Job
-            role="IT Analyst"
-            company="Commercial Insurance, Reporting, Planning & Analytics"
-            start="JUN '14"
-            end="FEB '15"
-            skills={['Lean Management']}
-            descriptions={[
-              'Attended and observed core trainings and milestone events of ongoing lean transformations',
-              'Performed user acceptance testing and produced reports on lean metrics',
+              'Promoted policy-issuing efficiency by integrating form templates into a centralized document repository portal',
+              'Increased company-wide engagement in organizational lean transformation efforts by participating in change initiatives and publishing knowledge-sharing articles',
             ]}
           />
         </div>
@@ -140,8 +100,7 @@ export const Experience = (): JSX.Element => (
         end="MAY '14"
         skills={['HTML', 'CSS', 'Adobe Photoshop']}
         descriptions={[
-          "Updated and managed CEDAC's three websites, emails, and contact management system",
-          'Processed, peer-reviewed, and sent financial audit confirmations',
+          'Raised community awareness of corporate mission by updating websites and contact management system, and coding engaging emails and event invitations with on-brand graphics',
         ]}
         indent
       />

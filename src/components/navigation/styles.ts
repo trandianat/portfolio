@@ -30,10 +30,8 @@ export const navigation = css({
       svg: { fill: Color.BLACK },
     },
   },
-  '@media (max-width: 700px)': {
-    fontSize: '.875rem',
-    a: { ':last-child': { display: 'none' } },
-  },
+  '@media (max-width: 950px)': { '.external': { display: 'none' } },
+  '@media (max-width: 700px)': { a: { fontSize: '.875rem' } },
   '@media (max-width: 450px)': {
     flexDirection: 'column',
     a: {
