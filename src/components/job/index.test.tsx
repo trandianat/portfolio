@@ -11,7 +11,8 @@ describe('Job', () => {
           start="Start"
           end="End"
           skills={['Skill 1', 'Skill 2']}
-          descriptions={['Description 1', 'Description 2']}
+          scope="Scope"
+          accomplishments={['Accomplishment 1', 'Accomplishment 2']}
         />
       )
     ).toMatchSnapshot();

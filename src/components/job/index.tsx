@@ -6,7 +6,8 @@ export const Job = ({
   start,
   end,
   skills,
-  descriptions,
+  scope,
+  accomplishments,
   indent = false,
 }: {
   role: string;
@@ -14,7 +15,8 @@ export const Job = ({
   start: string;
   end: string;
   skills: string[];
-  descriptions: string[];
+  scope: string;
+  accomplishments: string[];
   indent?: boolean;
 }): JSX.Element => (
   <div css={styles.job(indent)}>
@@ -50,9 +52,10 @@ export const Job = ({
           </div>
         ))}
       </div>
+      <p>{scope}</p>
       <ul>
-        {descriptions.map((description: string) => (
-          <li key={description}>{description}</li>
+        {accomplishments.map((accomplishment: string) => (
+          <li key={accomplishment}>{accomplishment}</li>
         ))}
       </ul>
     </div>

@@ -185,7 +185,7 @@ exports[`Experience should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Results-driven team player with 8 years of full-stack experience and 1 year of management experience. Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Well versed in the software development lifecycle including design thinking, architecture and system design, testing, and monitoring. Graduated from Boston College in 2014 with a bachelor's degree in Computer Science.
+          Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Experienced in design-thinking ideation and building seamless, accessible, and confidence-boosting user experiences. Well versed in the software development lifecycle including architecture and system design, testing, and monitoring.
            
           <span
             className="emotion-6"
@@ -705,7 +705,7 @@ exports[`Experience should match the snapshot 1`] = `
             className="emotion-19"
           >
             <h2>
-              Software Development Engineer III & Chapter Lead
+              Software Development Engineer III
             </h2>
             <p
               className="sans"
@@ -811,15 +811,15 @@ exports[`Experience should match the snapshot 1`] = `
                 SaaS
               </div>
             </div>
+            <p>
+              Served as a frontend subject matter expert (SME) for annuity, disability insurance, and claims product teams. Fostered professional growth and performed annual reviews for 5 full-stack developers across 2 teams.
+            </p>
             <ul>
               <li>
-                Led development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for our primary client, MassMutual
+                Led architectural design and development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for primary client, MassMutual
               </li>
               <li>
-                Fostered professional growth and performed annual reviews for 5 full-stack developers across 2 teams
-              </li>
-              <li>
-                Served as a frontend subject matter expert for annuity, disability insurance, and claims product teams
+                Promoted to Chapter Lead (software engineering manager) in 2022
               </li>
             </ul>
           </div>
@@ -980,15 +980,18 @@ exports[`Experience should match the snapshot 1`] = `
                     Agile
                   </div>
                 </div>
+                <p>
+                  Iterated upon quote and claims applications with fail-fast mentality by rapidly launching A/B tests. Assisted in career growth as a mentor for junior software engineers and interns.
+                </p>
                 <ul>
                   <li>
-                    Improved quote conversion rate via design-thinking ideation and failing fast by rapidly launching A/B tests
+                    Improved conversion rate by ideating on and leading development of a quote status feature and a guided policy builder across 4 micro-frontends
                   </li>
                   <li>
-                    Expanded customer base and confidence by scaling the claim-filing application to serve third-party claimants and carriers, and creating an application to guide different types of claimants in deciding whether to file a claim
+                    Expanded customer base beyond first-party claimants by scaling claims application to accommodate third-party claimants and carriers
                   </li>
                   <li>
-                    Assisted in career growth by mentoring junior software engineers and interns
+                    Boosted customer confidence by creating an application to guide different types of claimants in deciding whether to file a claim
                   </li>
                 </ul>
               </div>
@@ -1103,12 +1106,15 @@ exports[`Experience should match the snapshot 1`] = `
                     Agile
                   </div>
                 </div>
+                <p>
+                  Monitored and ensured frictionless monthly insurance agent compensation transactions and statements. Enhanced insurer productivity by developing reinsurance claims, underwriting, and contact management applications.
+                </p>
                 <ul>
                   <li>
-                    Reduced spending and optimized processing speed by migrating batch jobs from on-premise to the cloud
+                    Reduced company spending and optimized processing speed by migrating sales compensation batch jobs from on-premise servers to the cloud
                   </li>
                   <li>
-                    Boosted insurer productivity by developing claims, underwriting, and contact management platforms
+                    Researched and implemented unit testing solution for reinsurance applications
                   </li>
                 </ul>
               </div>
@@ -1223,9 +1229,12 @@ exports[`Experience should match the snapshot 1`] = `
                     Waterfall
                   </div>
                 </div>
+                <p>
+                  Selected for rotational entry-level Technical Development Program. Designated as Technical Lead on a team with 4 fellow program participants.
+                </p>
                 <ul>
                   <li>
-                    Promoted policy-issuing efficiency by integrating form templates into a centralized document repository portal
+                    Promoted policy-issuing efficiency by integrating a formerly manual process of gathering form templates into a centralized document repository portal
                   </li>
                   <li>
                     Increased company-wide engagement in organizational lean transformation efforts by participating in change initiatives and publishing knowledge-sharing articles
@@ -1330,9 +1339,12 @@ exports[`Experience should match the snapshot 1`] = `
                 Adobe Photoshop
               </div>
             </div>
+            <p>
+              Managed office operations by maintaining contact management system, and answering incoming phone calls and directing them to the appropriate extensions.
+            </p>
             <ul>
               <li>
-                Raised community awareness of corporate mission by updating websites and contact management system, and coding engaging emails and event invitations with on-brand graphics
+                Raised community awareness of corporate mission by crafting and distributing engaging emails and event invitations with on-brand graphics
               </li>
             </ul>
           </div>

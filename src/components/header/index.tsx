@@ -22,12 +22,11 @@ export const Header = (): JSX.Element => (
         </div>
       </div>
       <p>
-        Results-driven team player with 8 years of full-stack experience and 1
-        year of management experience. Detail-oriented documentation expert who
-        is eager to fail fast, learn, and iterate. Well versed in the software
-        development lifecycle including design thinking, architecture and system
-        design, testing, and monitoring. Graduated from Boston College in 2014
-        with a bachelor's degree in Computer Science.{' '}
+        Detail-oriented documentation expert who is eager to fail fast, learn,
+        and iterate. Experienced in design-thinking ideation and building
+        seamless, accessible, and confidence-boosting user experiences. Well
+        versed in the software development lifecycle including architecture and
+        system design, testing, and monitoring.{' '}
         <span css={styles.links}>
           <Link
             icon={<LinkOut />}

@@ -1,6 +1,5 @@
 import { Content } from 'components/content';
 import * as styles from 'pages/skills/styles';
-import { Fragment } from 'react';
 
 export const Skills = (): JSX.Element => {
   const skills = {
@@ -34,6 +33,7 @@ export const Skills = (): JSX.Element => {
       'Webpack',
       'Docker',
       'Kubernetes',
+      'Gradle',
       'AWS',
       'Git',
     ],
@@ -41,11 +41,11 @@ export const Skills = (): JSX.Element => {
   return (
     <Content>
       <div className="desktop" css={styles.skills}>
-        {Object.entries(skills).map((list: any) => (
-          <div key={list[0]}>
+        {Object.entries(skills).map((list: Array<string | string[]>) => (
+          <div key={list[0] as string}>
             <h2>{list[0]}</h2>
             <ul>
-              {list[1].map((skill: string) => (
+              {(list[1] as string[]).map((skill: string) => (
                 <li key={skill}>{skill}</li>
               ))}
             </ul>
@@ -53,7 +53,7 @@ export const Skills = (): JSX.Element => {
         ))}
       </div>
       <div className="mobile" css={styles.skills}>
-        {Object.entries(skills).map((list: (string | string[])[]) => (
+        {Object.entries(skills).map((list: Array<string | string[]>) => (
           <div key={list[0] as string}>
             <h2>{list[0]}</h2>
             <hr />

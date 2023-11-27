@@ -254,12 +254,15 @@ exports[`Job should match the snapshot 1`] = `
         Skill 2
       </div>
     </div>
+    <p>
+      Scope
+    </p>
     <ul>
       <li>
-        Description 1
+        Accomplishment 1
       </li>
       <li>
-        Description 2
+        Accomplishment 2
       </li>
     </ul>
   </div>
