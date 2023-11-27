@@ -33,7 +33,7 @@ export const Experience = (): JSX.Element => (
         ]}
         scope="Served as a frontend subject matter expert (SME) for annuity, disability insurance, and claims product teams. Fostered professional growth and performed annual reviews for 5 full-stack developers across 2 teams."
         accomplishments={[
-          'Led architectural design and development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for primary client, MassMutual',
+          'Led architectural design and development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 1 week digitally for the primary client, MassMutual',
           'Promoted to Chapter Lead (software engineering manager) in 2022',
         ]}
         indent
