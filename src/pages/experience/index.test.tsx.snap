@@ -185,7 +185,7 @@ exports[`Experience should match the snapshot 1`] = `
           </div>
         </div>
         <p>
-          Detail-oriented documentation expert who is eager to fail fast, learn, and iterate. Experienced in design-thinking ideation and building seamless, accessible, and confidence-boosting user experiences. Well versed in the software development lifecycle including architecture and system design, testing, and monitoring.
+          Detail-oriented documentation expert, eager to fail fast, learn, and iterate. Experienced in design-thinking ideation and building seamless, accessible, and confidence-boosting user experiences. Well versed in the software development lifecycle including architecture and system design, testing, and monitoring.
            
           <span
             className="emotion-6"
@@ -816,10 +816,10 @@ exports[`Experience should match the snapshot 1`] = `
             </p>
             <ul>
               <li>
-                Led architectural design and development of accessibility, authentication, and notifications for claims applications, reducing the average claim process from 1 month manually to 3 days digitally for primary client, MassMutual
+                Led architectural design and development of accessibility, authentication, and notifications for claims applications, reducing average claim process from 1 month manually to 1 week digitally for primary client, MassMutual.
               </li>
               <li>
-                Promoted to Chapter Lead (software engineering manager) in 2022
+                Promoted to Chapter Lead (software engineering manager) in 2022.
               </li>
             </ul>
           </div>
@@ -985,13 +985,13 @@ exports[`Experience should match the snapshot 1`] = `
                 </p>
                 <ul>
                   <li>
-                    Improved conversion rate by ideating on and leading development of a quote status feature and a guided policy builder across 4 micro-frontends
+                    Improved conversion rate by ideating on and leading development of quote status feature and guided policy builder across 4 micro-frontends.
                   </li>
                   <li>
-                    Expanded customer base beyond first-party claimants by scaling claims application to accommodate third-party claimants and carriers
+                    Expanded customer base beyond first-party claimants by scaling claims application to accommodate third-party claimants and carriers.
                   </li>
                   <li>
-                    Boosted customer confidence by creating an application to guide different types of claimants in deciding whether to file a claim
+                    Created application to guide different types of claimants in deciding whether to file claim, boosting customer confidence.
                   </li>
                 </ul>
               </div>
@@ -1111,10 +1111,7 @@ exports[`Experience should match the snapshot 1`] = `
                 </p>
                 <ul>
                   <li>
-                    Reduced company spending and optimized processing speed by migrating sales compensation batch jobs from on-premise servers to the cloud
-                  </li>
-                  <li>
-                    Researched and implemented unit testing solution for reinsurance applications
+                    Reduced company spending and optimized processing speed by migrating sales compensation batch jobs from on-premise servers to cloud.
                   </li>
                 </ul>
               </div>
@@ -1234,10 +1231,10 @@ exports[`Experience should match the snapshot 1`] = `
                 </p>
                 <ul>
                   <li>
-                    Promoted policy-issuing efficiency by integrating a formerly manual process of gathering form templates into a centralized document repository portal
+                    Promoted policy-issuing efficiency by integrating formerly manual process of gathering form templates into centralized document repository portal.
                   </li>
                   <li>
-                    Increased company-wide engagement in organizational lean transformation efforts by participating in change initiatives and publishing knowledge-sharing articles
+                    Participated in change initiatives and published knowledge-sharing articles, increased company-wide engagement in organizational lean transformation efforts.
                   </li>
                 </ul>
               </div>
@@ -1340,11 +1337,11 @@ exports[`Experience should match the snapshot 1`] = `
               </div>
             </div>
             <p>
-              Managed office operations by maintaining contact management system, and answering incoming phone calls and directing them to the appropriate extensions.
+              Managed office operations, maintained contact management system, and answered incoming phone calls, directing them to appropriate extensions.
             </p>
             <ul>
               <li>
-                Raised community awareness of corporate mission by crafting and distributing engaging emails and event invitations with on-brand graphics
+                Raised community awareness of corporate mission by crafting and distributing engaging emails and event invitations with on-brand graphics.
               </li>
             </ul>
           </div>

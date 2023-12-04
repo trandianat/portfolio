@@ -22,11 +22,11 @@ export const Header = (): JSX.Element => (
         </div>
       </div>
       <p>
-        Detail-oriented documentation expert who is eager to fail fast, learn,
-        and iterate. Experienced in design-thinking ideation and building
-        seamless, accessible, and confidence-boosting user experiences. Well
-        versed in the software development lifecycle including architecture and
-        system design, testing, and monitoring.{' '}
+        Detail-oriented documentation expert, eager to fail fast, learn, and
+        iterate. Experienced in design-thinking ideation and building seamless,
+        accessible, and confidence-boosting user experiences. Well versed in the
+        software development lifecycle including architecture and system design,
+        testing, and monitoring.{' '}
         <span css={styles.links}>
           <Link
             icon={<LinkOut />}
