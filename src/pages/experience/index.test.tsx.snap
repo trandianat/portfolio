@@ -540,16 +540,16 @@ exports[`Experience should match the snapshot 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-40 {
+.emotion-41 {
   border: 1px dotted black;
   padding: 16px 24px;
 }
 
-.emotion-40 .company {
+.emotion-41 .company {
   font-family: var(--serif);
 }
 
-.emotion-41 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -561,7 +561,7 @@ exports[`Experience should match the snapshot 1`] = `
   margin-top: 22px;
 }
 
-.emotion-42 {
+.emotion-43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -570,7 +570,7 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 @media (max-width: 450px) {
-  .emotion-42 {
+  .emotion-43 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -738,6 +738,11 @@ exports[`Experience should match the snapshot 1`] = `
               <div
                 className="emotion-21"
               >
+                HTML
+              </div>
+              <div
+                className="emotion-21"
+              >
                 CSS
               </div>
               <div
@@ -825,7 +830,7 @@ exports[`Experience should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          className="emotion-40"
+          className="emotion-41"
         >
           <h2
             className="company"
@@ -838,10 +843,10 @@ exports[`Experience should match the snapshot 1`] = `
             Technical Development Program & Post-Program Placement
           </p>
           <div
-            className="emotion-41"
+            className="emotion-42"
           >
             <div
-              className="emotion-42"
+              className="emotion-43"
             >
               <div
                 className="emotion-7"
@@ -937,6 +942,16 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="emotion-21"
                   >
+                    HTML
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
+                    CSS
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
                     Node.js
                   </div>
                   <div
@@ -997,7 +1012,7 @@ exports[`Experience should match the snapshot 1`] = `
               </div>
             </div>
             <div
-              className="emotion-42"
+              className="emotion-43"
             >
               <div
                 className="emotion-7"
@@ -1083,6 +1098,16 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="emotion-21"
                   >
+                    HTML
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
+                    CSS
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
                     Java
                   </div>
                   <div
@@ -1117,7 +1142,7 @@ exports[`Experience should match the snapshot 1`] = `
               </div>
             </div>
             <div
-              className="emotion-42"
+              className="emotion-43"
             >
               <div
                 className="emotion-7"
@@ -1195,6 +1220,16 @@ exports[`Experience should match the snapshot 1`] = `
                 <div
                   className="emotion-20"
                 >
+                  <div
+                    className="emotion-21"
+                  >
+                    HTML
+                  </div>
+                  <div
+                    className="emotion-21"
+                  >
+                    CSS
+                  </div>
                   <div
                     className="emotion-21"
                   >

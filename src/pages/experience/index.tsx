@@ -15,6 +15,7 @@ export const Experience = (): JSX.Element => (
           'Redux',
           'TypeScript',
           'Angular',
+          'HTML',
           'CSS',
           'Emotion',
           'Storybook',
@@ -53,6 +54,8 @@ export const Experience = (): JSX.Element => (
               'React',
               'Redux',
               'TypeScript',
+              'HTML',
+              'CSS',
               'Node.js',
               'Express',
               'GraphQL',
@@ -75,7 +78,16 @@ export const Experience = (): JSX.Element => (
             company="Sales Compensation & Reinsurance"
             start="FEB '16"
             end="SEP '17"
-            skills={['AngularJS', 'Java', 'Gradle', 'Oracle', 'MySQL', 'Agile']}
+            skills={[
+              'AngularJS',
+              'HTML',
+              'CSS',
+              'Java',
+              'Gradle',
+              'Oracle',
+              'MySQL',
+              'Agile',
+            ]}
             scope="Monitored and ensured frictionless monthly insurance agent compensation transactions and statements. Enhanced insurer productivity by developing reinsurance claims, underwriting, and contact management applications."
             accomplishments={[
               'Reduced company spending and optimized processing speed by migrating sales compensation batch jobs from on-premise servers to cloud.',
@@ -86,7 +98,16 @@ export const Experience = (): JSX.Element => (
             company="Publishing & RPA (Reporting, Planning & Analytics)"
             start="JUN '14"
             end="FEB '16"
-            skills={['Dojo', 'Java', 'SOAP', 'XML', 'SharePoint', 'Waterfall']}
+            skills={[
+              'HTML',
+              'CSS',
+              'Dojo',
+              'Java',
+              'SOAP',
+              'XML',
+              'SharePoint',
+              'Waterfall',
+            ]}
             scope="Selected for rotational entry-level Technical Development Program. Designated as Technical Lead on a team with 4 fellow program participants."
             accomplishments={[
               'Promoted policy-issuing efficiency by integrating formerly manual process of gathering form templates into centralized document repository portal.',
