@@ -74,7 +74,7 @@ export const Experience = (): JSX.Element => (
             ]}
           />
           <Job
-            role="Software Developer"
+            role="Software Engineer"
             company="Sales Compensation & Reinsurance"
             start="FEB '16"
             end="SEP '17"
