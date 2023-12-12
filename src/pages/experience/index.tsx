@@ -66,7 +66,7 @@ export const Experience = (): JSX.Element => (
               'Lambdas',
               'Agile',
             ]}
-            scope="Iterated upon quote and claims applications with fail-fast mentality by rapidly launching A/B tests. Assisted in career growth as a mentor for junior software engineers and interns."
+            scope="Iterated upon quote and claims applications with fail-fast mentality by rapidly launching A/B tests. Assisted in career growth as mentor for junior software engineers and interns."
             accomplishments={[
               'Improved conversion rate by ideating on and leading development of quote status feature and guided policy builder across 4 micro-frontends.',
               'Expanded customer base beyond first-party claimants by scaling claims application to accommodate third-party claimants and carriers.',
@@ -111,7 +111,7 @@ export const Experience = (): JSX.Element => (
             scope="Selected for rotational entry-level Technical Development Program. Designated as Technical Lead on a team with 4 fellow program participants."
             accomplishments={[
               'Promoted policy-issuing efficiency by integrating formerly manual process of gathering form templates into centralized document repository portal.',
-              'Participated in change initiatives and published knowledge-sharing articles, increased company-wide engagement in organizational lean transformation efforts.',
+              'Participated in change initiatives and published knowledge-sharing articles, increasing company-wide engagement in organizational lean transformation efforts.',
             ]}
           />
         </div>
@@ -122,7 +122,7 @@ export const Experience = (): JSX.Element => (
         start="JUN '13"
         end="MAY '14"
         skills={['HTML', 'CSS', 'Adobe Photoshop']}
-        scope="Managed office operations, maintained contact management system, and answered incoming phone calls, directing them to appropriate extensions."
+        scope="Managed office operations, maintained contact management system, and answered incoming phone calls, directing to appropriate extensions."
         accomplishments={[
           'Raised community awareness of corporate mission by crafting and distributing engaging emails and event invitations with on-brand graphics.',
         ]}
