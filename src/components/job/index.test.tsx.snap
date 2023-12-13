@@ -44,7 +44,7 @@ exports[`Job should match the snapshot 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  min-width: 70px;
+  min-width: 40px;
   padding: 8px 0;
   text-align: right;
   white-space: nowrap;

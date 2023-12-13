@@ -20,7 +20,7 @@ export const verticalRange = css({
   flexDirection: 'column',
   fontWeight: 500,
   justifyContent: 'space-between',
-  minWidth: 70,
+  minWidth: 40,
   padding: '8px 0',
   textAlign: 'right',
   whiteSpace: 'nowrap',

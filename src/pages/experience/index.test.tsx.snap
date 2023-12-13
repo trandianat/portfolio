@@ -420,7 +420,7 @@ exports[`Experience should match the snapshot 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  min-width: 70px;
+  min-width: 40px;
   padding: 8px 0;
   text-align: right;
   white-space: nowrap;
@@ -648,12 +648,12 @@ exports[`Experience should match the snapshot 1`] = `
               <div
                 className="sans"
               >
-                AUG '23
+                2023
               </div>
               <div
                 className="sans"
               >
-                JUL '21
+                2021
               </div>
             </div>
             <div
@@ -692,12 +692,12 @@ exports[`Experience should match the snapshot 1`] = `
               <div
                 className="sans"
               >
-                JUL '21
+                2021
               </div>
               <div
                 className="sans"
               >
-                AUG '23
+                2023
               </div>
             </div>
           </div>
@@ -857,12 +857,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    JUL '21
+                    2021
                   </div>
                   <div
                     className="sans"
                   >
-                    OCT '17
+                    2017
                   </div>
                 </div>
                 <div
@@ -901,12 +901,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    OCT '17
+                    2017
                   </div>
                   <div
                     className="sans"
                   >
-                    JUL '21
+                    2021
                   </div>
                 </div>
               </div>
@@ -1023,12 +1023,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    SEP '17
+                    2017
                   </div>
                   <div
                     className="sans"
                   >
-                    FEB '16
+                    2016
                   </div>
                 </div>
                 <div
@@ -1067,12 +1067,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    FEB '16
+                    2016
                   </div>
                   <div
                     className="sans"
                   >
-                    SEP '17
+                    2017
                   </div>
                 </div>
               </div>
@@ -1153,12 +1153,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    FEB '16
+                    2016
                   </div>
                   <div
                     className="sans"
                   >
-                    JUN '14
+                    2014
                   </div>
                 </div>
                 <div
@@ -1197,12 +1197,12 @@ exports[`Experience should match the snapshot 1`] = `
                   <div
                     className="sans"
                   >
-                    JUN '14
+                    2014
                   </div>
                   <div
                     className="sans"
                   >
-                    FEB '16
+                    2016
                   </div>
                 </div>
               </div>
@@ -1288,12 +1288,12 @@ exports[`Experience should match the snapshot 1`] = `
               <div
                 className="sans"
               >
-                MAY '14
+                2014
               </div>
               <div
                 className="sans"
               >
-                JUN '13
+                2013
               </div>
             </div>
             <div
@@ -1332,12 +1332,12 @@ exports[`Experience should match the snapshot 1`] = `
               <div
                 className="sans"
               >
-                JUN '13
+                2013
               </div>
               <div
                 className="sans"
               >
-                MAY '14
+                2014
               </div>
             </div>
           </div>

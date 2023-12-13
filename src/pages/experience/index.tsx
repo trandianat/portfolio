@@ -8,8 +8,8 @@ export const Experience = (): JSX.Element => (
       <Job
         role="Software Development Engineer III"
         company="Haven Technologies"
-        start="JUL '21"
-        end="AUG '23"
+        start="2021"
+        end="2023"
         skills={[
           'React',
           'Redux',
@@ -48,8 +48,8 @@ export const Experience = (): JSX.Element => (
           <Job
             role="Senior Software Engineer"
             company="Direct Sales & Claims"
-            start="OCT '17"
-            end="JUL '21"
+            start="2017"
+            end="2021"
             skills={[
               'React',
               'Redux',
@@ -76,8 +76,8 @@ export const Experience = (): JSX.Element => (
           <Job
             role="Software Engineer"
             company="Sales Compensation & Reinsurance"
-            start="FEB '16"
-            end="SEP '17"
+            start="2016"
+            end="2017"
             skills={[
               'AngularJS',
               'HTML',
@@ -96,8 +96,8 @@ export const Experience = (): JSX.Element => (
           <Job
             role="Technology Associate"
             company="Publishing & RPA (Reporting, Planning & Analytics)"
-            start="JUN '14"
-            end="FEB '16"
+            start="2014"
+            end="2016"
             skills={[
               'HTML',
               'CSS',
@@ -119,8 +119,8 @@ export const Experience = (): JSX.Element => (
       <Job
         role="Operations Intern"
         company="Community Economic Development Assistance Corporation"
-        start="JUN '13"
-        end="MAY '14"
+        start="2013"
+        end="2014"
         skills={['HTML', 'CSS', 'Adobe Photoshop']}
         scope="Managed office operations, maintained contact management system, and answered incoming phone calls, directing to appropriate extensions."
         accomplishments={[
