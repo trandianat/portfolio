@@ -140,16 +140,6 @@ export const Notes = (): JSX.Element => {
             )} ${updatedDate.toLocaleTimeString(locale)}`;
             return (
               <div css={styles.card} key={id}>
-                <div
-                  className="trash"
-                  onClick={() => {
-                    removeNote(id);
-                    setTitle({});
-                    setContent({});
-                  }}
-                >
-                  <Trash />
-                </div>
                 {title[id] ? (
                   <input
                     autoFocus
@@ -179,7 +169,13 @@ export const Notes = (): JSX.Element => {
                   <h3
                     className="name"
                     onClick={() => setTitle({ ...title, ...{ [id]: name } })}
+                    onKeyDown={event => {
+                      if (event.key === 'Enter') {
+                        setTitle({ ...title, ...{ [id]: name } });
+                      }
+                    }}
                     ref={ref}
+                    tabIndex={0}
                   >
                     {name}
                   </h3>
@@ -215,11 +211,35 @@ export const Notes = (): JSX.Element => {
                     onClick={() =>
                       setContent({ ...content, ...{ [id]: description } })
                     }
+                    onKeyDown={event => {
+                      if (event.key === 'Enter') {
+                        setContent({ ...content, ...{ [id]: description } });
+                      }
+                    }}
                     ref={ref}
+                    tabIndex={0}
                   >
                     {description}
                   </p>
                 )}
+                <div
+                  className="trash"
+                  onClick={() => {
+                    removeNote(id);
+                    setTitle({});
+                    setContent({});
+                  }}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter') {
+                      removeNote(id);
+                      setTitle({});
+                      setContent({});
+                    }
+                  }}
+                  tabIndex={0}
+                >
+                  <Trash />
+                </div>
                 <div css={styles.footer}>
                   <p>
                     <span>Created</span>: {formattedCreatedDate}

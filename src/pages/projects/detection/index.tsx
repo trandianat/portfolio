@@ -52,7 +52,6 @@ export const Detection = (): JSX.Element => {
     if (results.length) {
       setError(false);
       results.forEach((result: Prediction, index: number) => {
-        context.beginPath();
         context.lineWidth = 2;
         context.strokeStyle = colors[index];
         const [x, y, width, height] = result.bbox;
