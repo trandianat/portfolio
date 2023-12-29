@@ -9,6 +9,18 @@ export const auth = {
     ':hover': { color: Color.WHITE, cursor: 'default' },
   },
   'button.amplify-field__show-password': { display: 'none' },
+  'div.amplify-alert--error': {
+    alignItems: 'flex-start',
+    border: `1px solid ${Color.BLACK}`,
+    display: 'flex',
+    gap: 12,
+    marginTop: 16,
+    padding: 12,
+    'button.amplify-alert__dismiss': {
+      padding: '2px 0',
+      marginTop: 0,
+    },
+  },
   'fieldset.amplify-flex': {
     border: 0,
     display: 'flex',
