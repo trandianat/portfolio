@@ -403,6 +403,7 @@ exports[`Skills should match the snapshot 1`] = `
     >
       <nav
         className="sans emotion-2"
+        id="navigation"
       >
         <a
           href="/"

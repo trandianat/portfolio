@@ -97,6 +97,7 @@ exports[`Navigation should match the snapshot 1`] = `
 
 <nav
   className="sans emotion-0"
+  id="navigation"
 >
   <a
     href="/"

@@ -43,3 +43,20 @@ export const navigation = css({
 });
 
 export const external = { justifyContent: 'center' };
+
+export const scroll = css({
+  backgroundColor: Color.WHITE,
+  border: `1px solid ${Color.BLACK}`,
+  borderRadius: 20,
+  bottom: 16,
+  color: Color.BLACK,
+  fontSize: '1.5rem',
+  fontWeight: 300,
+  padding: '6px 11px',
+  position: 'fixed',
+  right: 16,
+  ':hover': {
+    backgroundColor: Color.BLACK,
+    color: Color.WHITE,
+  },
+});
