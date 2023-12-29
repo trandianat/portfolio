@@ -32,7 +32,7 @@ export const Navigation = (): JSX.Element => {
 
   useEffect(() => {
     window.onscroll = () => {
-      if (!document.getElementById('navigation')?.getBoundingClientRect().top) {
+      if (document.documentElement.scrollTop > window.innerHeight) {
         setScroll(true);
       } else {
         setScroll(false);
