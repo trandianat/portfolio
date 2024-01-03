@@ -73,3 +73,8 @@ export const lexInputConfig = {
   botName: process.env.REACT_APP_LEX_BOT,
   userId: process.env.REACT_APP_LEX_USER,
 };
+
+export const nyTimesConfig = {
+  apiKey: process.env.REACT_APP_NYTIMES,
+  apiUrl: 'https://api.nytimes.com/svc/books/v3/lists/full-overview.json',
+};

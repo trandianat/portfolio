@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import Book from 'assets/icons/book';
 import Chat from 'assets/icons/chat';
 import Note from 'assets/icons/note';
 import Photo from 'assets/icons/photo';
@@ -44,6 +45,13 @@ export const Projects = (): JSX.Element => {
       icon: <Wedding />,
       name: 'Wedding',
       path: 'wedding',
+    },
+    {
+      description:
+        "Search for New York Times' best-selling books by date and genre",
+      icon: <Book />,
+      name: 'Books',
+      path: 'books',
     },
   ];
   return (

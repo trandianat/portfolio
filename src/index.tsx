@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Experience } from 'pages/experience';
 import { Projects } from 'pages/projects';
+import { Books } from 'pages/projects/books';
 import { Chatbot } from 'pages/projects/chatbot';
 import { Detection } from 'pages/projects/detection';
 import { Notes } from 'pages/projects/notes';
@@ -21,6 +22,7 @@ root.render(
         <Route element={<Experience />} path="/" />
         <Route element={<Skills />} path="skills" />
         <Route element={<Projects />} path="projects">
+          <Route element={<Books />} path="books" />
           <Route element={<Chatbot />} path="chatbot" />
           <Route element={<Detection />} path="detection" />
           <Route element={<Notes />} path="notes" />
