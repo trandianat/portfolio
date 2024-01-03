@@ -202,7 +202,7 @@ export const Books = (): JSX.Element => {
                       <h3>{title}</h3>
                       <p>{author}</p>
                       {weeks_on_list > 0 && (
-                        <p>{duration(weeks_on_list)} on bestseller list</p>
+                        <p>{duration(weeks_on_list)} on best-seller list</p>
                       )}
                     </div>
                     <div className="rank">{rank}</div>
