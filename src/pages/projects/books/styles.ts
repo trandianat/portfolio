@@ -17,6 +17,10 @@ export const books = css({
       gap: 4,
       '#genre': { padding: '9px 4px', width: '100%' },
     },
+    '@media (max-width: 700px)': {
+      gridTemplateColumns: 'auto',
+      button: { width: 'fit-content' },
+    },
   },
   '.books': {
     display: 'grid',
@@ -29,9 +33,7 @@ export const books = css({
       gap: 24,
       gridTemplateColumns: 'min-content auto',
       padding: 24,
-      img: {
-        width: 100,
-      },
+      img: { width: 100 },
       '.details': {
         display: 'flex',
         flexDirection: 'column',
@@ -45,23 +47,18 @@ export const books = css({
           '.title': { display: 'flex', flexDirection: 'column', gap: 4 },
           '.rank': { fontSize: '2rem' },
         },
-        '.purchase': {
-          columnGap: 10,
-          display: 'flex',
-          flexWrap: 'wrap',
-        },
+        '.purchase': { columnGap: 10, display: 'flex', flexWrap: 'wrap' },
       },
+      '@media (max-width: 450px)': {
+        gridTemplateColumns: 'auto',
+        img: { margin: '0 auto', width: '75%' },
+      },
+      '@media (max-width: 350px)': { img: { width: '100%' } },
     },
   },
   '.message': {
     backgroundColor: Color.WHITE,
     border: `1px solid ${Color.BLACK}`,
     padding: 16,
-  },
-  '@media (max-width: 700px)': {
-    '.search': {
-      gridTemplateColumns: 'auto',
-      button: { width: 'fit-content' },
-    },
   },
 });
