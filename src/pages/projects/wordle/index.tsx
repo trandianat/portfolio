@@ -165,7 +165,7 @@ export const Wordle = (): JSX.Element => {
           ))}
         </div>
         <Keyboard
-          disabled={guesses.includes(answer)}
+          disabled={guesses.includes(answer) || guesses.length >= guessLimit}
           guesses={guesses}
           handleSubmit={handleSubmit}
           input={input}
