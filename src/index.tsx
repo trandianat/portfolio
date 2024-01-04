@@ -8,6 +8,7 @@ import { Chatbot } from 'pages/projects/chatbot';
 import { Detection } from 'pages/projects/detection';
 import { Notes } from 'pages/projects/notes';
 import { Wedding } from 'pages/projects/wedding';
+import { Wordle } from 'pages/projects/wordle';
 import { Skills } from 'pages/skills';
 import NotificationProvider from 'utils/notification';
 import config from './aws-exports';
@@ -27,6 +28,7 @@ root.render(
           <Route element={<Detection />} path="detection" />
           <Route element={<Notes />} path="notes" />
           <Route element={<Wedding />} path="wedding" />
+          <Route element={<Wordle />} path="wordle" />
           <Route element={<Navigate to="/projects" />} path="*" />
         </Route>
         <Route element={<Navigate to="/" />} path="*" />

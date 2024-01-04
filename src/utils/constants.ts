@@ -4,9 +4,16 @@ export enum Color {
   DARK_GRAY = 'var(--dark-gray)',
   GRAY = 'var(--gray)',
   GREEN = 'var(--green)',
+  LIGHT_GREEN = 'var(--light-green)',
   NAVY = 'var(--navy)',
   RED = 'var(--red)',
   WHITE = 'var(--white)',
+  YELLOW = 'var(--yellow)',
+}
+
+export enum Keyboard {
+  DELETE = 'DELETE',
+  ENTER = 'ENTER',
 }
 
 export enum Persona {
@@ -24,8 +31,10 @@ export enum Links {
   DESIGN = 'https://www.justinmind.com',
   GITHUB = 'https://github.com/trandianat',
   LINKEDIN = 'https://www.linkedin.com/in/trandianat',
+  STANFORD_GRAPHBASE = 'https://www-cs-faculty.stanford.edu/~knuth/sgb.html',
   TENSORFLOW = 'https://www.tensorflow.org/js/models',
   WEDDING = 'https://www.thebeanwedding.com',
+  WORDLE = 'https://www.nytimes.com/games/wordle/index.html',
 }
 
 export enum Size {

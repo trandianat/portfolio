@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Book from 'assets/icons/book';
 import Chat from 'assets/icons/chat';
+import Letter from 'assets/icons/letter';
 import Note from 'assets/icons/note';
 import Photo from 'assets/icons/photo';
 import Wedding from 'assets/icons/wedding';
@@ -52,6 +53,12 @@ export const Projects = (): JSX.Element => {
       icon: <Book />,
       name: 'Books',
       path: 'books',
+    },
+    {
+      description: 'A recreation of the popular New York Times word game',
+      icon: <Letter />,
+      name: 'Wordle',
+      path: 'wordle',
     },
   ];
   return (
