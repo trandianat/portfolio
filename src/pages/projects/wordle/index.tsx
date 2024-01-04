@@ -30,7 +30,7 @@ export const Wordle = (): JSX.Element => {
             Math.floor(Math.random() * (wordArray.length + 1))
           ].toUpperCase();
         setWords(wordArray);
-        setAnswer('TOAST');
+        setAnswer(randomWord);
       });
   };
 
