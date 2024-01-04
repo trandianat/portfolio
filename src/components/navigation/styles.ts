@@ -55,6 +55,7 @@ export const scroll = css({
   padding: '6px 11px',
   position: 'fixed',
   right: 16,
+  zIndex: 1,
   ':hover': {
     backgroundColor: Color.BLACK,
     color: Color.WHITE,
