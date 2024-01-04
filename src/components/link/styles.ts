@@ -1,9 +1,11 @@
-import { Size } from 'utils/constants';
+import { Position, Size } from 'utils/constants';
 import { size } from 'utils/map';
 
-export const link = (iconGap: Size) => ({
-  alignItems: 'center',
-  display: 'inline-flex',
+export const link = (iconGap: Size, iconPosition: Position) => ({
   gap: size(iconGap),
-  verticalAlign: 'bottom',
+  '.icon': { verticalAlign: 'middle' },
+  '.text':
+    iconPosition === Position.LEFT
+      ? { marginLeft: size(iconGap) }
+      : { marginRight: size(iconGap) },
 });

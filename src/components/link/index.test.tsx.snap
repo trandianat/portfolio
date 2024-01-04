@@ -2,16 +2,15 @@
 
 exports[`Link should match the snapshot 1`] = `
 .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   gap: 2px;
-  vertical-align: bottom;
+}
+
+.emotion-0 .icon {
+  vertical-align: middle;
+}
+
+.emotion-0 .text {
+  margin-right: 2px;
 }
 
 <a
@@ -19,6 +18,13 @@ exports[`Link should match the snapshot 1`] = `
   href="http://example.com"
   target="_blank"
 >
-  Text
+  <span
+    className="text"
+  >
+    Text
+  </span>
+  <span
+    className="icon"
+  />
 </a>
 `;

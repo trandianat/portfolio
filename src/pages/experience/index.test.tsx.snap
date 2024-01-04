@@ -129,16 +129,15 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 .emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   gap: 4px;
-  vertical-align: bottom;
+}
+
+.emotion-7 .icon {
+  vertical-align: middle;
+}
+
+.emotion-7 .text {
+  margin-right: 4px;
 }
 
 <div
@@ -195,15 +194,23 @@ exports[`Experience should match the snapshot 1`] = `
               href="https://www.linkedin.com/in/trandianat"
               target="_blank"
             >
-              LinkedIn
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                className="text"
               >
-                <path
-                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-                />
-              </svg>
+                LinkedIn
+              </span>
+              <span
+                className="icon"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                  />
+                </svg>
+              </span>
             </a>
              
             &
@@ -213,15 +220,23 @@ exports[`Experience should match the snapshot 1`] = `
               href="https://github.com/trandianat"
               target="_blank"
             >
-              Github
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                className="text"
               >
-                <path
-                  d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-                />
-              </svg>
+                Github
+              </span>
+              <span
+                className="icon"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+                  />
+                </svg>
+              </span>
             </a>
           </span>
         </p>
@@ -339,20 +354,19 @@ exports[`Experience should match the snapshot 1`] = `
 }
 
 .emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   gap: 6px;
-  vertical-align: bottom;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+.emotion-3 .icon {
+  vertical-align: middle;
+}
+
+.emotion-3 .text {
+  margin-left: 6px;
 }
 
 .emotion-5 {
@@ -608,30 +622,46 @@ exports[`Experience should match the snapshot 1`] = `
           href="https://www.linkedin.com/in/trandianat"
           target="_blank"
         >
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="icon"
           >
-            <path
-              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-            />
-          </svg>
-          LinkedIn
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+              />
+            </svg>
+          </span>
+          <span
+            className="text"
+          >
+            LinkedIn
+          </span>
         </a>
         <a
           className="external emotion-3"
           href="https://github.com/trandianat"
           target="_blank"
         >
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="icon"
           >
-            <path
-              d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
-            />
-          </svg>
-          Github
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-7h-2v7H5V5h7V3H5zm9 0v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"
+              />
+            </svg>
+          </span>
+          <span
+            className="text"
+          >
+            Github
+          </span>
         </a>
       </nav>
       <div

@@ -6,7 +6,7 @@ export const Link = ({
   children,
   icon,
   iconGap = Size.SMALL,
-  iconPosition,
+  iconPosition = Position.RIGHT,
   text,
   url,
   ...rest
@@ -18,9 +18,14 @@ export const Link = ({
   url: string;
   [rest: string]: unknown;
 }>): JSX.Element => (
-  <a css={styles.link(iconGap)} href={url} target="_blank" {...rest}>
-    {iconPosition === Position.LEFT && icon}
-    {text}
-    {iconPosition === Position.RIGHT && icon}
+  <a
+    css={styles.link(iconGap, iconPosition)}
+    href={url}
+    target="_blank"
+    {...rest}
+  >
+    {iconPosition === Position.LEFT && <span className="icon">{icon}</span>}
+    <span className="text">{text}</span>
+    {iconPosition === Position.RIGHT && <span className="icon">{icon}</span>}
   </a>
 );

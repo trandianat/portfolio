@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import LinkOut from 'assets/icons/link';
 import { Keyboard } from 'components/keyboard';
+import { Link } from 'components/link';
 import * as styles from 'pages/projects/wordle/styles';
 import wordList from 'pages/projects/wordle/words.txt';
-import { Link } from 'components/link';
 import { Links, Position } from 'utils/constants';
 
 export const Wordle = (): JSX.Element => {
@@ -119,7 +119,7 @@ export const Wordle = (): JSX.Element => {
           <Link
             icon={<LinkOut />}
             iconPosition={Position.RIGHT}
-            text="The Stanford GraphBase"
+            text="The Stanford GraphBase: A Platform for Combinatorial Computing"
             url={Links.STANFORD_GRAPHBASE}
           />
           . It contains 5,757 common five-letter words that meet the following
