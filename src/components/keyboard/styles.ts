@@ -18,12 +18,15 @@ export const keyboard = css({
       width: 28,
       '&.action': {
         width: 'auto',
-        '&.primary': { '@media (max-width: 450px)': { display: 'none' } },
+        '@media (max-width: 450px)': {
+          width: 80,
+          '&.primary': { display: 'none' },
+        },
       },
       '&.used': { backgroundColor: Color.WHITE, color: Color.BLACK },
-      '@media (max-width: 450px)': { height: 28, width: 24 },
     },
   },
   '@media (max-width: 700px)': { margin: '0 auto' },
   '@media (min-width: 451px)': { '.row-4': { display: 'none' } },
+  '@media (max-width: 400px)': { gap: 2, '.row': { gap: 2 } },
 });
