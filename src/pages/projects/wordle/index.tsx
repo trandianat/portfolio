@@ -30,7 +30,7 @@ export const Wordle = (): JSX.Element => {
             Math.floor(Math.random() * (wordArray.length + 1))
           ].toUpperCase();
         setWords(wordArray);
-        setAnswer(randomWord);
+        setAnswer('TOAST');
       });
   };
 
@@ -164,6 +164,7 @@ export const Wordle = (): JSX.Element => {
             </div>
           ))}
         </div>
+        {message && <p className="message">{message}</p>}
         <Keyboard
           disabled={guesses.includes(answer) || guesses.length >= guessLimit}
           guesses={guesses}
@@ -171,7 +172,6 @@ export const Wordle = (): JSX.Element => {
           input={input}
           setInput={setInput}
         />
-        {message && <p className="message">{message}</p>}
       </div>
     </div>
   );

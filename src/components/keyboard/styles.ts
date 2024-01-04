@@ -19,7 +19,7 @@ export const keyboard = css({
       '&.action': {
         width: 'auto',
         '@media (max-width: 450px)': {
-          width: 80,
+          width: 100,
           '&.primary': { display: 'none' },
         },
       },
