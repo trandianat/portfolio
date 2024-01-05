@@ -125,15 +125,15 @@ export const Wordle = (): JSX.Element => {
             text="The Stanford GraphBase: A Platform for Combinatorial Computing"
             url={Links.STANFORD_GRAPHBASE}
           />
-          . It contains 5,757 common five-letter words that meet the following
-          criteria:
+          . It contains 5,757 common five-letter words (with some modifications)
+          that meet the following criteria:
         </p>
         <ul>
           <li>No proper nouns</li>
           <li>No accent marks, hyphens, or punctuation</li>
           <li>No extremely rare words</li>
         </ul>
-        <p>The possible answers are a subset of 3,103 words.</p>
+        <p>The possible answers are from a subset of 3,100 words.</p>
       </div>
       <hr />
       <div className="game">
