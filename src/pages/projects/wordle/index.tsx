@@ -157,6 +157,7 @@ export const Wordle = (): JSX.Element => {
           onClick={() => {
             getAnswer();
             setGrid(initialGrid);
+            setGuessLimit(initialGuessLimit);
             setGuesses([]);
             setInput('');
             setMessage('');
