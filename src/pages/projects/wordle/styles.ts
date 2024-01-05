@@ -11,6 +11,7 @@ export const wordle = {
     '.grid': {
       display: 'grid',
       gap: 6,
+      margin: '0 auto',
       '.row': {
         display: 'grid',
         gap: 6,
@@ -40,7 +41,19 @@ export const wordle = {
       border: `1px solid ${Color.BLACK}`,
       display: 'grid',
       font: '.875rem var(--sans)',
+      gap: 12,
+      gridTemplateColumns: 'auto',
       padding: 16,
+      '.retry': {
+        display: 'grid',
+        gap: 12,
+        '.actions': {
+          display: 'grid',
+          gap: 12,
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          '@media (max-width: 450px)': { gridTemplateColumns: 'auto' },
+        },
+      },
     },
     '@media (max-width: 700px)': {
       width: '100%',

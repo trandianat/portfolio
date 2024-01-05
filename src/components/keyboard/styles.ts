@@ -5,6 +5,7 @@ export const keyboard = css({
   display: 'flex',
   flexDirection: 'column',
   font: '1.25rem var(--sans)',
+  margin: '0 auto',
   gap: 4,
   width: 'fit-content',
   '.row': {
