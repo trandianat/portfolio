@@ -3,7 +3,8 @@ import LinkOut from 'assets/icons/link';
 import { Keyboard } from 'components/keyboard';
 import { Link } from 'components/link';
 import * as styles from 'pages/projects/wordle/styles';
-import wordList from 'pages/projects/wordle/words.txt';
+import answerList from 'pages/projects/wordle/words/answers.txt';
+import wordList from 'pages/projects/wordle/words/words.txt';
 import { Links, Position } from 'utils/constants';
 
 export const Wordle = (): JSX.Element => {
@@ -21,16 +22,15 @@ export const Wordle = (): JSX.Element => {
   const [words, setWords] = useState<string[]>([]);
 
   const getAnswer = () => {
-    fetch(wordList)
-      .then(words => words.text())
-      .then((text: string) => {
-        const wordArray = text.split('\n');
-        const randomWord =
-          wordArray[
-            Math.floor(Math.random() * (wordArray.length + 1))
+    fetch(answerList)
+      .then(answers => answers.text())
+      .then((answers: string) => {
+        const answerArray = answers.split('\n');
+        const randomAnswer =
+          answerArray[
+            Math.floor(Math.random() * (answerArray.length + 1))
           ].toUpperCase();
-        setWords(wordArray);
-        setAnswer(randomWord);
+        setAnswer(randomAnswer);
       });
   };
 
@@ -85,6 +85,9 @@ export const Wordle = (): JSX.Element => {
   }, [input]);
 
   useEffect(() => {
+    fetch(wordList)
+      .then(words => words.text())
+      .then((words: string) => setWords(words.split('\n')));
     getAnswer();
   }, []);
 
@@ -115,7 +118,7 @@ export const Wordle = (): JSX.Element => {
           </li>
         </ul>
         <p>
-          The possible words are from a list created by Donald Knuth as part of{' '}
+          The valid words are from a list created by Donald Knuth as part of{' '}
           <Link
             icon={<LinkOut />}
             iconPosition={Position.RIGHT}
@@ -130,6 +133,7 @@ export const Wordle = (): JSX.Element => {
           <li>No accent marks, hyphens, or punctuation</li>
           <li>No extremely rare words</li>
         </ul>
+        <p>The possible answers are a subset of 3,103 words.</p>
       </div>
       <hr />
       <div className="game">
