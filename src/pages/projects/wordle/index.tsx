@@ -68,7 +68,7 @@ export const Wordle = (): JSX.Element => {
         `Congratulations! You guessed the word ${
           guesses.length > 1
             ? `in ${guesses.length} tries.`
-            : 'on the first try!'
+            : 'on the first try.'
         }`
       );
     } else if (guesses.length >= guessLimit) {
