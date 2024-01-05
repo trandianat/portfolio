@@ -51,7 +51,7 @@ export const wordle = {
           display: 'grid',
           gap: 12,
           gridTemplateColumns: 'repeat(2, 1fr)',
-          '@media (max-width: 450px)': { gridTemplateColumns: 'auto' },
+          '@media (max-width: 450px)': { gap: 8, gridTemplateColumns: 'auto' },
         },
       },
     },
