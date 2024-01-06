@@ -173,7 +173,6 @@ baize
 baked
 baker
 bales
-balls
 balmy
 banal
 bands
@@ -392,7 +391,6 @@ burst
 bushy
 busts
 butte
-butts
 buxom
 buyer
 cabal
@@ -557,8 +555,6 @@ colic
 colon
 colts
 combs
-comer
-comes
 comet
 comic
 comma
@@ -863,7 +859,6 @@ endow
 enemy
 enjoy
 ennui
-enrol
 ensue
 enter
 entry
@@ -1101,7 +1096,6 @@ fuses
 fussy
 fuzzy
 gable
-gaily
 gains
 gales
 galls
@@ -1218,9 +1212,7 @@ gripe
 grips
 grist
 groan
-groin
 groom
-grope
 gross
 group
 grove
@@ -1359,7 +1351,6 @@ hurry
 hurts
 husks
 husky
-hussy
 hydra
 hyena
 hymns
@@ -2286,7 +2277,6 @@ seven
 sever
 sewed
 sewer
-sexes
 shack
 shade
 shady
@@ -2714,7 +2704,6 @@ thine
 thing
 think
 third
-thong
 thorn
 those
 three
@@ -2867,7 +2856,6 @@ upset
 urban
 urged
 urges
-urine
 usage
 users
 usher
