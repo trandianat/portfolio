@@ -6,11 +6,11 @@ import { nyTimesConfig } from 'utils/constants';
 export const Books = (): JSX.Element => {
   const [allBooks, setAllBooks] = useState<{ [x: string]: string }[]>([]);
   const [books, setBooks] = useState<{ [x: string]: string }[]>([]);
+  const [category, setCategory] = useState<string>('');
+  const [categories, setCategories] = useState<Record<string, string>>({});
   const [date, setDate] = useState<string>('');
   const [dateChanged, setDateChanged] = useState<boolean>(false);
   const [defaultDate, setDefaultDate] = useState<string>('');
-  const [genre, setGenre] = useState<string>('');
-  const [genres, setGenres] = useState<Record<string, string>>({});
   const [message, setMessage] = useState<string>('');
 
   const duration = (weeks: number): string => {
@@ -27,14 +27,15 @@ export const Books = (): JSX.Element => {
   };
 
   useEffect(() => {
-    if (genre) {
+    if (category) {
       setBooks(
         allBooks.filter(
-          ({ genre_encoded }: Record<string, string>) => genre === genre_encoded
+          ({ category_encoded }: Record<string, string>) =>
+            category === category_encoded
         )
       );
     }
-  }, [genre]);
+  }, [category]);
 
   useEffect(() => {
     if (date) {
@@ -44,8 +45,8 @@ export const Books = (): JSX.Element => {
         .then(response => response.json())
         .then(({ results }) => {
           if (results !== undefined && Object.keys(results).length) {
-            setGenres({});
-            const sortedGenres = results.lists
+            setCategories({});
+            const sortedCategories = results.lists
               .map((list: Record<string, unknown>) => [
                 list.list_name_encoded,
                 list.display_name,
@@ -59,8 +60,8 @@ export const Books = (): JSX.Element => {
                   return 0;
                 }
               });
-            sortedGenres.forEach(([key, value]: string[]) =>
-              setGenres(genres => ({ ...genres, [key]: value }))
+            sortedCategories.forEach(([key, value]: string[]) =>
+              setCategories(categories => ({ ...categories, [key]: value }))
             );
             const bookResults: { [x: string]: string }[] = [];
             results.lists.forEach(
@@ -71,7 +72,7 @@ export const Books = (): JSX.Element => {
                 bookResults.push(
                   ...list.books.map((book: Record<string, unknown>) => ({
                     ...book,
-                    genre_encoded: list.list_name_encoded,
+                    category_encoded: list.list_name_encoded,
                   }))
                 )
             );
@@ -80,7 +81,7 @@ export const Books = (): JSX.Element => {
           } else {
             setAllBooks([]);
             setBooks([]);
-            setGenres({});
+            setCategories({});
             setMessage('No results found for the selected publication date');
           }
         });
@@ -104,7 +105,7 @@ export const Books = (): JSX.Element => {
       <h2>Books</h2>
       <p>
         Search for New York Times' best-selling books by the date that the
-        best-seller list was published and by genre. Best-seller lists are
+        best-seller list was published and by category. Best-seller lists are
         published each week, so the selected date will correspond to the list
         published for that week.
       </p>
@@ -119,10 +120,10 @@ export const Books = (): JSX.Element => {
             onChange={({
               target: { value },
             }: ChangeEvent<HTMLInputElement>) => {
-              setGenre('');
+              setCategory('');
               setMessage('');
               (
-                document.getElementById('genre') as HTMLSelectElement
+                document.getElementById('category') as HTMLSelectElement
               ).selectedIndex = 0;
               const validDate =
                 /(19|20)\d\d-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])/;
@@ -130,7 +131,7 @@ export const Books = (): JSX.Element => {
                 setDate(value);
               } else {
                 setDate('');
-                setGenres({});
+                setCategories({});
                 setMessage('Invalid publication date');
               }
               if (!dateChanged) {
@@ -141,20 +142,20 @@ export const Books = (): JSX.Element => {
           />
         </div>
         <div className="filter">
-          <label htmlFor="genre">Genre:</label>
+          <label htmlFor="category">Category:</label>
           <select
             defaultValue=""
-            id="genre"
+            id="category"
             onChange={(event: ChangeEvent<HTMLSelectElement>) => {
               setBooks(allBooks);
-              setGenre(event.target.value);
+              setCategory(event.target.value);
             }}
-            {...(!Object.keys(genres).length && { disabled: true })}
+            {...(!Object.keys(categories).length && { disabled: true })}
           >
             <option disabled value="">
-              Select a genre
+              Select a category
             </option>
-            {Object.entries(genres).map(([key, value]: string[]) => (
+            {Object.entries(categories).map(([key, value]: string[]) => (
               <option key={key} value={key}>
                 {value}
               </option>
@@ -163,30 +164,30 @@ export const Books = (): JSX.Element => {
         </div>
         <button
           onClick={() => {
+            setCategory('');
             setDate(defaultDate);
             setDateChanged(false);
-            setGenre('');
             setMessage('');
             (document.getElementById('date') as HTMLInputElement).value =
               defaultDate;
             (
-              document.getElementById('genre') as HTMLSelectElement
+              document.getElementById('category') as HTMLSelectElement
             ).selectedIndex = 0;
           }}
-          {...(!dateChanged && !genre && { disabled: true })}
+          {...(!dateChanged && !category && { disabled: true })}
         >
           Reset
         </button>
       </div>
-      {genre && (
+      {category && (
         <div className="books">
           {books.map(
             ({
               author,
               book_image,
               buy_links,
+              category_encoded,
               description,
-              genre_encoded,
               primary_isbn13,
               rank,
               title,
@@ -194,7 +195,10 @@ export const Books = (): JSX.Element => {
             }: {
               [x: string]: any;
             }) => (
-              <div className="book" key={`${genre_encoded}-${primary_isbn13}`}>
+              <div
+                className="book"
+                key={`${category_encoded}-${primary_isbn13}`}
+              >
                 <img src={book_image} />
                 <div className="details">
                   <div className="header">

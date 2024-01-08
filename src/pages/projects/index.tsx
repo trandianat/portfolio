@@ -49,7 +49,7 @@ export const Projects = (): JSX.Element => {
     },
     {
       description:
-        "Search for New York Times' best-selling books by date and genre",
+        "Search for New York Times' best-selling books by date and category",
       icon: <Book />,
       name: 'Books',
       path: 'books',
