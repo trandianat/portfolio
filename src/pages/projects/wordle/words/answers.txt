@@ -270,6 +270,7 @@ blent
 bless
 blest
 blind
+bling
 blink
 bliss
 block
@@ -780,7 +781,6 @@ drier
 dries
 drift
 drill
-drily
 drink
 drips
 drive
@@ -1135,7 +1135,6 @@ gifts
 gilds
 gills
 gimme
-gipsy
 girds
 girls
 given
@@ -2387,7 +2386,6 @@ slaps
 slash
 slate
 slats
-slave
 slays
 sleds
 sleek
@@ -2397,7 +2395,6 @@ slept
 slice
 slick
 slide
-slily
 slime
 slimy
 sling

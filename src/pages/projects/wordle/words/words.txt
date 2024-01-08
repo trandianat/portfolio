@@ -505,6 +505,7 @@ bless
 blest
 blimp
 blind
+bling
 blini
 blink
 blips
