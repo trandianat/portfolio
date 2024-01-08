@@ -55,7 +55,7 @@ export const Wordle = (): JSX.Element => {
     const letterIndices = [...guess].reduce(
       (previous, current, currentIndex) => {
         const indexArray = previous;
-        if (current === letter) {
+        if (current === letter && current !== answer.charAt(currentIndex)) {
           indexArray.push(currentIndex);
         }
         return indexArray;
@@ -242,6 +242,7 @@ export const Wordle = (): JSX.Element => {
           </div>
         )}
         <Keyboard
+          answer={answer}
           disabled={guesses.includes(answer) || guesses.length >= guessLimit}
           guesses={guesses}
           handleSubmit={handleSubmit}

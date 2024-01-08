@@ -24,7 +24,15 @@ export const keyboard = css({
           '&.primary': { display: 'none' },
         },
       },
-      '&.used': { backgroundColor: Color.WHITE, color: Color.BLACK },
+      '&.correct': {
+        backgroundColor: Color.LIGHT_GREEN,
+        color: Color.BLACK,
+      },
+      '&.incorrect': { backgroundColor: Color.WHITE, color: Color.BLACK },
+      '&.incorrect-space': {
+        backgroundColor: Color.YELLOW,
+        color: Color.BLACK,
+      },
     },
   },
   '@media (max-width: 700px)': { margin: '0 auto' },
