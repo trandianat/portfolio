@@ -40,12 +40,33 @@ export const Wordle = (): JSX.Element => {
   };
 
   const setClass = (letter: string, index: number, guessNumber: number) => {
+    const answerArray = [...answer];
+    const guess = guesses[guessNumber];
+    const numLettersInAnswer = answerArray.filter(
+      char => char === letter
+    ).length;
+    let numCorrectLetters = 0;
+    answerArray.forEach((char, i) => {
+      if (char === letter && answer.charAt(i) === guess.charAt(i)) {
+        numCorrectLetters++;
+      }
+    });
+    const remainingLetters = numLettersInAnswer - numCorrectLetters;
+    const letterIndices = [...guess].reduce(
+      (previous, current, currentIndex) => {
+        const indexArray = previous;
+        if (current === letter) {
+          indexArray.push(currentIndex);
+        }
+        return indexArray;
+      },
+      [] as number[]
+    );
     if (letter === answer[index]) {
       return 'correct';
     } else if (
       answer.includes(letter) &&
-      guesses[guessNumber].split('').filter(char => char === letter).length <=
-        answer.split('').filter(char => char === letter).length
+      letterIndices.indexOf(index) < remainingLetters
     ) {
       return 'incorrect-space';
     }
@@ -193,10 +214,10 @@ export const Wordle = (): JSX.Element => {
                 <div className="actions">
                   <button
                     onClick={() => {
-                      setGuessLimit(guessLimit + 1);
                       let tempGrid = [...grid];
                       tempGrid[guesses.length] = blankRow;
                       setGrid(tempGrid);
+                      setGuessLimit(guessLimit + 1);
                       setRetry(false);
                     }}
                   >
