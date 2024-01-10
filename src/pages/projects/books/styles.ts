@@ -15,7 +15,7 @@ export const books = css({
       display: 'flex',
       flexDirection: 'column',
       gap: 4,
-      '#category': { padding: '9px 4px', width: '100%' },
+      '#category': { padding: 10 },
     },
     '@media (max-width: 700px)': {
       gridTemplateColumns: 'auto',

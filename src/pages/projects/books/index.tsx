@@ -96,8 +96,8 @@ export const Books = (): JSX.Element => {
     const formattedMonth = month < 10 ? '0' + month : month;
     const formattedDay = day < 10 ? '0' + day : day;
     const formattedDate = `${year}-${formattedMonth}-${formattedDay}`;
-    setDefaultDate(formattedDate);
     setDate(formattedDate);
+    setDefaultDate(formattedDate);
   }, []);
 
   return (
